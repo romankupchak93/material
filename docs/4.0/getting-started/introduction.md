@@ -3,6 +3,11 @@ layout: docs
 title: Introduction
 description: Get started with Material, a cross-platform and fully responsive front-end interface based on Google Material Design, built using Bootstrap 4.
 group: getting-started
+redirect_from:
+  - /docs/
+  - /docs/4.0/
+  - /docs/4.0/getting-started/
+  - /docs/getting-started/
 toc: true
 ---
 
