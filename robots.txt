@@ -1,1 +1,1 @@
-Sitemap: http://daemonite.github.io/material/sitemap.xml
+Sitemap: http://djibe.github.io/material/sitemap.xml
