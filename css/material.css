@@ -4668,6 +4668,18 @@ a.btn:not([class*='btn-flat']):not([class*='btn-outline']):enabled:hover {
   text-decoration: none;
 }
 
+.chip-action:not(.disabled):hover {
+  background-color: rgba(0, 0, 0, 0.24);
+}
+
+.chip-action:not(.disabled):active {
+  background-color: rgba(0, 0, 0, 0.32);
+}
+
+.chip-action:not(.disabled):focus {
+  outline: 0;
+}
+
 .chip-action:not(.disabled).chip-outline:hover {
   background-color: rgba(0, 0, 0, 0.04);
 }
@@ -4676,25 +4688,21 @@ a.btn:not([class*='btn-flat']):not([class*='btn-outline']):enabled:hover {
   background-color: rgba(0, 0, 0, 0.16);
 }
 
-.chip-action:not(.disabled):hover {
-  background-color: #cfcfcf;
-}
-
-.chip-action:not(.disabled):active {
-  background-color: #b3b3b3;
-}
-
-.chip-action:not(.disabled):focus {
-  outline: 0;
-}
-
 [type='radio']:checked + .chip-choice {
   background-color: rgba(98, 0, 238, 0.24);
   color: #6200ee;
 }
 
+[type='radio']:checked + .chip-choice:hover, [type='radio']:checked + .chip-choice:active {
+  background-color: rgba(98, 0, 238, 0.32);
+}
+
 [type='radio']:checked + .chip-choice.chip-outline {
   background-color: rgba(98, 0, 238, 0.12);
+}
+
+[type='radio']:checked + .chip-choice.chip-outline:hover, [type='radio']:checked + .chip-choice.chip-outline:active {
+  background-color: rgba(98, 0, 238, 0.16);
 }
 
 [type='checkbox'] + .chip-filter:not(.chip-outline) {
