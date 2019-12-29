@@ -1,1 +1,1 @@
-Sitemap: http://djibe.github.io/material/sitemap.xml
+Sitemap: https://djibe.github.io/material/sitemap.xml
