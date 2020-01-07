@@ -195,7 +195,7 @@
 </div>
 <h2 id="buttons">Buttons</h2>
 <h3 id="flat-buttons">Flat buttons</h3>
-<p>Flat buttons are text-only buttons. They may be used in dialogs, toolbars, or inline. They do not lift, but fill with color on press.</p>
+<p>Flat buttons are text-only buttons (now called Text Button in MD). They may be used in dialogs, toolbars, or inline. They do not lift, but fill with color on press.</p>
 <div class="bd-example">
 <button class="btn btn-flat" type="button">Flat</button>
 <button class="btn btn-flat-primary my-1" type="button">Primary</button>
@@ -206,6 +206,7 @@
 <button class="btn btn-flat-warning my-1" type="button">Warning</button>
 <button class="btn btn-flat-dark my-1" type="button">Dark</button>
 <button class="btn btn-flat-light my-1" type="button">Light</button>
+<button class="btn btn-flat-primary my-1" type="button"><i class="material-icons">favorite</i>Icon</button>
 </div>
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-flat"</span> <span class="na">type=</span><span class="s">"button"</span><span class="nt">&gt;</span>Flat<span class="nt">&lt;/button&gt;</span>
 
@@ -223,7 +224,9 @@
 
 <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-flat-dark my-1"</span> <span class="na">type=</span><span class="s">"button"</span><span class="nt">&gt;</span>Dark<span class="nt">&lt;/button&gt;</span>
 
-<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-flat-light my-1"</span> <span class="na">type=</span><span class="s">"button"</span><span class="nt">&gt;</span>Light<span class="nt">&lt;/button&gt;</span></code></pre></figure>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-flat-light my-1"</span> <span class="na">type=</span><span class="s">"button"</span><span class="nt">&gt;</span>Light<span class="nt">&lt;/button&gt;</span>
+
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-flat-primary my-1"</span> <span class="na">type=</span><span class="s">"button"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"material-icons"</span><span class="nt">&gt;</span>favorite<span class="nt">&lt;/i&gt;</span>Icon<span class="nt">&lt;/button&gt;</span></code></pre></figure>
 <h3 id="raised-buttons">Raised buttons</h3>
 <p>Raised buttons are rectangular-shaped buttons. They may be used inline. They lift and display ink reactions on press.</p>
 <p><strong>Default buttons, i.e. <code class="highlighter-rouge">.btn</code>, are the equivalent of Material raised buttons. For more details, please refer to <a href="/material/docs/4.4/components/buttons/#examples">Components/Buttons documentation</a>.</strong></p>
@@ -237,6 +240,7 @@
 <button class="btn btn-warning my-1" type="button">Warning</button>
 <button class="btn btn-dark my-1" type="button">Dark</button>
 <button class="btn btn-light my-1" type="button">Light</button>
+<button class="btn btn-primary my-1" type="button"><i class="material-icons">favorite</i>Icon</button>
 </div>
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn my-1"</span> <span class="na">type=</span><span class="s">"button"</span><span class="nt">&gt;</span>Raised<span class="nt">&lt;/button&gt;</span>
 
@@ -254,7 +258,75 @@
 
 <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-dark my-1"</span> <span class="na">type=</span><span class="s">"button"</span><span class="nt">&gt;</span>Dark<span class="nt">&lt;/button&gt;</span>
 
-<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-light my-1"</span> <span class="na">type=</span><span class="s">"button"</span><span class="nt">&gt;</span>Light<span class="nt">&lt;/button&gt;</span></code></pre></figure>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-light my-1"</span> <span class="na">type=</span><span class="s">"button"</span><span class="nt">&gt;</span>Light<span class="nt">&lt;/button&gt;</span>
+
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-primary my-1"</span> <span class="na">type=</span><span class="s">"button"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"material-icons"</span><span class="nt">&gt;</span>favorite<span class="nt">&lt;/i&gt;</span>Icon<span class="nt">&lt;/button&gt;</span></code></pre></figure>
+<h3 id="unelevated-buttons">Unelevated buttons</h3>
+<p>Unelevated buttons are easy to obtain : just add <code class="highlighter-rouge">.shadow-none</code> to your default button.</p>
+<div class="bd-example">
+<button class="btn shadow-none my-1" type="button">Raised</button>
+<button class="btn btn-primary shadow-none my-1" type="button">Primary</button>
+<button class="btn btn-secondary shadow-none my-1" type="button">Secondary</button>
+<button class="btn btn-danger shadow-none my-1" type="button">Danger</button>
+<button class="btn btn-info shadow-none my-1" type="button">Info</button>
+<button class="btn btn-success shadow-none my-1" type="button">Success</button>
+<button class="btn btn-warning shadow-none my-1" type="button">Warning</button>
+<button class="btn btn-dark shadow-none my-1" type="button">Dark</button>
+<button class="btn btn-light shadow-none my-1" type="button">Light</button>
+<button class="btn btn-primary shadow-none my-1" type="button"><i class="material-icons">favorite</i>Icon</button>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn shadow-none my-1"</span> <span class="na">type=</span><span class="s">"button"</span><span class="nt">&gt;</span>Raised<span class="nt">&lt;/button&gt;</span>
+
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-primary shadow-none my-1"</span> <span class="na">type=</span><span class="s">"button"</span><span class="nt">&gt;</span>Primary<span class="nt">&lt;/button&gt;</span>
+
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-secondary shadow-none my-1"</span> <span class="na">type=</span><span class="s">"button"</span><span class="nt">&gt;</span>Secondary<span class="nt">&lt;/button&gt;</span>
+
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-danger shadow-none my-1"</span> <span class="na">type=</span><span class="s">"button"</span><span class="nt">&gt;</span>Danger<span class="nt">&lt;/button&gt;</span>
+
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-info shadow-none my-1"</span> <span class="na">type=</span><span class="s">"button"</span><span class="nt">&gt;</span>Info<span class="nt">&lt;/button&gt;</span>
+
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-success shadow-none my-1"</span> <span class="na">type=</span><span class="s">"button"</span><span class="nt">&gt;</span>Success<span class="nt">&lt;/button&gt;</span>
+
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-warning shadow-none my-1"</span> <span class="na">type=</span><span class="s">"button"</span><span class="nt">&gt;</span>Warning<span class="nt">&lt;/button&gt;</span>
+
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-dark shadow-none my-1"</span> <span class="na">type=</span><span class="s">"button"</span><span class="nt">&gt;</span>Dark<span class="nt">&lt;/button&gt;</span>
+
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-light shadow-none my-1"</span> <span class="na">type=</span><span class="s">"button"</span><span class="nt">&gt;</span>Light<span class="nt">&lt;/button&gt;</span>
+
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-primary shadow-none my-1"</span> <span class="na">type=</span><span class="s">"button"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"material-icons"</span><span class="nt">&gt;</span>favorite<span class="nt">&lt;/i&gt;</span>Icon<span class="nt">&lt;/button&gt;</span></code></pre></figure>
+<h3 id="outlined-buttons">Outlined buttons</h3>
+<p><strong>Outlined buttons have already been covered in the documentation. For more details, please refer to <a href="/material/docs/4.4/components/buttons/#examples">Components/Buttons documentation</a>.</strong></p>
+<div class="bd-example">
+<button class="btn btn-outline my-1" type="button">Raised</button>
+<button class="btn btn-outline-primary my-1" type="button">Primary</button>
+<button class="btn btn-outline-secondary my-1" type="button">Secondary</button>
+<button class="btn btn-outline-danger my-1" type="button">Danger</button>
+<button class="btn btn-outline-info my-1" type="button">Info</button>
+<button class="btn btn-outline-success my-1" type="button">Success</button>
+<button class="btn btn-outline-warning my-1" type="button">Warning</button>
+<button class="btn btn-outline-dark my-1" type="button">Dark</button>
+<button class="btn btn-outline-light my-1" type="button">Light</button>
+<button class="btn btn-outline-primary my-1" type="button"><i class="material-icons">favorite</i>Icon</button>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-outline my-1"</span> <span class="na">type=</span><span class="s">"button"</span><span class="nt">&gt;</span>Raised<span class="nt">&lt;/button&gt;</span>
+
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-outline-primary my-1"</span> <span class="na">type=</span><span class="s">"button"</span><span class="nt">&gt;</span>Primary<span class="nt">&lt;/button&gt;</span>
+
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-outline-secondary my-1"</span> <span class="na">type=</span><span class="s">"button"</span><span class="nt">&gt;</span>Secondary<span class="nt">&lt;/button&gt;</span>
+
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-outline-danger my-1"</span> <span class="na">type=</span><span class="s">"button"</span><span class="nt">&gt;</span>Danger<span class="nt">&lt;/button&gt;</span>
+
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-outline-info my-1"</span> <span class="na">type=</span><span class="s">"button"</span><span class="nt">&gt;</span>Info<span class="nt">&lt;/button&gt;</span>
+
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-outline-success my-1"</span> <span class="na">type=</span><span class="s">"button"</span><span class="nt">&gt;</span>Success<span class="nt">&lt;/button&gt;</span>
+
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-outline-warning my-1"</span> <span class="na">type=</span><span class="s">"button"</span><span class="nt">&gt;</span>Warning<span class="nt">&lt;/button&gt;</span>
+
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-outline-dark my-1"</span> <span class="na">type=</span><span class="s">"button"</span><span class="nt">&gt;</span>Dark<span class="nt">&lt;/button&gt;</span>
+
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-outline-light my-1"</span> <span class="na">type=</span><span class="s">"button"</span><span class="nt">&gt;</span>Light<span class="nt">&lt;/button&gt;</span>
+
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-outline-primary my-1"</span> <span class="na">type=</span><span class="s">"button"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"material-icons"</span><span class="nt">&gt;</span>favorite<span class="nt">&lt;/i&gt;</span>Icon<span class="nt">&lt;/button&gt;</span></code></pre></figure>
 <h3 id="shaped-buttons">Shaped buttons</h3>
 <p>For rounded buttons, add <code class="highlighter-rouge">btn-shaped</code> class to your button. it also works for small and large buttons.</p>
 <div class="bd-example">
@@ -268,35 +340,38 @@
 <h2 id="floating-action-buttons">Floating action buttons</h2>
 <p>A floating action button represents the primary action in an application, it is used for a promoted action.</p>
 <div class="bd-example">
-<button class="btn btn-float" type="button"><i class="material-icons">add</i></button>
+<button class="btn btn-secondary btn-float" type="button"><i class="material-icons">favorite_border</i></button>
 </div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-float"</span> <span class="na">type=</span><span class="s">"button"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"material-icons"</span><span class="nt">&gt;</span>add<span class="nt">&lt;/i&gt;&lt;/button&gt;</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-secondary btn-float"</span> <span class="na">type=</span><span class="s">"button"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"material-icons"</span><span class="nt">&gt;</span>favorite_border<span class="nt">&lt;/i&gt;&lt;/button&gt;</span></code></pre></figure>
 <h3 id="colors">Colors</h3>
 <div class="bd-example">
-<button class="btn btn-float btn-primary my-1" type="button"><i class="material-icons">add</i></button>
-<button class="btn btn-float btn-secondary my-1" type="button"><i class="material-icons">add</i></button>
-<button class="btn btn-float btn-danger my-1" type="button"><i class="material-icons">add</i></button>
-<button class="btn btn-float btn-info my-1" type="button"><i class="material-icons">add</i></button>
-<button class="btn btn-float btn-success my-1" type="button"><i class="material-icons">add</i></button>
-<button class="btn btn-float btn-warning my-1" type="button"><i class="material-icons">add</i></button>
-<button class="btn btn-float btn-dark my-1" type="button"><i class="material-icons">add</i></button>
-<button class="btn btn-float btn-light my-1" type="button"><i class="material-icons">add</i></button>
+<button class="btn btn-float my-1" type="button"><i class="material-icons">favorite_border</i></button>
+<button class="btn btn-float btn-primary my-1" type="button"><i class="material-icons">favorite_border</i></button>
+<button class="btn btn-float btn-secondary my-1" type="button"><i class="material-icons">favorite_border</i></button>
+<button class="btn btn-float btn-danger my-1" type="button"><i class="material-icons">favorite_border</i></button>
+<button class="btn btn-float btn-info my-1" type="button"><i class="material-icons">favorite_border</i></button>
+<button class="btn btn-float btn-success my-1" type="button"><i class="material-icons">favorite_border</i></button>
+<button class="btn btn-float btn-warning my-1" type="button"><i class="material-icons">favorite_border</i></button>
+<button class="btn btn-float btn-dark my-1" type="button"><i class="material-icons">favorite_border</i></button>
+<button class="btn btn-float btn-light my-1" type="button"><i class="material-icons">favorite_border</i></button>
 </div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-float btn-primary my-1"</span> <span class="na">type=</span><span class="s">"button"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"material-icons"</span><span class="nt">&gt;</span>add<span class="nt">&lt;/i&gt;&lt;/button&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-float my-1"</span> <span class="na">type=</span><span class="s">"button"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"material-icons"</span><span class="nt">&gt;</span>favorite_border<span class="nt">&lt;/i&gt;&lt;/button&gt;</span>
 
-<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-float btn-secondary my-1"</span> <span class="na">type=</span><span class="s">"button"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"material-icons"</span><span class="nt">&gt;</span>add<span class="nt">&lt;/i&gt;&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-float btn-primary my-1"</span> <span class="na">type=</span><span class="s">"button"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"material-icons"</span><span class="nt">&gt;</span>favorite_border<span class="nt">&lt;/i&gt;&lt;/button&gt;</span>
 
-<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-float btn-danger my-1"</span> <span class="na">type=</span><span class="s">"button"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"material-icons"</span><span class="nt">&gt;</span>add<span class="nt">&lt;/i&gt;&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-float btn-secondary my-1"</span> <span class="na">type=</span><span class="s">"button"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"material-icons"</span><span class="nt">&gt;</span>favorite_border<span class="nt">&lt;/i&gt;&lt;/button&gt;</span>
 
-<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-float btn-info my-1"</span> <span class="na">type=</span><span class="s">"button"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"material-icons"</span><span class="nt">&gt;</span>add<span class="nt">&lt;/i&gt;&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-float btn-danger my-1"</span> <span class="na">type=</span><span class="s">"button"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"material-icons"</span><span class="nt">&gt;</span>favorite_border<span class="nt">&lt;/i&gt;&lt;/button&gt;</span>
 
-<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-float btn-success my-1"</span> <span class="na">type=</span><span class="s">"button"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"material-icons"</span><span class="nt">&gt;</span>add<span class="nt">&lt;/i&gt;&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-float btn-info my-1"</span> <span class="na">type=</span><span class="s">"button"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"material-icons"</span><span class="nt">&gt;</span>favorite_border<span class="nt">&lt;/i&gt;&lt;/button&gt;</span>
 
-<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-float btn-warning my-1"</span> <span class="na">type=</span><span class="s">"button"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"material-icons"</span><span class="nt">&gt;</span>add<span class="nt">&lt;/i&gt;&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-float btn-success my-1"</span> <span class="na">type=</span><span class="s">"button"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"material-icons"</span><span class="nt">&gt;</span>favorite_border<span class="nt">&lt;/i&gt;&lt;/button&gt;</span>
 
-<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-float btn-dark my-1"</span> <span class="na">type=</span><span class="s">"button"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"material-icons"</span><span class="nt">&gt;</span>add<span class="nt">&lt;/i&gt;&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-float btn-warning my-1"</span> <span class="na">type=</span><span class="s">"button"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"material-icons"</span><span class="nt">&gt;</span>favorite_border<span class="nt">&lt;/i&gt;&lt;/button&gt;</span>
 
-<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-float btn-light my-1"</span> <span class="na">type=</span><span class="s">"button"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"material-icons"</span><span class="nt">&gt;</span>add<span class="nt">&lt;/i&gt;&lt;/button&gt;</span></code></pre></figure>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-float btn-dark my-1"</span> <span class="na">type=</span><span class="s">"button"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"material-icons"</span><span class="nt">&gt;</span>favorite_border<span class="nt">&lt;/i&gt;&lt;/button&gt;</span>
+
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-float btn-light my-1"</span> <span class="na">type=</span><span class="s">"button"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"material-icons"</span><span class="nt">&gt;</span>favorite_border<span class="nt">&lt;/i&gt;&lt;/button&gt;</span></code></pre></figure>
 <h3 id="dropdown">Dropdown</h3>
 <p>Floating action buttons can also work with dropdown menus to fling out related actions:</p>
 <div class="bd-example">
@@ -339,9 +414,20 @@
 <h3 id="sizes">Sizes</h3>
 <p>A smaller sized, i.e. mini floating action button, is also available.</p>
 <div class="bd-example">
-<button class="btn btn-float btn-sm" type="button"><i class="material-icons">add</i></button>
+<button class="btn btn-secondary btn-float btn-sm" type="button"><i class="material-icons">favorite_border</i></button>
 </div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-float btn-sm"</span> <span class="na">type=</span><span class="s">"button"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"material-icons"</span><span class="nt">&gt;</span>add<span class="nt">&lt;/i&gt;&lt;/button&gt;</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-secondary btn-float btn-sm"</span> <span class="na">type=</span><span class="s">"button"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"material-icons"</span><span class="nt">&gt;</span>favorite_border<span class="nt">&lt;/i&gt;&lt;/button&gt;</span></code></pre></figure>
+<h3 id="extended-fab">Extended FAB</h3>
+<p>A larger FAB button has been introduced in recent Material guidelines. Add <code class="highlighter-rouge">btn-float-extended</code> class to your actual FAB.</p>
+<div class="bd-example">
+<button class="btn btn-secondary btn-float btn-float-extended" type="button"><i class="material-icons">add</i>Create</button>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-secondary btn-float btn-float-extended"</span> <span class="na">type=</span><span class="s">"button"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"material-icons"</span><span class="nt">&gt;</span>add<span class="nt">&lt;/i&gt;</span>Create<span class="nt">&lt;/button&gt;</span></code></pre></figure>
+<p>Extended FAB (without Icon)</p>
+<div class="bd-example">
+<button class="btn btn-secondary btn-float btn-float-extended" type="button">Create</button>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-secondary btn-float btn-float-extended"</span> <span class="na">type=</span><span class="s">"button"</span><span class="nt">&gt;</span>Create<span class="nt">&lt;/button&gt;</span></code></pre></figure>
 <h2 id="toggle-buttons">Toggle buttons</h2>
 <p>Toggle buttons may be used to group related options, similar to <a href="/material/docs/4.4/components/button-group/">Components/Button group</a>. Use flat buttons (i.e. <code class="highlighter-rouge">.btn-outline</code>s or <code class="highlighter-rouge">.btn-outline-*</code>s) instead of raised buttons to achieve a look that is more in line with the specifications laid out in Material Design Guidelines.</p>
 <div class="bd-example">
@@ -595,6 +681,8 @@
 <ul>
 <li class="toc-entry toc-h3"><a href="#flat-buttons">Flat buttons</a></li>
 <li class="toc-entry toc-h3"><a href="#raised-buttons">Raised buttons</a></li>
+<li class="toc-entry toc-h3"><a href="#unelevated-buttons">Unelevated buttons</a></li>
+<li class="toc-entry toc-h3"><a href="#outlined-buttons">Outlined buttons</a></li>
 <li class="toc-entry toc-h3"><a href="#shaped-buttons">Shaped buttons</a></li>
 </ul>
 </li>
@@ -604,6 +692,7 @@
 <li class="toc-entry toc-h3"><a href="#colors">Colors</a></li>
 <li class="toc-entry toc-h3"><a href="#dropdown">Dropdown</a></li>
 <li class="toc-entry toc-h3"><a href="#sizes">Sizes</a></li>
+<li class="toc-entry toc-h3"><a href="#extended-fab">Extended FAB</a></li>
 </ul>
 </li>
 <li class="toc-entry toc-h2"><a href="#toggle-buttons">Toggle buttons</a></li>
