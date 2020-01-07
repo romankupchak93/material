@@ -927,6 +927,59 @@
     <span class="nt">&lt;/span&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
+<h2 id="input-icons-for-webkit-browsers">Input icons for Webkit browsers</h2>
+<p>If you use <strong>Chrome</strong> or <strong>Safari</strong>, in the examples below, you will see calendar icon for suitable fields and erase icon for search and calendar based inputs.</p>
+<p>To disable this add-on, in <code class="highlighter-rouge">_utilities.scss</code>, comment the last line like this : <code class="highlighter-rouge">// _webkit-custom.scss</code> and recompile SCSS sources.</p>
+<div class="bd-example">
+<div class="form-group">
+  <label for="exampleInputSearch">Search</label>
+  <input class="form-control" id="exampleInputSearch" placeholder="Search" type="search">
+</div>
+<div class="form-group">
+  <label for="exampleInputDateTime">Date and time</label>
+  <input class="form-control" id="exampleInputDateTime" placeholder="Date and time" type="datetime-local">
+</div>
+<div class="form-group">
+  <label for="exampleInput2bis">Date</label>
+  <input class="form-control" id="exampleInput2bis" placeholder="Date" type="date">
+</div>
+<div class="form-group">
+  <label for="exampleInput24">Time</label>
+  <input class="form-control" id="exampleInput24" placeholder="Time" type="time">
+</div>
+<div class="form-group">
+  <label for="exampleInput2ter">Month</label>
+  <input class="form-control" id="exampleInput2ter" placeholder="Month" type="month">
+</div>
+<div class="form-group">
+  <label for="exampleInput25">Week</label>
+  <input class="form-control" id="exampleInput25" placeholder="Week" type="week">
+</div>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"exampleInputSearch"</span><span class="nt">&gt;</span>Search<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">id=</span><span class="s">"exampleInputSearch"</span> <span class="na">placeholder=</span><span class="s">"Search"</span> <span class="na">type=</span><span class="s">"search"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"exampleInputDateTime"</span><span class="nt">&gt;</span>Date and time<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">id=</span><span class="s">"exampleInputDateTime"</span> <span class="na">placeholder=</span><span class="s">"Date and time"</span> <span class="na">type=</span><span class="s">"datetime-local"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"exampleInput2bis"</span><span class="nt">&gt;</span>Date<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">id=</span><span class="s">"exampleInput2bis"</span> <span class="na">placeholder=</span><span class="s">"Date"</span> <span class="na">type=</span><span class="s">"date"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"exampleInput24"</span><span class="nt">&gt;</span>Time<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">id=</span><span class="s">"exampleInput24"</span> <span class="na">placeholder=</span><span class="s">"Time"</span> <span class="na">type=</span><span class="s">"time"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"exampleInput2ter"</span><span class="nt">&gt;</span>Month<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">id=</span><span class="s">"exampleInput2ter"</span> <span class="na">placeholder=</span><span class="s">"Month"</span> <span class="na">type=</span><span class="s">"month"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"exampleInput25"</span><span class="nt">&gt;</span>Week<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">id=</span><span class="s">"exampleInput25"</span> <span class="na">placeholder=</span><span class="s">"Week"</span> <span class="na">type=</span><span class="s">"week"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
          </div>
        </div>
          <div class="col-xl-3 d-none d-xl-block">
@@ -947,6 +1000,7 @@
 </ul>
 </li>
 <li class="toc-entry toc-h2"><a href="#with-icons">With icons</a></li>
+<li class="toc-entry toc-h2"><a href="#input-icons-for-webkit-browsers">Input icons for Webkit browsers</a></li>
 </ul>
          </div>
      </div>
