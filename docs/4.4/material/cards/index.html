@@ -197,29 +197,173 @@
 <h2 id="supplemental-actions">Supplemental actions</h2>
 <p>The primary action in a card is typically the card itself.</p>
 <p>Supplemental actions can vary from card to card in a collection, depending on the content type and expected outcome.</p>
-<p>Supplemental actions within the card are explicitly called out using icons, text, and UI controls, typically placed at the bottom of the card.</p>
+<p>Supplemental actions within the card are explicitly called out using icons, text, and UI controls, typically placed at the bottom of the card. Keep the classic card layout with <code class="highlighter-rouge">card-header</code> and <code class="highlighter-rouge">card-body</code>, but make sure you group all buttons in a <code class="highlighter-rouge">card-actions</code> div for proper alignment and spacing.</p>
+<p>You can still use links or buttons for card buttons. Icon buttons, <code class="highlighter-rouge">.btn-icon</code> are right-aligned thanks to flex utility <code class="highlighter-rouge">.ml-auto</code> (<em>margin-left: auto</em>).</p>
+<p><strong>NB.</strong> <code class="highlighter-rouge">.text-black-secondary</code> has been added to the following example to copy MDComponents card examples (0.54 opacity). However you don’t require these as <code class="highlighter-rouge">.card-subtitle</code> and <code class="highlighter-rouge">.card-text</code> have been styled as in Google’s guidelines, with a 0.6 opacity.</p>
 <div class="bd-example">
-<div class="card" style="width: 20rem;">
-  <img alt="Card image cap" class="card-img-top" data-src="holder.js/100px180/">
+<div class="card" style="max-width: 350px;">
+  <img alt="100%x180" class="card-img-top" src="https://material-components.github.io/material-components-web-catalog/static/media/photos/3x2/2.jpg">
+ <div class="card-header border-0">
+   <h2 class="card-title">Our Changing Planet</h2>
+   <h3 class="card-subtitle text-black-secondary">by Kurt Wagner</h3>
+ </div>
  <div class="card-body">
-   <h4 class="card-title">Card title</h4>
-   <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+   <p class="card-text text-black-secondary">Visit ten places on our planet that are undergoing the biggest changes today.</p>
  </div>
  <div class="card-actions">
-    <a class="btn btn-flat-primary" href="#">Action</a>
-    <a class="btn btn-flat-primary" href="#">Action</a>
+    <a class="btn btn-flat-primary" href="#">read</a>
+    <a class="btn btn-flat-primary" href="#">bookmark</a>
+    <button class="btn btn-icon ml-auto" type="button"><i class="material-icons">favorite_border</i></button>
+    <button class="btn btn-icon" type="button"><i class="material-icons">share</i></button>
+    <button class="btn btn-icon" type="button"><i class="material-icons">more_vert</i></button>
+</div>
+</div>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card"</span> <span class="na">style=</span><span class="s">"max-width: 350px;"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;img</span> <span class="na">alt=</span><span class="s">"100%x180"</span> <span class="na">class=</span><span class="s">"card-img-top"</span> <span class="na">src=</span><span class="s">"https://material-components.github.io/material-components-web-catalog/static/media/photos/3x2/2.jpg"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-header border-0"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;h2</span> <span class="na">class=</span><span class="s">"card-title"</span><span class="nt">&gt;</span>Our Changing Planet<span class="nt">&lt;/h2&gt;</span>
+    <span class="nt">&lt;h3</span> <span class="na">class=</span><span class="s">"card-subtitle text-black-secondary"</span><span class="nt">&gt;</span>by Kurt Wagner<span class="nt">&lt;/h3&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-body"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"card-text text-black-secondary"</span><span class="nt">&gt;</span>Visit ten places on our planet that are undergoing the biggest changes today.<span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-actions"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn btn-flat-primary"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>read<span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn btn-flat-primary"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>bookmark<span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-icon ml-auto"</span> <span class="na">type=</span><span class="s">"button"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"material-icons"</span><span class="nt">&gt;</span>favorite_border<span class="nt">&lt;/i&gt;&lt;/button&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-icon"</span> <span class="na">type=</span><span class="s">"button"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"material-icons"</span><span class="nt">&gt;</span>share<span class="nt">&lt;/i&gt;&lt;/button&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-icon"</span> <span class="na">type=</span><span class="s">"button"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"material-icons"</span><span class="nt">&gt;</span>more_vert<span class="nt">&lt;/i&gt;&lt;/button&gt;</span>
+ <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+<p>Example without <code class="highlighter-rouge">card-actions</code> div. Apply <code class="highlighter-rouge">border-0</code> utility to the card-header in order to remove border.</p>
+<div class="bd-example">
+<div class="card" style="max-width: 350px;">
+  <img alt="100%x180" class="card-img-top" src="https://material-components.github.io/material-components-web-catalog/static/media/photos/3x2/2.jpg">
+ <div class="card-header border-0">
+   <h2 class="card-title">Our Changing Planet</h2>
+   <h3 class="card-subtitle">by Kurt Wagner</h3>
+ </div>
+ <div class="card-body">
+   <p class="card-text">Visit ten places on our planet that are undergoing the biggest changes today.</p>
+  </div>
+</div>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card"</span> <span class="na">style=</span><span class="s">"max-width: 350px;"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;img</span> <span class="na">alt=</span><span class="s">"100%x180"</span> <span class="na">class=</span><span class="s">"card-img-top"</span> <span class="na">src=</span><span class="s">"https://material-components.github.io/material-components-web-catalog/static/media/photos/3x2/2.jpg"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-header border-0"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;h2</span> <span class="na">class=</span><span class="s">"card-title"</span><span class="nt">&gt;</span>Our Changing Planet<span class="nt">&lt;/h2&gt;</span>
+    <span class="nt">&lt;h3</span> <span class="na">class=</span><span class="s">"card-subtitle"</span><span class="nt">&gt;</span>by Kurt Wagner<span class="nt">&lt;/h3&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-body"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"card-text"</span><span class="nt">&gt;</span>Visit ten places on our planet that are undergoing the biggest changes today.<span class="nt">&lt;/p&gt;</span>
+   <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+<p>Another card without image banner and buttons pushed to the end with <code class="highlighter-rouge">.justify-content-end</code> flex utility.</p>
+<p>Buttons are still separated thanks to a flex utility <code class="highlighter-rouge">.ml-auto</code> applied to the first of the icon buttons.</p>
+<div class="bd-example">
+<div class="card" style="max-width: 350px;">
+ <div class="card-header border-0">
+   <h2 class="card-title">Our Changing Planet</h2>
+   <h3 class="card-subtitle">by Kurt Wagner</h3>
+ </div>
+ <div class="card-body">
+   <p class="card-text">Visit ten places on our planet that are undergoing the biggest changes today.</p>
+ </div>
+ <div class="card-actions justify-content-end">
+    <button class="btn btn-flat-primary" type="button">read</button>
+    <button class="btn btn-flat-primary" type="button">bookmark</button>
+    <button class="btn btn-icon ml-auto" type="button"><i class="material-icons">favorite_border</i></button>
+    <button class="btn btn-icon" type="button"><i class="material-icons">share</i></button>
+    <button class="btn btn-icon" type="button"><i class="material-icons">more_vert</i></button>
  </div>
 </div>
 </div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card"</span> <span class="na">style=</span><span class="s">"width: 20rem;"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;img</span> <span class="na">alt=</span><span class="s">"Card image cap"</span> <span class="na">class=</span><span class="s">"card-img-top"</span> <span class="na">src=</span><span class="s">".../100px180/"</span><span class="nt">&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card"</span> <span class="na">style=</span><span class="s">"max-width: 350px;"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-header border-0"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;h2</span> <span class="na">class=</span><span class="s">"card-title"</span><span class="nt">&gt;</span>Our Changing Planet<span class="nt">&lt;/h2&gt;</span>
+    <span class="nt">&lt;h3</span> <span class="na">class=</span><span class="s">"card-subtitle"</span><span class="nt">&gt;</span>by Kurt Wagner<span class="nt">&lt;/h3&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-body"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">"card-title"</span><span class="nt">&gt;</span>Card title<span class="nt">&lt;/h4&gt;</span>
-    <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"card-text"</span><span class="nt">&gt;</span>Some quick example text to build on the card title and make up the bulk of the card's content.<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"card-text"</span><span class="nt">&gt;</span>Visit ten places on our planet that are undergoing the biggest changes today.<span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-actions justify-content-end"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-flat-primary"</span> <span class="na">type=</span><span class="s">"button"</span><span class="nt">&gt;</span>read<span class="nt">&lt;/button&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-flat-primary"</span> <span class="na">type=</span><span class="s">"button"</span><span class="nt">&gt;</span>bookmark<span class="nt">&lt;/button&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-icon ml-auto"</span> <span class="na">type=</span><span class="s">"button"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"material-icons"</span><span class="nt">&gt;</span>favorite_border<span class="nt">&lt;/i&gt;&lt;/button&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-icon"</span> <span class="na">type=</span><span class="s">"button"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"material-icons"</span><span class="nt">&gt;</span>share<span class="nt">&lt;/i&gt;&lt;/button&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-icon"</span> <span class="na">type=</span><span class="s">"button"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"material-icons"</span><span class="nt">&gt;</span>more_vert<span class="nt">&lt;/i&gt;&lt;/button&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+<p>You can use a simplified HTML markup and omit <code class="highlighter-rouge">.card-header</code> container to obtain the same result.</p>
+<p>This card is styled in shape with <code class="highlighter-rouge">card-shaped</code> class you can apply to the <code class="highlighter-rouge">.card</code> container.</p>
+<div class="bd-example">
+<div class="card card-shaped" style="max-width: 350px;">
+ <div class="card-body">
+   <h2 class="card-title">Our Changing Planet</h2>
+   <h3 class="card-subtitle">by Kurt Wagner</h3>
+   <p class="card-text">Visit ten places on our planet that are undergoing the biggest changes today.</p>
+ </div>
+ <div class="card-actions">
+    <a class="btn btn-flat-primary" href="#">read</a>
+    <a class="btn btn-flat-primary" href="#">bookmark</a>
+    <a class="btn btn-flat-primary ml-auto" href="#"><i class="material-icons">favorite_border</i></a>
+    <a class="btn btn-flat-primary" href="#"><i class="material-icons">share</i></a>
+    <a class="btn btn-flat-primary" href="#"><i class="material-icons">more_vert</i></a>
+ </div>
+</div>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card card-shaped"</span> <span class="na">style=</span><span class="s">"max-width: 350px;"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-body"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;h2</span> <span class="na">class=</span><span class="s">"card-title"</span><span class="nt">&gt;</span>Our Changing Planet<span class="nt">&lt;/h2&gt;</span>
+    <span class="nt">&lt;h3</span> <span class="na">class=</span><span class="s">"card-subtitle"</span><span class="nt">&gt;</span>by Kurt Wagner<span class="nt">&lt;/h3&gt;</span>
+    <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"card-text"</span><span class="nt">&gt;</span>Visit ten places on our planet that are undergoing the biggest changes today.<span class="nt">&lt;/p&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-actions"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn btn-flat-primary"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Action<span class="nt">&lt;/a&gt;</span>
-    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn btn-flat-primary"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Action<span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn btn-flat-primary"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>read<span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn btn-flat-primary"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>bookmark<span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn btn-flat-primary ml-auto"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"material-icons"</span><span class="nt">&gt;</span>favorite_border<span class="nt">&lt;/i&gt;&lt;/a&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn btn-flat-primary"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"material-icons"</span><span class="nt">&gt;</span>share<span class="nt">&lt;/i&gt;&lt;/a&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn btn-flat-primary"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"material-icons"</span><span class="nt">&gt;</span>more_vert<span class="nt">&lt;/i&gt;&lt;/a&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+<p>Outlined card obtained by using standard Bootstrap utilities : <code class="highlighter-rouge">.shadow-none</code> to remove card’s shading and <code class="highlighter-rouge">border</code> to apply a slight border around the card.</p>
+<p>This card uses a simplified HTML markup without <code class="highlighter-rouge">.card-header</code> container. We can’t make it simpler ;-)</p>
+<div class="bd-example">
+<div class="card shadow-none border" style="max-width: 350px;">
+ <div class="card-body">
+  <h2 class="card-title">Card title</h2>
+  <h3 class="card-subtitle">Secondary text</h3>
+  <p class="card-text">Greyhound divisively hello coldly wonderfully marginally far upon excluding.</p>
+ </div>
+</div>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card shadow-none border"</span> <span class="na">style=</span><span class="s">"max-width: 350px;"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-body"</span><span class="nt">&gt;</span>
+   <span class="nt">&lt;h2</span> <span class="na">class=</span><span class="s">"card-title"</span><span class="nt">&gt;</span>Card title<span class="nt">&lt;/h2&gt;</span>
+   <span class="nt">&lt;h3</span> <span class="na">class=</span><span class="s">"card-subtitle"</span><span class="nt">&gt;</span>Secondary text<span class="nt">&lt;/h3&gt;</span>
+   <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"card-text"</span><span class="nt">&gt;</span>Greyhound divisively hello coldly wonderfully marginally far upon excluding.<span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+<p>And the exact same Outlined card with a <code class="highlighter-rouge">card-header</code> container. Your choice !</p>
+<div class="bd-example">
+<div class="card shadow-none border" style="max-width: 350px;">
+ <div class="card-header border-0">
+  <h2 class="card-title">Card title</h2>
+  <h3 class="card-subtitle">Secondary text</h3>
+ </div>
+ <div class="card-body">
+  <p class="card-text">Greyhound divisively hello coldly wonderfully marginally far upon excluding.</p>
+ </div>
+</div>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card shadow-none border"</span> <span class="na">style=</span><span class="s">"max-width: 350px;"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-header border-0"</span><span class="nt">&gt;</span>
+   <span class="nt">&lt;h2</span> <span class="na">class=</span><span class="s">"card-title"</span><span class="nt">&gt;</span>Card title<span class="nt">&lt;/h2&gt;</span>
+   <span class="nt">&lt;h3</span> <span class="na">class=</span><span class="s">"card-subtitle"</span><span class="nt">&gt;</span>Secondary text<span class="nt">&lt;/h3&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-body"</span><span class="nt">&gt;</span>
+   <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"card-text"</span><span class="nt">&gt;</span>Greyhound divisively hello coldly wonderfully marginally far upon excluding.<span class="nt">&lt;/p&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
 <p>Vertical action sheet is also supported. Add <code class="highlighter-rouge">.flex-column</code> or <code class="highlighter-rouge">.flex-column-reverse</code> to convert a horizontal action sheet to a vertical one.</p>
