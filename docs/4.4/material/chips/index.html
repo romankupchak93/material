@@ -237,7 +237,7 @@
 <label for="myRadio3" class="chip chip-action chip-choice">Medium</label>
 <input type="radio" id="myRadio4" name="chip-radio" class="d-none">
 <label for="myRadio4" class="chip chip-action chip-choice">Hard</label>
-<input type="radio" disabled id="myRadio5" name="chip-radio" class="d-none">
+<input type="radio" id="myRadio5" name="chip-radio" class="d-none" disabled>
 <label for="myRadio5" class="chip chip-action chip-choice">Disabled</label>
 </div>
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">id=</span><span class="s">"myRadio1"</span> <span class="na">name=</span><span class="s">"chip-radio"</span> <span class="na">class=</span><span class="s">"d-none"</span><span class="nt">&gt;</span>
@@ -252,7 +252,7 @@
 <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">id=</span><span class="s">"myRadio4"</span> <span class="na">name=</span><span class="s">"chip-radio"</span> <span class="na">class=</span><span class="s">"d-none"</span><span class="nt">&gt;</span>
 <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"myRadio4"</span> <span class="na">class=</span><span class="s">"chip chip-action chip-choice"</span><span class="nt">&gt;</span>Hard<span class="nt">&lt;/label&gt;</span>
 
-<span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">disabled</span> <span class="na">id=</span><span class="s">"myRadio5"</span> <span class="na">name=</span><span class="s">"chip-radio"</span> <span class="na">class=</span><span class="s">"d-none"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">id=</span><span class="s">"myRadio5"</span> <span class="na">name=</span><span class="s">"chip-radio"</span> <span class="na">class=</span><span class="s">"d-none"</span> <span class="na">disabled</span><span class="nt">&gt;</span>
 <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"myRadio5"</span> <span class="na">class=</span><span class="s">"chip chip-action chip-choice"</span><span class="nt">&gt;</span>Disabled<span class="nt">&lt;/label&gt;</span></code></pre></figure>
 <p>They also exist in their outline variant.</p>
 <div class="bd-example">
@@ -264,7 +264,7 @@
 <label for="radio-3" class="chip chip-action chip-outline chip-choice">Medium</label>
 <input type="radio" id="radio-4" name="chip-radio-outline" class="d-none">
 <label for="radio-4" class="chip chip-action chip-outline chip-choice">Hard</label>
-<input type="radio" disabled id="radio-5" name="chip-radio-outline" class="d-none">
+<input type="radio" id="radio-5" name="chip-radio-outline" class="d-none" disabled>
 <label for="radio-5" class="chip chip-action chip-outline chip-choice">Disabled</label>
 </div>
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">id=</span><span class="s">"radio-1"</span> <span class="na">name=</span><span class="s">"chip-radio-outline"</span> <span class="na">class=</span><span class="s">"d-none"</span><span class="nt">&gt;</span>
@@ -279,7 +279,7 @@
 <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">id=</span><span class="s">"radio-4"</span> <span class="na">name=</span><span class="s">"chip-radio-outline"</span> <span class="na">class=</span><span class="s">"d-none"</span><span class="nt">&gt;</span>
 <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"radio-4"</span> <span class="na">class=</span><span class="s">"chip chip-action chip-outline chip-choice"</span><span class="nt">&gt;</span>Hard<span class="nt">&lt;/label&gt;</span>
 
-<span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">disabled</span> <span class="na">id=</span><span class="s">"radio-5"</span> <span class="na">name=</span><span class="s">"chip-radio-outline"</span> <span class="na">class=</span><span class="s">"d-none"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">id=</span><span class="s">"radio-5"</span> <span class="na">name=</span><span class="s">"chip-radio-outline"</span> <span class="na">class=</span><span class="s">"d-none"</span> <span class="na">disabled</span><span class="nt">&gt;</span>
 <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"radio-5"</span> <span class="na">class=</span><span class="s">"chip chip-action chip-outline chip-choice"</span><span class="nt">&gt;</span>Disabled<span class="nt">&lt;/label&gt;</span></code></pre></figure>
 <h2 id="filter-chips">Filter chips</h2>
 <p>Filter chips use tags or descriptive words to filter content.</p>
@@ -295,7 +295,7 @@
 <label for="myCheckbox3" class="chip chip-action chip-filter">Fireplan</label>
 <input type="checkbox" id="myCheckbox4" class="d-none">
 <label for="myCheckbox4" class="chip chip-action chip-filter">Wheelchair access</label>
-<input type="checkbox" disabled id="myCheckbox5" class="d-none">
+<input type="checkbox" id="myCheckbox5" class="d-none" disabled>
 <label for="myCheckbox5" class="chip chip-action chip-filter">Disabled</label>
 </div>
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"typography-headline-6"</span><span class="nt">&gt;</span>Choose amenities<span class="nt">&lt;/p&gt;</span>
@@ -312,7 +312,7 @@
 <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">id=</span><span class="s">"myCheckbox4"</span> <span class="na">class=</span><span class="s">"d-none"</span><span class="nt">&gt;</span>
 <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"myCheckbox4"</span> <span class="na">class=</span><span class="s">"chip chip-action chip-filter"</span><span class="nt">&gt;</span>Wheelchair access<span class="nt">&lt;/label&gt;</span>
 
-<span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">disabled</span> <span class="na">id=</span><span class="s">"myCheckbox5"</span> <span class="na">class=</span><span class="s">"d-none"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">id=</span><span class="s">"myCheckbox5"</span> <span class="na">class=</span><span class="s">"d-none"</span> <span class="na">disabled</span><span class="nt">&gt;</span>
 <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"myCheckbox5"</span> <span class="na">class=</span><span class="s">"chip chip-action chip-filter"</span><span class="nt">&gt;</span>Disabled<span class="nt">&lt;/label&gt;</span></code></pre></figure>
 <p>They also exist in their outline variant.</p>
 <div class="bd-example">
@@ -325,7 +325,7 @@
 <label for="myCheckbox13" class="chip chip-action chip-outline chip-filter">Fireplan</label>
 <input type="checkbox" id="myCheckbox14" class="d-none">
 <label for="myCheckbox14" class="chip chip-action chip-outline chip-filter">Wheelchair access</label>
-<input type="checkbox" disabled id="myCheckbox15" class="d-none">
+<input type="checkbox" id="myCheckbox15" class="d-none" disabled>
 <label for="myCheckbox15" class="chip chip-action chip-outline chip-filter">Disabled</label>
 </div>
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"typography-headline-6"</span><span class="nt">&gt;</span>Choose amenities<span class="nt">&lt;/p&gt;</span>
@@ -342,7 +342,7 @@
 <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">id=</span><span class="s">"myCheckbox14"</span> <span class="na">class=</span><span class="s">"d-none"</span><span class="nt">&gt;</span>
 <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"myCheckbox14"</span> <span class="na">class=</span><span class="s">"chip chip-action chip-outline chip-filter"</span><span class="nt">&gt;</span>Wheelchair access<span class="nt">&lt;/label&gt;</span>
 
-<span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">disabled</span> <span class="na">id=</span><span class="s">"myCheckbox15"</span> <span class="na">class=</span><span class="s">"d-none"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">id=</span><span class="s">"myCheckbox15"</span> <span class="na">class=</span><span class="s">"d-none"</span> <span class="na">disabled</span><span class="nt">&gt;</span>
 <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"myCheckbox15"</span> <span class="na">class=</span><span class="s">"chip chip-action chip-outline chip-filter"</span><span class="nt">&gt;</span>Disabled<span class="nt">&lt;/label&gt;</span></code></pre></figure>
 <h2 id="action-chips">Action chips</h2>
 <p>Action chips offer actions related to primary content. They should appear dynamically and contextually in a UI.</p>
