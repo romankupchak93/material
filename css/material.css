@@ -4370,6 +4370,16 @@ a.btn:not([class*='btn-flat']):not([class*='btn-outline']):enabled:hover, a.card
   padding: 0 0.5rem;
 }
 
+.card-actions.flex-column {
+  -ms-flex-align: start;
+  align-items: flex-start;
+  padding-bottom: 0.25rem;
+}
+
+.card-actions.flex-column .btn, .card-actions.flex-column .card-link {
+  margin-bottom: 0.25rem;
+}
+
 .card-body + .card-actions {
   margin-top: -0.5rem;
 }
