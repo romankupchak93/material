@@ -9,7 +9,7 @@
 <meta name="keywords" content="material design, material, material UI, bootstrap, theme, daemonite, web, ui, components, responsive, accessibility, css, mobile web, open source">
 <meta name="docsearch:language" content="en">
 <meta name="docsearch:version" content="4.4">
-<title>Dialogs - Material 2</title>
+<title>Dialogs - Daemonite Material Design 2</title>
 <!-- CSS -->
 <!-- Add Material font (Roboto) and Material icon as needed -->
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i|Roboto+Mono:300,400,700|Roboto+Slab:300,400,700&display=swap" rel="stylesheet">
@@ -204,14 +204,14 @@
  <li>Avoid apologies (“Sorry for the interruption”), alarm (“Warning!”), or ambiguity (“Are you sure?”)</li>
 </ul>
 <div class="bd-example bd-example-modal">
- <div class="modal">
-   <div class="modal-dialog modal-sm" role="document">
+ <div class="modal fade" tabindex="-1" role="dialog">
+   <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
      <div class="modal-content">
        <div class="modal-header">
          <h5 class="modal-title">Get this party started?</h5>
        </div>
        <div class="modal-body">
-         <p class="text-black-secondary typography-subheading">Turn up the jams and have a good time.</p>
+         <p>Turn up the jams and have a good time.</p>
        </div>
        <div class="modal-footer">
           <button class="btn btn-primary" data-dismiss="modal" type="button">Decline</button>
@@ -221,14 +221,14 @@
    </div>
  </div>
 </div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-dialog modal-sm"</span> <span class="na">role=</span><span class="s">"document"</span><span class="nt">&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal fade"</span> <span class="na">tabindex=</span><span class="s">"-1"</span> <span class="na">role=</span><span class="s">"dialog"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-dialog modal-dialog-centered modal-sm"</span> <span class="na">role=</span><span class="s">"document"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-content"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-header"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;h5</span> <span class="na">class=</span><span class="s">"modal-title"</span><span class="nt">&gt;</span>Get this party started?<span class="nt">&lt;/h5&gt;</span>
       <span class="nt">&lt;/div&gt;</span>
       <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-body"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-black-secondary typography-body-1"</span><span class="nt">&gt;</span>Turn up the jams and have a good time.<span class="nt">&lt;/p&gt;</span>
+        <span class="nt">&lt;p&gt;</span>Turn up the jams and have a good time.<span class="nt">&lt;/p&gt;</span>
       <span class="nt">&lt;/div&gt;</span>
       <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-footer"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span> <span class="na">data-dismiss=</span><span class="s">"modal"</span> <span class="na">type=</span><span class="s">"button"</span><span class="nt">&gt;</span>Decline<span class="nt">&lt;/button&gt;</span>
@@ -240,10 +240,10 @@
 <h3 id="alerts-without-title">Alerts without title</h3>
 <p>Most alerts don’t need titles. They summarize a decision in a sentence or two by either asking a question or making a statement related to the action buttons.</p>
 <div class="bd-example bd-example-modal">
- <div class="modal">
-   <div class="modal-dialog modal-sm" role="document">
+ <div class="modal fade" tabindex="-1" role="dialog">
+   <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
      <div class="modal-content">
-       <div class="modal-body typography-body-1">
+       <div class="modal-body">
           Discard draft?
        </div>
        <div class="modal-footer">
@@ -254,10 +254,10 @@
    </div>
  </div>
 </div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-dialog modal-sm"</span> <span class="na">role=</span><span class="s">"document"</span><span class="nt">&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal fade"</span> <span class="na">tabindex=</span><span class="s">"-1"</span> <span class="na">role=</span><span class="s">"dialog"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-dialog modal-dialog-centered modal-sm"</span> <span class="na">role=</span><span class="s">"document"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-content"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-body typography-body-1"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-body"</span><span class="nt">&gt;</span>
         Discard draft?
       <span class="nt">&lt;/div&gt;</span>
       <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-footer"</span><span class="nt">&gt;</span>
@@ -270,12 +270,13 @@
 <h3 id="scrollable-alert">Scrollable alert</h3>
 <p>You’ll notice that the modal-body has a custom scrollbar on both Firefox and Chrome.</p>
 <div class="bd-example bd-example-modal">
- <div class="modal">
+ <div class="modal fade" tabindex="-1" role="dialog">
    <div class="modal-dialog modal-dialog-scrollable" role="document">
      <div class="modal-content">
        <div class="modal-header">
        <h5 class="modal-title" id="exampleModalScrollableTitle">
-The Wonderful Wizard of Oz</h5>
+          The Wonderful Wizard of Oz
+       </h5>
      </div>
      <div class="modal-body">
        <p><a href="https://www.gutenberg.org/ebooks/55" target="_blank" rel="noopener noreferrer">Read the full book</a></p>
@@ -295,15 +296,16 @@ The Wonderful Wizard of Oz</h5>
    </div>
  </div>
 </div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal"</span><span class="nt">&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal fade"</span> <span class="na">tabindex=</span><span class="s">"-1"</span> <span class="na">role=</span><span class="s">"dialog"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-dialog modal-dialog-scrollable"</span> <span class="na">role=</span><span class="s">"document"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-content"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-header"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;h5</span> <span class="na">class=</span><span class="s">"modal-title"</span> <span class="na">id=</span><span class="s">"exampleModalScrollableTitle"</span><span class="nt">&gt;</span>
-The Wonderful Wizard of Oz<span class="nt">&lt;/h5&gt;</span>
+          The Wonderful Wizard of Oz
+        <span class="nt">&lt;/h5&gt;</span>
       <span class="nt">&lt;/div&gt;</span>
       <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-body"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;p&gt;&lt;a</span> <span class="na">href=</span><span class="s">"https://www.gutenberg.org/ebooks/55"</span> <span class="na">target=</span><span class="s">"_blank"</span> <span class="na">rel=</span><span class="s">"noopener noreferrer"</span><span class="nt">&gt;</span>Read the full book<span class="nt">&lt;/a&gt;&lt;/p&gt;</span>
+        <span class="nt">&lt;p&gt;&lt;a</span> <span class="na">href=</span><span class="s">"https://www.gutenberg.org/ebooks/55"</span> <span class="na">target=</span><span class="s">"_blank"</span> <span class="na">rel=</span><span class="s">"nofollow noopener noreferrer"</span><span class="nt">&gt;</span>Read the full book<span class="nt">&lt;/a&gt;&lt;/p&gt;</span>
         <span class="nt">&lt;p&gt;</span>Dorothy lived in the midst of the great Kansas prairies, with Uncle Henry, who was a farmer, and Aunt Em, who was the farmer's wife. Their house was small, for the lumber to build it had to be carried by wagon many miles. There were four walls, a floor and a roof, which made one room; and this room contained a rusty looking cookstove, a cupboard for the dishes, a table, three or four chairs, and the beds. Uncle Henry and Aunt Em had a big bed in one corner, and Dorothy a little bed in another corner. There was no garret at all, and no cellar--except a small hole dug in the ground, called a cyclone cellar, where the family could go in case one of those great whirlwinds arose, mighty enough to crush any building in its path. It was reached by a trap door in the middle of the floor, from which a ladder led down into the small, dark hole.<span class="nt">&lt;/p&gt;</span>
         <span class="nt">&lt;p&gt;</span>When Dorothy stood in the doorway and looked around, she could see nothing but the great gray prairie on every side. Not a tree nor a house broke the broad sweep of flat country that reached to the edge of the sky in all directions. The sun had baked the plowed land into a gray mass, with little cracks running through it. Even the grass was not green, for the sun had burned the tops of the long blades until they were the same gray color to be seen everywhere. Once the house had been painted, but the sun blistered the paint and the rains washed it away, and now the house was as dull and gray as everything else.<span class="nt">&lt;/p&gt;</span>
         <span class="nt">&lt;p&gt;</span>When Aunt Em came there to live she was a young, pretty wife. The sun and wind had changed her, too. They had taken the sparkle from her eyes and left them a sober gray; they had taken the red from her cheeks and lips, and they were gray also. She was thin and gaunt, and never smiled now. When Dorothy, who was an orphan, first came to her, Aunt Em had been so startled by the child's laughter that she would scream and press her hand upon her heart whenever Dorothy's merry voice reached her ears; and she still looked at the little girl with wonder that she could find anything to laugh at.<span class="nt">&lt;/p&gt;</span>
@@ -323,10 +325,10 @@ The Wonderful Wizard of Oz<span class="nt">&lt;/h5&gt;</span>
 <h3 id="side-by-side-buttons">Side-by-side buttons</h3>
 <p>Flat buttons should be used in dialogs. In addition, the affirmative button should be placed on the right while the dismissive button should be placed on the left while both should use the same colour, ideally, info or primary colour.</p>
 <div class="bd-example bd-example-modal">
- <div class="modal">
-   <div class="modal-dialog modal-sm" role="document">
+ <div class="modal fade" tabindex="-1" role="dialog">
+   <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
      <div class="modal-content">
-       <div class="modal-body typography-body-1">
+       <div class="modal-body">
           Discard draft?
        </div>
        <div class="modal-footer">
@@ -337,10 +339,10 @@ The Wonderful Wizard of Oz<span class="nt">&lt;/h5&gt;</span>
    </div>
  </div>
 </div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-dialog modal-sm"</span> <span class="na">role=</span><span class="s">"document"</span><span class="nt">&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal fade"</span> <span class="na">tabindex=</span><span class="s">"-1"</span> <span class="na">role=</span><span class="s">"dialog"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-dialog modal-dialog-centered modal-sm"</span> <span class="na">role=</span><span class="s">"document"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-content"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-body typography-body-1"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-body"</span><span class="nt">&gt;</span>
         Discard draft?
       <span class="nt">&lt;/div&gt;</span>
       <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-footer"</span><span class="nt">&gt;</span>
@@ -353,14 +355,14 @@ The Wonderful Wizard of Oz<span class="nt">&lt;/h5&gt;</span>
 <h3 id="stacked-full-width-buttons">Stacked full-width buttons</h3>
 <p>Stacked buttons accommodate longer button text. Confirming actions appear above dismissive actions.</p>
 <div class="bd-example bd-example-modal">
- <div class="modal">
-   <div class="modal-dialog modal-sm" role="document">
+ <div class="modal fade" tabindex="-1" role="dialog">
+   <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
      <div class="modal-content">
        <div class="modal-header">
          <h5 class="modal-title">Use location service?</h5>
        </div>
        <div class="modal-body">
-         <p class="text-black-secondary typography-subheading">Let us help apps determine location. This means sending anonymous location data to us, even when no apps are running.</p>
+         <p>Let us help apps determine location. This means sending anonymous location data to us, even when no apps are running.</p>
        </div>
        <div class="modal-footer modal-footer-stacked">
           <button class="btn btn-primary" type="button">Turn on Speed Boost</button>
@@ -370,14 +372,14 @@ The Wonderful Wizard of Oz<span class="nt">&lt;/h5&gt;</span>
    </div>
  </div>
 </div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-dialog modal-sm"</span> <span class="na">role=</span><span class="s">"document"</span><span class="nt">&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal fade"</span> <span class="na">tabindex=</span><span class="s">"-1"</span> <span class="na">role=</span><span class="s">"dialog"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-dialog modal-dialog-centered modal-sm"</span> <span class="na">role=</span><span class="s">"document"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-content"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-header"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;h5</span> <span class="na">class=</span><span class="s">"modal-title"</span><span class="nt">&gt;</span>Use location service?<span class="nt">&lt;/h5&gt;</span>
       <span class="nt">&lt;/div&gt;</span>
       <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-body"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-black-secondary typography-subheading"</span><span class="nt">&gt;</span>Let us help apps determine cation. This means sending anonymous location data to us, even when no apps are nning.<span class="nt">&lt;/p&gt;</span>
+        <span class="nt">&lt;p&gt;</span>Let us help apps determine cation. This means sending anonymous location data to us, even when no apps are nning.<span class="nt">&lt;/p&gt;</span>
       <span class="nt">&lt;/div&gt;</span>
       <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-footer modal-footer-stacked"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span> <span class="na">type=</span><span class="s">"button"</span><span class="nt">&gt;</span>Turn on Speed Boost<span class="nt">&lt;/button&gt;</span>
