@@ -13,7 +13,7 @@
 <!-- CSS -->
 <!-- Add Material font (Roboto) and Material icon as needed -->
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i|Roboto+Mono:300,400,700|Roboto+Slab:300,400,700&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
 <!-- Add Material CSS, replace Bootstrap CSS -->
 <link href="/material/css/material.min.css" rel="stylesheet">
 <!-- Additional CSS for documentation site -->
@@ -185,21 +185,38 @@
      <div class="row justify-content-center">
        <div class="col-xl-9">
          <div class="bd-content mb-5">
-           <h2 id="quick-start">Quick start</h2>
-<p>The easiest way to set up icon fonts for use in any web page is through <a href="https://developers.google.com/fonts/" target="_blank" rel="noopener noreferrer">Google Web Fonts</a>. All you need to do is include a single line of HTML:</p>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"https://fonts.googleapis.com/icon?family=Material+Icons"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span><span class="nt">&gt;</span></code></pre></figure>
-<p>Then, it’s easy to incorporate icons into your web page. Here’s a small example:</p>
+           <div class="list-group mt-lg-5">
+    <a href="https://material.io/resources/icons/?style=baseline" target="_blank" rel="noopener noreferrer" class="list-group-item list-group-item-action lgi-icon-md">Material Design Icons</a>
+</div>
+<h2 id="choose-your-icon-set">Choose your icon set</h2>
+<p>Daemonite Material UI is dependent of Material Design Icons and therefore requires at least this stylesheet declaration in your HTML header.</p>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"https://fonts.googleapis.com/css2?family=Material+Icons"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span><span class="nt">&gt;</span></code></pre></figure>
+<p>For more creativity, it is compatible with all variants of Material Design Icons (Filled, Outlined, Rounded, Two-Tone and Sharp versions, declared in this order below).</p>
+<p>You can apply changes immediately by modifying the stylesheet declaration according to the icon set you want (pick the one you want below).</p>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"https://fonts.googleapis.com/css2?family=Material+Icons"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"https://fonts.googleapis.com/css2?family=Material+Icons+Outlined"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"https://fonts.googleapis.com/css2?family=Material+Icons+Round"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"https://fonts.googleapis.com/css2?family=Material+Icons+Two+Tone"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"https://fonts.googleapis.com/css2?family=Material+Icons+Sharp"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span><span class="nt">&gt;</span></code></pre></figure>
+<p>You can even mix multiple icons set within your page with a combined stylesheet declaration like this.</p>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"https://fonts.googleapis.com/css2?family=Material+Icons&amp;family=Material+Icons+Outlined"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span><span class="nt">&gt;</span></code></pre></figure>
+<h2 id="html-markup">HTML markup</h2>
+<p>Then, it’s easy to incorporate icons into your web page. You can browse the icon set and copy-paste the HTML markup from the <a href="https://material.io/resources/icons/" target="_blank" rel="noopener noreferrer">Material icons library</a>.</p>
+<p>Here’s a small example:</p>
 <div class="bd-example">
 <i class="material-icons">face</i>
 </div>
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"material-icons"</span><span class="nt">&gt;</span>face<span class="nt">&lt;/i&gt;</span></code></pre></figure>
-<p>This example uses a typographic feature called <a href="http://alistapart.com/article/the-era-of-symbol-fonts" target="_blank" rel="noopener noreferrer">ligatures</a>, which allows rendering of an icon glyph simply by using its textual name. The replacement is done automatically by the web browser and provides more readable code than the equivalent numeric character reference. This feature is supported in most modern browsers on both desktop and mobile devices.</p>
-<p>For browsers that do not support ligatures, fall back to specifying the icons using numeric character references like the example below:</p>
+<p>In order to allow you to switch fast from one icon set to another, Daemonite Material promotes the usage of the default HTML markup using <code class="highlighter-rouge">&lt;i class="material-icons"&gt;...&lt;/i&gt;</code>.</p>
+<!---
+WIP In the case you use 2 Icons sets on a page, you will need to specify ...
+-->
+<p><strong>NB. For browsers that do not support ligatures, fall back to specifying the icons using numeric character references like the example below:</strong></p>
 <div class="bd-example">
 <i class="material-icons"></i>
 </div>
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"material-icons"</span><span class="nt">&gt;</span><span class="ni">&amp;#xE87C;</span><span class="nt">&lt;/i&gt;</span></code></pre></figure>
-<p>For all available icons, please refer to <a href="https://material.io/icons/" target="_blank" rel="noopener noreferrer">Material icons library</a>.</p>
+<p>For all available icons, please refer to <a href="https://material.io/resources/icons/" target="_blank" rel="noopener noreferrer">Material icons library</a>.</p>
          </div>
        </div>
      </div>
