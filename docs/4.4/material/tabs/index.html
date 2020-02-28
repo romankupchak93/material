@@ -238,7 +238,7 @@
   <span class="nt">&lt;div</span> <span class="na">aria-labelledby=</span><span class="s">"profile-tab"</span> <span class="na">class=</span><span class="s">"tab-pane fade"</span> <span class="na">id=</span><span class="s">"profile"</span> <span class="na">role=</span><span class="s">"tabpanel"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">aria-labelledby=</span><span class="s">"contact-tab"</span> <span class="na">class=</span><span class="s">"tab-pane fade"</span> <span class="na">id=</span><span class="s">"contact"</span> <span class="na">role=</span><span class="s">"tabpanel"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
-<h3 id="tabs-with-icons">Tabs with icons</h3>
+<h3 id="tabs-with-leading-icon">Tabs with leading icon</h3>
 <p>You can add <strong>Leading icons</strong> in front of your tab title. Just add an icon within an <code class="highlighter-rouge">&lt;i&gt;</code> tag or a <code class="highlighter-rouge">.material-icon</code>.</p>
 <div class="bd-example bd-example-tabs">
  <ul class="nav nav-justified nav-tabs" id="justifiedTabWithIcons" role="tablist">
@@ -286,6 +286,7 @@
     <span class="nt">&lt;p&gt;</span>Panel 3.<span class="nt">&lt;/p&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
+<h3 id="tabs-with-icon-only">Tabs with icon only</h3>
 <p>You can use tabs without text and a simple icon. Just add a <code class="highlighter-rouge">m-0</code> class to your icon to reset margins and center the icon.</p>
 <div class="bd-example bd-example-tabs">
  <ul class="nav nav-justified nav-tabs" id="justifiedTabWithIconsOnly" role="tablist">
@@ -333,17 +334,18 @@
     <span class="nt">&lt;p&gt;</span>Panel 3.<span class="nt">&lt;/p&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
+<h3 id="tabs-with-top-icon">Tabs with top icon</h3>
 <p>You can also use a <strong>Top icon</strong> for your tabs titles. Just add a <code class="highlighter-rouge">flex-column</code> class to your <code class="highlighter-rouge">nav-link</code> element so elements will align vertically.</p>
 <div class="bd-example bd-example-tabs">
  <ul class="nav nav-justified nav-tabs" id="justifiedTabVertical" role="tablist">
    <li class="nav-item">
-      <a aria-controls="example4tab" aria-selected="true" class="nav-link flex-column active" data-toggle="tab" href="#example4tab" id="example4" role="tab"><i class="material-icons">phone</i></a>
+      <a aria-controls="example4tab" aria-selected="true" class="nav-link flex-column active" data-toggle="tab" href="#example4tab" id="example4" role="tab"><i class="material-icons">phone</i> tab one</a>
    </li>
    <li class="nav-item">
-      <a aria-controls="example42tab" aria-selected="false" class="nav-link flex-column" data-toggle="tab" href="#example42tab" id="example42" role="tab"><i class="material-icons">favorite</i></a>
+      <a aria-controls="example42tab" aria-selected="false" class="nav-link flex-column" data-toggle="tab" href="#example42tab" id="example42" role="tab"><i class="material-icons">favorite</i> tab two</a>
    </li>
    <li class="nav-item">
-      <a aria-controls="example43tab" aria-selected="false" class="nav-link flex-column" data-toggle="tab" href="#example43tab" id="example43" role="tab"><i class="material-icons">location_on</i></a>
+      <a aria-controls="example43tab" aria-selected="false" class="nav-link flex-column" data-toggle="tab" href="#example43tab" id="example43" role="tab"><i class="material-icons">location_on</i> tab three</a>
    </li>
  </ul>
  <div class="tab-content" id="myTabContentVertical">
@@ -360,13 +362,13 @@
 </div>
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"nav nav-justified nav-tabs"</span> <span class="na">id=</span><span class="s">"justifiedTabVertical"</span> <span class="na">role=</span><span class="s">"tablist"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;a</span> <span class="na">aria-controls=</span><span class="s">"example4tab"</span> <span class="na">aria-selected=</span><span class="s">"true"</span> <span class="na">class=</span><span class="s">"nav-link flex-column active"</span> <span class="na">data-toggle=</span><span class="s">"tab"</span> <span class="na">href=</span><span class="s">"#example4tab"</span> <span class="na">id=</span><span class="s">"example4"</span> <span class="na">role=</span><span class="s">"tab"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"material-icons"</span><span class="nt">&gt;</span>phone<span class="nt">&lt;/i&gt;&lt;/a&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">aria-controls=</span><span class="s">"example4tab"</span> <span class="na">aria-selected=</span><span class="s">"true"</span> <span class="na">class=</span><span class="s">"nav-link flex-column active"</span> <span class="na">data-toggle=</span><span class="s">"tab"</span> <span class="na">href=</span><span class="s">"#example4tab"</span> <span class="na">id=</span><span class="s">"example4"</span> <span class="na">role=</span><span class="s">"tab"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"material-icons"</span><span class="nt">&gt;</span>phone<span class="nt">&lt;/i&gt;</span> tab one<span class="nt">&lt;/a&gt;</span>
   <span class="nt">&lt;/li&gt;</span>
   <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;a</span> <span class="na">aria-controls=</span><span class="s">"example42tab"</span> <span class="na">aria-selected=</span><span class="s">"false"</span> <span class="na">class=</span><span class="s">"nav-link flex-column"</span> <span class="na">data-toggle=</span><span class="s">"tab"</span> <span class="na">href=</span><span class="s">"#example42tab"</span> <span class="na">id=</span><span class="s">"example42"</span> <span class="na">role=</span><span class="s">"tab"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"material-icons"</span><span class="nt">&gt;</span>favorite<span class="nt">&lt;/i&gt;&lt;/a&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">aria-controls=</span><span class="s">"example42tab"</span> <span class="na">aria-selected=</span><span class="s">"false"</span> <span class="na">class=</span><span class="s">"nav-link flex-column"</span> <span class="na">data-toggle=</span><span class="s">"tab"</span> <span class="na">href=</span><span class="s">"#example42tab"</span> <span class="na">id=</span><span class="s">"example42"</span> <span class="na">role=</span><span class="s">"tab"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"material-icons"</span><span class="nt">&gt;</span>favorite<span class="nt">&lt;/i&gt;</span> tab two<span class="nt">&lt;/a&gt;</span>
   <span class="nt">&lt;/li&gt;</span>
   <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;a</span> <span class="na">aria-controls=</span><span class="s">"example43tab"</span> <span class="na">aria-selected=</span><span class="s">"false"</span> <span class="na">class=</span><span class="s">"nav-link flex-column"</span> <span class="na">data-toggle=</span><span class="s">"tab"</span> <span class="na">href=</span><span class="s">"#example43tab"</span> <span class="na">id=</span><span class="s">"example43"</span> <span class="na">role=</span><span class="s">"tab"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"material-icons"</span><span class="nt">&gt;</span>location_on<span class="nt">&lt;/i&gt;&lt;/a&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">aria-controls=</span><span class="s">"example43tab"</span> <span class="na">aria-selected=</span><span class="s">"false"</span> <span class="na">class=</span><span class="s">"nav-link flex-column"</span> <span class="na">data-toggle=</span><span class="s">"tab"</span> <span class="na">href=</span><span class="s">"#example43tab"</span> <span class="na">id=</span><span class="s">"example43"</span> <span class="na">role=</span><span class="s">"tab"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"material-icons"</span><span class="nt">&gt;</span>location_on<span class="nt">&lt;/i&gt;</span> tab three<span class="nt">&lt;/a&gt;</span>
   <span class="nt">&lt;/li&gt;</span>
 <span class="nt">&lt;/ul&gt;</span>
 <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tab-content"</span> <span class="na">id=</span><span class="s">"myTabContentVertical"</span><span class="nt">&gt;</span>
@@ -386,13 +388,13 @@
  <div class="pt-2 bg-primary">
    <ul class="nav nav-justified nav-tabs nav-inverse" id="justifiedTabInverse" role="tablist">
      <li class="nav-item">
-        <a aria-controls="example5tab" aria-selected="true" class="nav-link flex-column active" data-toggle="tab" href="#example5tab" id="example5" role="tab"><i class="material-icons">phone</i></a>
+        <a aria-controls="example5tab" aria-selected="true" class="nav-link flex-column active" data-toggle="tab" href="#example5tab" id="example5" role="tab"><i class="material-icons">phone</i> tab one</a>
      </li>
      <li class="nav-item">
-        <a aria-controls="example52tab" aria-selected="false" class="nav-link flex-column" data-toggle="tab" href="#example52tab" id="example52" role="tab"><i class="material-icons">favorite</i></a>
+        <a aria-controls="example52tab" aria-selected="false" class="nav-link flex-column" data-toggle="tab" href="#example52tab" id="example52" role="tab"><i class="material-icons">favorite</i> tab two</a>
      </li>
      <li class="nav-item">
-        <a aria-controls="example53tab" aria-selected="false" class="nav-link flex-column" data-toggle="tab" href="#example53tab" id="example53" role="tab"><i class="material-icons">location_on</i></a>
+        <a aria-controls="example53tab" aria-selected="false" class="nav-link flex-column" data-toggle="tab" href="#example53tab" id="example53" role="tab"><i class="material-icons">location_on</i> tab three</a>
      </li>
    </ul>
  </div>
@@ -411,13 +413,13 @@
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"pt-2 bg-primary"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"nav nav-justified nav-tabs nav-inverse"</span> <span class="na">id=</span><span class="s">"justifiedTabInverse"</span> <span class="na">role=</span><span class="s">"tablist"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;a</span> <span class="na">aria-controls=</span><span class="s">"example5tab"</span> <span class="na">aria-selected=</span><span class="s">"true"</span> <span class="na">class=</span><span class="s">"nav-link flex-column active"</span> <span class="na">data-toggle=</span><span class="s">"tab"</span> <span class="na">href=</span><span class="s">"#example5tab"</span> <span class="na">id=</span><span class="s">"example5"</span> <span class="na">role=</span><span class="s">"tab"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"material-icons"</span><span class="nt">&gt;</span>phone<span class="nt">&lt;/i&gt;&lt;/a&gt;</span>
+      <span class="nt">&lt;a</span> <span class="na">aria-controls=</span><span class="s">"example5tab"</span> <span class="na">aria-selected=</span><span class="s">"true"</span> <span class="na">class=</span><span class="s">"nav-link flex-column active"</span> <span class="na">data-toggle=</span><span class="s">"tab"</span> <span class="na">href=</span><span class="s">"#example5tab"</span> <span class="na">id=</span><span class="s">"example5"</span> <span class="na">role=</span><span class="s">"tab"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"material-icons"</span><span class="nt">&gt;</span>phone<span class="nt">&lt;/i&gt;</span> tab one<span class="nt">&lt;/a&gt;</span>
     <span class="nt">&lt;/li&gt;</span>
     <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;a</span> <span class="na">aria-controls=</span><span class="s">"example52tab"</span> <span class="na">aria-selected=</span><span class="s">"false"</span> <span class="na">class=</span><span class="s">"nav-link flex-column"</span> <span class="na">data-toggle=</span><span class="s">"tab"</span> <span class="na">href=</span><span class="s">"#example52tab"</span> <span class="na">id=</span><span class="s">"example52"</span> <span class="na">role=</span><span class="s">"tab"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"material-icons"</span><span class="nt">&gt;</span>favorite<span class="nt">&lt;/i&gt;&lt;/a&gt;</span>
+      <span class="nt">&lt;a</span> <span class="na">aria-controls=</span><span class="s">"example52tab"</span> <span class="na">aria-selected=</span><span class="s">"false"</span> <span class="na">class=</span><span class="s">"nav-link flex-column"</span> <span class="na">data-toggle=</span><span class="s">"tab"</span> <span class="na">href=</span><span class="s">"#example52tab"</span> <span class="na">id=</span><span class="s">"example52"</span> <span class="na">role=</span><span class="s">"tab"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"material-icons"</span><span class="nt">&gt;</span>favorite<span class="nt">&lt;/i&gt;</span> tab two<span class="nt">&lt;/a&gt;</span>
     <span class="nt">&lt;/li&gt;</span>
     <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;a</span> <span class="na">aria-controls=</span><span class="s">"example53tab"</span> <span class="na">aria-selected=</span><span class="s">"false"</span> <span class="na">class=</span><span class="s">"nav-link flex-column"</span> <span class="na">data-toggle=</span><span class="s">"tab"</span> <span class="na">href=</span><span class="s">"#example53tab"</span> <span class="na">id=</span><span class="s">"example53"</span> <span class="na">role=</span><span class="s">"tab"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"material-icons"</span><span class="nt">&gt;</span>location_on<span class="nt">&lt;/i&gt;&lt;/a&gt;</span>
+      <span class="nt">&lt;a</span> <span class="na">aria-controls=</span><span class="s">"example53tab"</span> <span class="na">aria-selected=</span><span class="s">"false"</span> <span class="na">class=</span><span class="s">"nav-link flex-column"</span> <span class="na">data-toggle=</span><span class="s">"tab"</span> <span class="na">href=</span><span class="s">"#example53tab"</span> <span class="na">id=</span><span class="s">"example53"</span> <span class="na">role=</span><span class="s">"tab"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"material-icons"</span><span class="nt">&gt;</span>location_on<span class="nt">&lt;/i&gt;</span> tab three<span class="nt">&lt;/a&gt;</span>
     <span class="nt">&lt;/li&gt;</span>
   <span class="nt">&lt;/ul&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
@@ -534,7 +536,9 @@
 <li class="toc-entry toc-h2">
 <a href="#fixed-tabs">Fixed tabs</a>
 <ul>
-<li class="toc-entry toc-h3"><a href="#tabs-with-icons">Tabs with icons</a></li>
+<li class="toc-entry toc-h3"><a href="#tabs-with-leading-icon">Tabs with leading icon</a></li>
+<li class="toc-entry toc-h3"><a href="#tabs-with-icon-only">Tabs with icon only</a></li>
+<li class="toc-entry toc-h3"><a href="#tabs-with-top-icon">Tabs with top icon</a></li>
 </ul>
 </li>
 <li class="toc-entry toc-h2"><a href="#tabs-on-dark-background">Tabs on dark background</a></li>
