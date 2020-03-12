@@ -2811,10 +2811,13 @@ pre code {
 }
 
 .nav-justified .nav-item {
-  -ms-flex-preferred-size: 0;
-  flex-basis: 0;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex: 1;
+  flex: 1;
 }
 
 .nav-pills .nav-link {
@@ -3078,6 +3081,18 @@ pre code {
 
 .embed-responsive-21by9::before {
   padding-top: 42.857143%;
+}
+
+/* djibe addition */
+html,
+[data-spy='scroll'] {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 }
 
 .fade {
@@ -6476,6 +6491,9 @@ input:disabled + .chip {
   transition-property: $property;
   transition-timing-function: $transition-timing-function-standard; */
   transition: background-color, color 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
   -ms-flex-align: center;
   align-items: center;
   background: none;
@@ -9418,10 +9436,9 @@ input:disabled + .chip {
 }
 
 .nav-tabs {
-  /* &.border-0,
-  &.border-bottom-0 {
-    box-shadow: none;
-  } */
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  width: 100%;
 }
 
 .nav-tabs.nav-inverse .nav-link {
@@ -9441,6 +9458,9 @@ input:disabled + .chip {
   transition-property: $property;
   transition-timing-function: $transition-timing-function-standard; */
   transition: background-color, color, opacity 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
   -ms-flex-align: center;
   align-items: center;
   color: rgba(0, 0, 0, 0.54);
@@ -9552,6 +9572,7 @@ input:disabled + .chip {
 .nav-tabs .nav-link.disabled {
   background-color: transparent;
   color: rgba(0, 0, 0, 0.38);
+  opacity: 1;
 }
 
 .nav-tabs .nav-link i,
@@ -9563,6 +9584,7 @@ input:disabled + .chip {
   background-color: rgba(0, 0, 0, 0.12);
 }
 
+/* Used ??? */
 .nav-tabs-material {
   position: relative;
 }
