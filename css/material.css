@@ -1905,10 +1905,11 @@ mark,
   display: inline-flex;
   font-size: inherit;
   font-weight: 500;
+  -ms-flex-pack: center;
+  justify-content: center;
   line-height: inherit;
   padding-right: 0.5em;
   padding-left: 0.5em;
-  text-align: center;
   white-space: nowrap;
 }
 
@@ -1920,21 +1921,39 @@ a.badge:hover, a.badge:focus {
   display: none;
 }
 
-.btn .badge, .card-link .badge {
-  border-radius: 50%;
-  display: inline-block;
+.btn > .badge, .card-link > .badge,
+.position-relative > .badge {
+  border-radius: 0.6875rem;
+  font-family: Roboto, sans-serif;
   font-size: 0.75rem;
-  font-weight: 600;
+  font-weight: 500;
   height: 1.375rem;
-  line-height: 1.375rem;
+  letter-spacing: initial;
+  min-width: 1.375rem;
   position: absolute;
   top: -0.6875rem;
-  right: -0.6875rem;
-  width: 1.375rem;
 }
 
-.btn .badge.badge-before, .card-link .badge.badge-before {
-  left: -0.6875rem;
+.btn > .badge, .card-link > .badge,
+i > .badge,
+[class*='material-icons'] > .badge {
+  top: 0;
+  right: 0;
+  -webkit-transform: translate(50%, -50%);
+  transform: translate(50%, -50%);
+  -webkit-transform-origin: 100% 0%;
+  transform-origin: 100% 0%;
+}
+
+.btn > .badge.badge-before, .card-link > .badge.badge-before,
+i > .badge.badge-before,
+[class*='material-icons'] > .badge.badge-before {
+  right: auto;
+  left: 0;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -webkit-transform-origin: 0% 100%;
+  transform-origin: 0% 100%;
 }
 
 .badge-pill {
@@ -3173,6 +3192,7 @@ tr.collapse.show {
   min-width: 4rem;
   outline: none;
   padding: 0 1rem;
+  position: relative;
   text-transform: uppercase;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -4761,6 +4781,7 @@ a.btn:not([class*='btn-flat']):not([class*='btn-outline']):enabled:hover, a.card
 .card-primary-action:hover {
   background: rgba(0, 0, 0, 0.04);
   cursor: pointer;
+  position: relative;
   transition: background-color 15ms linear, box-shadow 15ms linear;
 }
 
