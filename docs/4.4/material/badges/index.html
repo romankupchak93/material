@@ -11,7 +11,7 @@
 <link rel="preconnect" href="https://cdn.jsdelivr.net/">
 <meta name="docsearch:language" content="en">
 <meta name="docsearch:version" content="4.4">
-<title>Clearfix - Daemonite Material Design 2</title>
+<title>Badges - Daemonite Material Design 2</title>
 <!-- CSS -->
 <!-- Add Material font (Roboto) and Material icon as needed -->
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i|Roboto+Mono:300,400,700|Roboto+Slab:300,400,700&display=swap" rel="stylesheet">
@@ -113,10 +113,10 @@
           <a class="nav-item nav-link pl-4 my-0 text-black-secondary" href="/material/docs/4.4/components/toasts/"><span class="font-weight-normal">Toasts</span></a>
           <a class="nav-item nav-link pl-4 my-0 text-black-secondary" href="/material/docs/4.4/components/tooltips/"><span class="font-weight-normal">Tooltips</span></a>
        </div>
-        <a class="nav-item nav-link " data-toggle="collapse" href="#doc-navdrawer-utilities"><strong>Utilities</strong></a>
-       <div class="collapse pb-2 show" id="doc-navdrawer-utilities">
+        <a class="nav-item nav-link collapsed" data-toggle="collapse" href="#doc-navdrawer-utilities"><strong>Utilities</strong></a>
+       <div class="collapse pb-2 " id="doc-navdrawer-utilities">
           <a class="nav-item nav-link pl-4 my-0 text-black-secondary" href="/material/docs/4.4/utilities/borders/"><span class="font-weight-normal">Borders</span></a>
-          <a class="nav-item nav-link pl-4 my-0 active" href="/material/docs/4.4/utilities/clearfix/"><span class="font-weight-normal">Clearfix</span></a>
+          <a class="nav-item nav-link pl-4 my-0 text-black-secondary" href="/material/docs/4.4/utilities/clearfix/"><span class="font-weight-normal">Clearfix</span></a>
           <a class="nav-item nav-link pl-4 my-0 text-black-secondary" href="/material/docs/4.4/utilities/close-icon/"><span class="font-weight-normal">Close icon</span></a>
           <a class="nav-item nav-link pl-4 my-0 text-black-secondary" href="/material/docs/4.4/utilities/colors/"><span class="font-weight-normal">Colors</span></a>
           <a class="nav-item nav-link pl-4 my-0 text-black-secondary" href="/material/docs/4.4/utilities/display/"><span class="font-weight-normal">Display</span></a>
@@ -139,10 +139,10 @@
        <div class="collapse pb-2 " id="doc-navdrawer-extend-wip">
        </div>
        <div class="navdrawer-divider"></div>
-        <a class="nav-item nav-link collapsed" data-toggle="collapse" href="#doc-navdrawer-material"><strong>Material</strong></a>
-       <div class="collapse pb-2 " id="doc-navdrawer-material">
+        <a class="nav-item nav-link " data-toggle="collapse" href="#doc-navdrawer-material"><strong>Material</strong></a>
+       <div class="collapse pb-2 show" id="doc-navdrawer-material">
           <a class="nav-item nav-link pl-4 my-0 text-black-secondary" href="/material/docs/4.4/material/buttons/"><span class="font-weight-normal">Buttons</span></a>
-          <a class="nav-item nav-link pl-4 my-0 text-black-secondary" href="/material/docs/4.4/material/badges/"><span class="font-weight-normal">Badges</span></a>
+          <a class="nav-item nav-link pl-4 my-0 active" href="/material/docs/4.4/material/badges/"><span class="font-weight-normal">Badges</span></a>
           <a class="nav-item nav-link pl-4 my-0 text-black-secondary" href="/material/docs/4.4/material/cards/"><span class="font-weight-normal">Cards</span></a>
           <a class="nav-item nav-link pl-4 my-0 text-black-secondary" href="/material/docs/4.4/material/chips/"><span class="font-weight-normal">Chips</span></a>
           <a class="nav-item nav-link pl-4 my-0 text-black-secondary" href="/material/docs/4.4/material/colors/"><span class="font-weight-normal">Colors</span></a>
@@ -178,8 +178,8 @@
  <div class="container">
    <div class="row justify-content-center">
      <div class="col-xl-9">
-       <h1 class="typography-display-4" id="doc-main-h1">Clearfix</h1>
-       <p class="font-weight-light typography-title">Quickly and easily clear floated content within a container by adding a clearfix utility.</p>
+       <h1 class="typography-display-4" id="doc-main-h1">Badges</h1>
+       <p class="font-weight-light typography-title">Badges can contain dynamic information, such as a number of pending requests.</p>
      </div>
    </div>
  </div>
@@ -189,32 +189,74 @@
      <div class="row justify-content-center">
        <div class="col-xl-9">
          <div class="bd-content mb-5">
-           <p>Easily clear <code class="highlighter-rouge">float</code>s by adding <code class="highlighter-rouge">.clearfix</code> <strong>to the parent element</strong>. Can also be used as a mixin.</p>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"clearfix"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span></code></pre></figure>
-<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="c1">// Mixin itself</span>
-<span class="k">@mixin</span> <span class="nf">clearfix</span><span class="p">()</span> <span class="p">{</span>
-  <span class="err">&amp;</span><span class="p">:</span><span class="o">:</span><span class="n">after</span> <span class="p">{</span>
-    <span class="nl">display</span><span class="p">:</span> <span class="nb">block</span><span class="p">;</span>
-    <span class="nl">content</span><span class="p">:</span> <span class="s2">""</span><span class="p">;</span>
-    <span class="nl">clear</span><span class="p">:</span> <span class="nb">both</span><span class="p">;</span>
-  <span class="p">}</span>
-<span class="p">}</span>
-
-<span class="c1">// Usage as a mixin</span>
-<span class="nc">.element</span> <span class="p">{</span>
-  <span class="k">@include</span> <span class="nd">clearfix</span><span class="p">;</span>
-<span class="p">}</span></code></pre></figure>
-<p>The following example shows how the clearfix can be used. Without the clearfix the wrapping div would not span around the buttons which would cause a broken layout.</p>
+           <div class="list-group my-2 my-lg-5">
+    <a href="/material/docs/4.4/components/badge/" target="_blank" class="list-group-item list-group-item-action lgi-icon-bs">Bootstrap documentation: Badge
+      <span class="d-block font-weight-normal text-black-secondary"> Most of the details have been covered here</span>
+    </a>
+    <a href="https://material.io/components/bottom-navigation#behavior" target="_blank" class="list-group-item list-group-item-action lgi-icon-md" rel="noopener noreferrer">Material Design guidelines: Bottom navigation - Badges</a>
+</div>
+<h2 id="text-with-a-badge">Text with a badge</h2>
+<p>A badge can be appended to a text with 2 conditions:</p>
+<ol>
+ <li>Text is wrapped in a <code class="highlighter-rouge">&lt;span class="position-relative"&gt;</code> element. This text container must be of <code class="highlighter-rouge">position: relative</code> for badge absolute positioning.</li>
+ <li>Badge is inserted within this text element.</li>
+</ol>
 <div class="bd-example">
-<div class="bg-info clearfix">
-  <button type="button" class="btn btn-secondary float-left">Example Button floated left</button>
-  <button type="button" class="btn btn-secondary float-right">Example Button floated right</button>
+<p class="typography-body-1">
+  <span class="position-relative">Text with a badge
+    <span class="badge badge-primary">4</span>
+  </span>
+</p>
 </div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"typography-body-1"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"position-relative"</span><span class="nt">&gt;</span>Text with a badge
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"badge badge-primary"</span><span class="nt">&gt;</span>4<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;/p&gt;</span></code></pre></figure>
+<h2 id="button-with-a-badge">Button with a badge</h2>
+<p>Just add your badge element beside button’s text.</p>
+<p>Badge can be left aligned with <code class="highlighter-rouge">badge-before</code> CSS class.</p>
+<div class="bd-example">
+<button type="button" class="btn btn-primary">
+  Notifications
+  <span class="badge badge-danger">8</span>
+</button>
+<button type="button" class="btn btn-primary ml-5">
+  Action
+  <span class="badge badge-secondary badge-before">2</span>
+</button>
 </div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"bg-info clearfix"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-secondary float-left"</span><span class="nt">&gt;</span>Example Button floated left<span class="nt">&lt;/button&gt;</span>
-  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-secondary float-right"</span><span class="nt">&gt;</span>Example Button floated right<span class="nt">&lt;/button&gt;</span>
-<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span><span class="nt">&gt;</span>
+  Notifications
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"badge badge-danger"</span><span class="nt">&gt;</span>8<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;/button&gt;</span>
+
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-primary ml-5"</span><span class="nt">&gt;</span>
+  Action
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"badge badge-secondary badge-before"</span><span class="nt">&gt;</span>2<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;/button&gt;</span></code></pre></figure>
+<h2 id="icon-with-a-badge">Icon with a badge</h2>
+<p>Add <code class="highlighter-rouge">position-relative</code> class to your <code class="highlighter-rouge">&lt;i&gt;</code> or <code class="highlighter-rouge">&lt;span&gt;</code> element containing your icon (material icons, Fontawesome …) and insert badge beside icon’s name.</p>
+<p><code class="highlighter-rouge">badge-before</code> class is still available.</p>
+<div class="bd-example">
+<span class="material-icons position-relative">
+  home
+  <span class="badge badge-danger">15</span>
+</span>
+<span class="material-icons position-relative ml-5">
+  home
+  <span class="badge badge-danger badge-before">999</span>
+</span>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"material-icons position-relative"</span><span class="nt">&gt;</span>
+  home
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"badge badge-danger"</span><span class="nt">&gt;</span>15<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;/span&gt;</span>
+
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"material-icons position-relative ml-5"</span><span class="nt">&gt;</span>
+  home
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"badge badge-danger badge-before"</span><span class="nt">&gt;</span>999<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;/span&gt;</span></code></pre></figure>
          </div>
        </div>
      </div>
