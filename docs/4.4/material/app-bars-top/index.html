@@ -11,7 +11,7 @@
 <link rel="preconnect" href="https://cdn.jsdelivr.net/">
 <meta name="docsearch:language" content="en">
 <meta name="docsearch:version" content="4.4">
-<title>Overflow - Daemonite Material Design 2</title>
+<title>App bars top - Daemonite Material Design 2</title>
 <!-- CSS -->
 <!-- Add Material font (Roboto) and Material icon as needed -->
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i|Roboto+Mono:300,400,700|Roboto+Slab:300,400,700&display=swap" rel="stylesheet">
@@ -113,8 +113,8 @@
           <a class="nav-item nav-link pl-4 my-0 text-black-secondary" href="/material/docs/4.4/components/toasts/"><span class="font-weight-normal">Toasts</span></a>
           <a class="nav-item nav-link pl-4 my-0 text-black-secondary" href="/material/docs/4.4/components/tooltips/"><span class="font-weight-normal">Tooltips</span></a>
        </div>
-        <a class="nav-item nav-link " data-toggle="collapse" href="#doc-navdrawer-utilities"><strong>Utilities</strong></a>
-       <div class="collapse pb-2 show" id="doc-navdrawer-utilities">
+        <a class="nav-item nav-link collapsed" data-toggle="collapse" href="#doc-navdrawer-utilities"><strong>Utilities</strong></a>
+       <div class="collapse pb-2 " id="doc-navdrawer-utilities">
           <a class="nav-item nav-link pl-4 my-0 text-black-secondary" href="/material/docs/4.4/utilities/borders/"><span class="font-weight-normal">Borders</span></a>
           <a class="nav-item nav-link pl-4 my-0 text-black-secondary" href="/material/docs/4.4/utilities/clearfix/"><span class="font-weight-normal">Clearfix</span></a>
           <a class="nav-item nav-link pl-4 my-0 text-black-secondary" href="/material/docs/4.4/utilities/close-icon/"><span class="font-weight-normal">Close icon</span></a>
@@ -124,7 +124,7 @@
           <a class="nav-item nav-link pl-4 my-0 text-black-secondary" href="/material/docs/4.4/utilities/flex/"><span class="font-weight-normal">Flex</span></a>
           <a class="nav-item nav-link pl-4 my-0 text-black-secondary" href="/material/docs/4.4/utilities/float/"><span class="font-weight-normal">Float</span></a>
           <a class="nav-item nav-link pl-4 my-0 text-black-secondary" href="/material/docs/4.4/utilities/image-replacement/"><span class="font-weight-normal">Image replacement</span></a>
-          <a class="nav-item nav-link pl-4 my-0 active" href="/material/docs/4.4/utilities/overflow/"><span class="font-weight-normal">Overflow</span></a>
+          <a class="nav-item nav-link pl-4 my-0 text-black-secondary" href="/material/docs/4.4/utilities/overflow/"><span class="font-weight-normal">Overflow</span></a>
           <a class="nav-item nav-link pl-4 my-0 text-black-secondary" href="/material/docs/4.4/utilities/position/"><span class="font-weight-normal">Position</span></a>
           <a class="nav-item nav-link pl-4 my-0 text-black-secondary" href="/material/docs/4.4/utilities/screen-readers/"><span class="font-weight-normal">Screen readers</span></a>
           <a class="nav-item nav-link pl-4 my-0 text-black-secondary" href="/material/docs/4.4/utilities/shadows/"><span class="font-weight-normal">Shadows</span></a>
@@ -139,9 +139,9 @@
        <div class="collapse pb-2 " id="doc-navdrawer-extend-wip">
        </div>
        <div class="navdrawer-divider"></div>
-        <a class="nav-item nav-link collapsed" data-toggle="collapse" href="#doc-navdrawer-material"><strong>Material</strong></a>
-       <div class="collapse pb-2 " id="doc-navdrawer-material">
-          <a class="nav-item nav-link pl-4 my-0 text-black-secondary" href="/material/docs/4.4/material/app-bars-top/"><span class="font-weight-normal">App bars top</span></a>
+        <a class="nav-item nav-link " data-toggle="collapse" href="#doc-navdrawer-material"><strong>Material</strong></a>
+       <div class="collapse pb-2 show" id="doc-navdrawer-material">
+          <a class="nav-item nav-link pl-4 my-0 active" href="/material/docs/4.4/material/app-bars-top/"><span class="font-weight-normal">App bars top</span></a>
           <a class="nav-item nav-link pl-4 my-0 text-black-secondary" href="/material/docs/4.4/material/buttons/"><span class="font-weight-normal">Buttons</span></a>
           <a class="nav-item nav-link pl-4 my-0 text-black-secondary" href="/material/docs/4.4/material/buttons-floating-action/"><span class="font-weight-normal">Buttons floating action</span></a>
           <a class="nav-item nav-link pl-4 my-0 text-black-secondary" href="/material/docs/4.4/material/badges/"><span class="font-weight-normal">Badges</span></a>
@@ -179,8 +179,8 @@
  <div class="container">
    <div class="row justify-content-center">
      <div class="col-xl-9">
-       <h1 class="typography-display-4" id="doc-main-h1">Overflow</h1>
-       <p class="font-weight-light typography-title">Use these shorthand utilities for quickly configuring how content overflows an element.</p>
+       <h1 class="typography-display-4" id="doc-main-h1">App bars top</h1>
+       <p class="font-weight-light typography-title">The top app bar displays information and actions relating to the current screen.</p>
      </div>
    </div>
  </div>
@@ -190,18 +190,23 @@
      <div class="row justify-content-center">
        <div class="col-xl-9">
          <div class="bd-content mb-5">
-           <p>Barebones <code class="highlighter-rouge">overflow</code> functionality is provided for two values by default, and they are not responsive.</p>
-<div class="bd-example d-md-flex">
- <div class="overflow-auto p-3 mb-3 mb-md-0 mr-md-3 bg-light" style="max-width: 260px; max-height: 100px;">
-    This is an example of using <code>.overflow-auto</code> on an element with set width and height dimensions. By design, this content will vertically scroll.
- </div>
- <div class="overflow-hidden p-3 bg-light" style="max-width: 260px; max-height: 100px;">
-    This is an example of using <code>.overflow-hidden</code> on an element with set width and height dimensions.
- </div>
+           <p>The top app bar provides content and actions related to the current screen. It’s used for branding, screen titles, navigation, and actions.</p>
+<p>It can transform into a contextual action bar.</p>
+<div class="list-group my-2 my-lg-5">
+    <a href="/material/docs/4.4/components/navbar/" target="_blank" class="list-group-item list-group-item-action d-flex list-group-item-two-line font-weight-bold">
+      <span class="list-group-item-icon lgi-icon-bs"></span>
+      <span class="list-group-item-text">
+        <span>Bootstrap documentation: Navbar</span>
+        <span>Most of the details have been covered here</span>
+      </span>
+    </a>
+    <a href="https://material.io/components/app-bars-top" target="_blank" class="list-group-item list-group-item-action d-flex font-weight-bold" rel="noopener noreferrer">
+      <span class="list-group-item-icon lgi-icon-md"></span>
+      Material Design guidelines: App bars: top</a>
+    <a href="https://material-components.github.io/material-components-web-catalog/#/component/tabs" target="_blank" class="list-group-item list-group-item-action d-flex font-weight-bold" rel="noopener noreferrer">
+    <span class="list-group-item-icon lgi-icon-mdc"></span>
+    Material Components for the web: Top Bar</a>
 </div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"overflow-auto"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"overflow-hidden"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span></code></pre></figure>
-<p>Using Sass variables, you may customize the overflow utilities by changing the <code class="highlighter-rouge">$overflows</code> variable in <code class="highlighter-rouge">_variables.scss</code>.</p>
          </div>
        </div>
      </div>
