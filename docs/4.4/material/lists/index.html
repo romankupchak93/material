@@ -263,29 +263,29 @@
   <span class="nt">&lt;/li&gt;</span>
 <span class="nt">&lt;/ul&gt;</span></code></pre></figure>
 <h3 id="single-line-items-with-icon">Single-line items with icon</h3>
-<p>To prepend an icon, just add your icon markup with <code class="highlighter-rouge">list-group-item-icon</code> class.</p>
+<p>To prepend an icon, just add your icon markup with <code class="highlighter-rouge">list-group-item-icon</code> class. Material UI is compatible with any icon set (SVG, Material icons, FontAwesome 4 or 5, …).</p>
 <div class="bd-example">
 <ul class="list-group">
  <li class="list-group-item list-group-item-action d-flex">
-    <span class="material-icons list-group-item-icon">favorite</span>
+    <span class="material-icons list-group-item-icon" aria-hidden="true">favorite</span>
     List item
  </li>
  <li class="list-group-item list-group-item-action d-flex">
-    <svg xmlns="http://www.w3.org/2000/svg" height="24" viewbox="0 0 24 24" width="24" class="list-group-item-icon"><path d="M0 0h24v24H0z" fill="none"></path><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" fill="rgba(0,0,0,0.60)"></path></svg>
+    <svg class="list-group-item-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" height="24" viewbox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"></path><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path></svg>
     List item with svg icon
  </li>
  <li class="list-group-item list-group-item-action d-flex">
-    <span class="material-icons list-group-item-icon">favorite</span>
+    <span class="material-icons list-group-item-icon" aria-hidden="true">favorite</span>
     List item with icon
     <span class="material-icons list-group-item-meta">info</span>
  </li>
  <li class="list-group-item list-group-item-action d-flex">
-    <span class="material-icons list-group-item-icon">favorite</span>
+    <span class="material-icons list-group-item-icon" aria-hidden="true">favorite</span>
     List item with Button
     <a class="btn btn-icon ml-auto" href="#"><span class="material-icons">more_vert</span></a>
  </li>
  <li class="list-group-item list-group-item-action d-flex">
-    <span class="material-icons list-group-item-icon">favorite</span>
+    <span class="material-icons list-group-item-icon" aria-hidden="true">favorite</span>
     List item with Text
     <span class="list-group-item-meta">Meta</span>
  </li>
@@ -293,25 +293,25 @@
 </div>
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"list-group"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"list-group-item list-group-item-action d-flex"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"material-icons list-group-item-icon"</span><span class="nt">&gt;</span>favorite<span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"material-icons list-group-item-icon"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span>favorite<span class="nt">&lt;/span&gt;</span>
     List item
   <span class="nt">&lt;/li&gt;</span>
   <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"list-group-item list-group-item-action d-flex"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;svg</span> <span class="na">xmlns=</span><span class="s">"http://www.w3.org/2000/svg"</span> <span class="na">height=</span><span class="s">"24"</span> <span class="na">viewbox=</span><span class="s">"0 0 24 24"</span> <span class="na">width=</span><span class="s">"24"</span> <span class="na">class=</span><span class="s">"list-group-item-icon"</span><span class="nt">&gt;&lt;path</span> <span class="na">d=</span><span class="s">"M0 0h24v24H0z"</span> <span class="na">fill=</span><span class="s">"none"</span> <span class="nt">/&gt;&lt;path</span> <span class="na">d=</span><span class="s">"M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"</span> <span class="na">fill=</span><span class="s">"rgba(0,0,0,0.60)"</span><span class="nt">/&gt;&lt;/svg&gt;</span>
+    <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"list-group-item-icon"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span> <span class="na">xmlns=</span><span class="s">"http://www.w3.org/2000/svg"</span> <span class="na">height=</span><span class="s">"24"</span> <span class="na">viewbox=</span><span class="s">"0 0 24 24"</span> <span class="na">width=</span><span class="s">"24"</span><span class="nt">&gt;&lt;path</span> <span class="na">d=</span><span class="s">"M0 0h24v24H0z"</span> <span class="na">fill=</span><span class="s">"none"</span> <span class="nt">/&gt;&lt;path</span> <span class="na">d=</span><span class="s">"M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"</span> <span class="nt">/&gt;&lt;/svg&gt;</span>
     List item with svg icon
   <span class="nt">&lt;/li&gt;</span>
   <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"list-group-item list-group-item-action d-flex"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"material-icons list-group-item-icon"</span><span class="nt">&gt;</span>favorite<span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"material-icons list-group-item-icon"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span>favorite<span class="nt">&lt;/span&gt;</span>
     List item with icon
     <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"material-icons list-group-item-meta"</span><span class="nt">&gt;</span>info<span class="nt">&lt;/span&gt;</span>
   <span class="nt">&lt;/li&gt;</span>
   <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"list-group-item list-group-item-action d-flex"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"material-icons list-group-item-icon"</span><span class="nt">&gt;</span>favorite<span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"material-icons list-group-item-icon"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span>favorite<span class="nt">&lt;/span&gt;</span>
     List item with Button
     <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn btn-icon ml-auto"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"material-icons"</span><span class="nt">&gt;</span>more_vert<span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
   <span class="nt">&lt;/li&gt;</span>
   <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"list-group-item list-group-item-action d-flex"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"material-icons list-group-item-icon"</span><span class="nt">&gt;</span>favorite<span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"material-icons list-group-item-icon"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span>favorite<span class="nt">&lt;/span&gt;</span>
     List item with Text
     <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"list-group-item-meta"</span><span class="nt">&gt;</span>Meta<span class="nt">&lt;/span&gt;</span>
   <span class="nt">&lt;/li&gt;</span>
@@ -321,21 +321,21 @@
 <div class="bd-example">
 <ul class="list-group my-3">
  <li class="list-group-item list-group-item-action d-flex">
-      <svg xmlns="http://www.w3.org/2000/svg" height="24" viewbox="0 0 24 24" width="24" class="list-group-item-graphic"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z" fill="rgba(0,0,0,0.3)"></path><path d="M0 0h24v24H0z" fill="none"></path></svg>
+      <svg class="list-group-item-graphic" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" height="24" viewbox="0 0 24 24" width="24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg>
     List item with svg icon
  </li>
  <li class="list-group-item list-group-item-action d-flex">
-    <span class="material-icons list-group-item-graphic">account_circle</span>
+    <span class="material-icons list-group-item-graphic" aria-hidden="true">account_circle</span>
     List item with appended icon
     <span class="material-icons list-group-item-meta">info</span>
  </li>
  <li class="list-group-item list-group-item-action d-flex">
-    <span class="material-icons list-group-item-graphic">account_circle</span>
+    <span class="material-icons list-group-item-graphic" aria-hidden="true">account_circle</span>
     List item with material icon and Button
     <a class="btn btn-icon ml-auto" href="#"><span class="material-icons">more_vert</span></a>
  </li>
  <li class="list-group-item list-group-item-action d-flex">
-    <span class="material-icons list-group-item-graphic">account_circle</span>
+    <span class="material-icons list-group-item-graphic" aria-hidden="true">account_circle</span>
     List item with Text
     <span class="list-group-item-meta">Meta</span>
  </li>
@@ -343,21 +343,21 @@
 </div>
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"list-group my-3"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"list-group-item list-group-item-action d-flex"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;svg</span> <span class="na">xmlns=</span><span class="s">"http://www.w3.org/2000/svg"</span> <span class="na">height=</span><span class="s">"24"</span> <span class="na">viewbox=</span><span class="s">"0 0 24 24"</span> <span class="na">width=</span><span class="s">"24"</span> <span class="na">class=</span><span class="s">"list-group-item-graphic"</span><span class="nt">&gt;&lt;path</span> <span class="na">d=</span><span class="s">"M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"</span> <span class="na">fill=</span><span class="s">"rgba(0,0,0,0.3)"</span><span class="nt">/&gt;&lt;path</span> <span class="na">d=</span><span class="s">"M0 0h24v24H0z"</span> <span class="na">fill=</span><span class="s">"none"</span> <span class="nt">/&gt;&lt;/svg&gt;</span>
+      <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"list-group-item-graphic"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span> <span class="na">xmlns=</span><span class="s">"http://www.w3.org/2000/svg"</span> <span class="na">height=</span><span class="s">"24"</span> <span class="na">viewbox=</span><span class="s">"0 0 24 24"</span> <span class="na">width=</span><span class="s">"24"</span><span class="nt">&gt;&lt;path</span> <span class="na">d=</span><span class="s">"M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"</span> <span class="nt">/&gt;&lt;path</span> <span class="na">d=</span><span class="s">"M0 0h24v24H0z"</span> <span class="na">fill=</span><span class="s">"none"</span> <span class="nt">/&gt;&lt;/svg&gt;</span>
     List item with svg icon
   <span class="nt">&lt;/li&gt;</span>
   <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"list-group-item list-group-item-action d-flex"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"material-icons list-group-item-graphic"</span><span class="nt">&gt;</span>account_circle<span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"material-icons list-group-item-graphic"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span>account_circle<span class="nt">&lt;/span&gt;</span>
     List item with appended icon
     <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"material-icons list-group-item-meta"</span><span class="nt">&gt;</span>info<span class="nt">&lt;/span&gt;</span>
   <span class="nt">&lt;/li&gt;</span>
   <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"list-group-item list-group-item-action d-flex"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"material-icons list-group-item-graphic"</span><span class="nt">&gt;</span>account_circle<span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"material-icons list-group-item-graphic"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span>account_circle<span class="nt">&lt;/span&gt;</span>
     List item with material icon and Button
     <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn btn-icon ml-auto"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span</span>          <span class="na">class=</span><span class="s">"material-icons"</span><span class="nt">&gt;</span>more_vert<span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
   <span class="nt">&lt;/li&gt;</span>
   <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"list-group-item list-group-item-action d-flex"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"material-icons list-group-item-graphic"</span><span class="nt">&gt;</span>account_circle<span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"material-icons list-group-item-graphic"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span>account_circle<span class="nt">&lt;/span&gt;</span>
     List item with Text
     <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"list-group-item-meta"</span><span class="nt">&gt;</span>Meta<span class="nt">&lt;/span&gt;</span>
   <span class="nt">&lt;/li&gt;</span>
@@ -437,14 +437,14 @@
 <div class="bd-example">
 <ul class="list-group">
  <li class="list-group-item list-group-item-action d-flex list-group-item-two-line">
-    <span class="material-icons list-group-item-icon">favorite</span>
+    <span class="material-icons list-group-item-icon" aria-hidden="true">favorite</span>
     <span class="list-group-item-text">
       <span>List item title</span>
       <span>Secondary text</span>
     </span>
  </li>
  <li class="list-group-item list-group-item-action d-flex list-group-item-two-line">
-    <span class="material-icons list-group-item-icon">favorite</span>
+    <span class="material-icons list-group-item-icon" aria-hidden="true">favorite</span>
     <span class="list-group-item-text">
       <span>List item title with Text</span>
       <span>Secondary text</span>
@@ -452,7 +452,7 @@
     <span class="material-icons list-group-item-meta">info</span>
   </li>
  <li class="list-group-item list-group-item-action d-flex list-group-item-two-line">
-    <span class="material-icons list-group-item-icon">favorite</span>
+    <span class="material-icons list-group-item-icon" aria-hidden="true">favorite</span>
     <span class="list-group-item-text">
       <span>List item title with icon</span>
       <span>Secondary text</span>
@@ -462,7 +462,7 @@
     </a>
  </li>
  <li class="list-group-item list-group-item-action d-flex list-group-item-two-line">
-    <span class="material-icons list-group-item-icon">favorite</span>
+    <span class="material-icons list-group-item-icon" aria-hidden="true">favorite</span>
     <span class="list-group-item-text">
       <span>List item title with Text</span>
       <span>Secondary text</span>
@@ -473,14 +473,14 @@
 </div>
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"list-group"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"list-group-item list-group-item-action d-flex list-group-item-two-line"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"material-icons list-group-item-icon"</span><span class="nt">&gt;</span>favorite<span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"material-icons list-group-item-icon"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span>favorite<span class="nt">&lt;/span&gt;</span>
     <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"list-group-item-text"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;span&gt;</span>List item title<span class="nt">&lt;/span&gt;</span>
       <span class="nt">&lt;span&gt;</span>Secondary text<span class="nt">&lt;/span&gt;</span>
     <span class="nt">&lt;/span&gt;</span>
   <span class="nt">&lt;/li&gt;</span>
   <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"list-group-item list-group-item-action d-flex list-group-item-two-line"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"material-icons list-group-item-icon"</span><span class="nt">&gt;</span>favorite<span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"material-icons list-group-item-icon"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span>favorite<span class="nt">&lt;/span&gt;</span>
     <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"list-group-item-text"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;span&gt;</span>List item title with Text<span class="nt">&lt;/span&gt;</span>
       <span class="nt">&lt;span&gt;</span>Secondary text<span class="nt">&lt;/span&gt;</span>
@@ -488,7 +488,7 @@
     <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"material-icons list-group-item-meta"</span><span class="nt">&gt;</span>info<span class="nt">&lt;/span&gt;</span>
    <span class="nt">&lt;/li&gt;</span>
   <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"list-group-item list-group-item-action d-flex list-group-item-two-line"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"material-icons list-group-item-icon"</span><span class="nt">&gt;</span>favorite<span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"material-icons list-group-item-icon"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span>favorite<span class="nt">&lt;/span&gt;</span>
     <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"list-group-item-text"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;span&gt;</span>List item title with icon<span class="nt">&lt;/span&gt;</span>
       <span class="nt">&lt;span&gt;</span>Secondary text<span class="nt">&lt;/span&gt;</span>
@@ -498,7 +498,7 @@
     <span class="nt">&lt;/a&gt;</span>
   <span class="nt">&lt;/li&gt;</span>
   <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"list-group-item list-group-item-action d-flex list-group-item-two-line"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"material-icons list-group-item-icon"</span><span class="nt">&gt;</span>favorite<span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"material-icons list-group-item-icon"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span>favorite<span class="nt">&lt;/span&gt;</span>
     <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"list-group-item-text"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;span&gt;</span>List item title with Text<span class="nt">&lt;/span&gt;</span>
       <span class="nt">&lt;span&gt;</span>Secondary text<span class="nt">&lt;/span&gt;</span>
@@ -510,14 +510,14 @@
 <div class="bd-example">
 <ul class="list-group">
  <li class="list-group-item list-group-item-action d-flex list-group-item-two-line">
-    <svg xmlns="http://www.w3.org/2000/svg" height="24" viewbox="0 0 24 24" width="24" class="list-group-item-graphic"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z" fill="rgba(0,0,0,0.3)"></path><path d="M0 0h24v24H0z" fill="none"></path></svg>
+    <svg class="list-group-item-graphic" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" height="24" viewbox="0 0 24 24" width="24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg>
     <span class="list-group-item-text">
       <span>List item title with SVG</span>
       <span>Secondary text</span>
     </span>
  </li>
  <li class="list-group-item list-group-item-action d-flex list-group-item-two-line">
-    <span class="material-icons list-group-item-graphic">account_circle</span>
+    <span class="material-icons list-group-item-graphic" aria-hidden="true">account_circle</span>
     <span class="list-group-item-text">
       <span>List item title with Text</span>
       <span>Secondary text</span>
@@ -525,7 +525,7 @@
     <span class="material-icons list-group-item-meta">info</span>
   </li>
  <li class="list-group-item list-group-item-action d-flex list-group-item-two-line">
-    <span class="material-icons list-group-item-graphic">account_circle</span>
+    <span class="material-icons list-group-item-graphic" aria-hidden="true">account_circle</span>
     <span class="list-group-item-text">
       <span>List item title with icon/button</span>
       <span>Secondary text</span>
@@ -535,7 +535,7 @@
     </a>
  </li>
  <li class="list-group-item list-group-item-action d-flex list-group-item-two-line">
-    <span class="material-icons list-group-item-graphic">account_circle</span>
+    <span class="material-icons list-group-item-graphic" aria-hidden="true">account_circle</span>
     <span class="list-group-item-text">
       <span>List item title with Text</span>
       <span>Secondary text</span>
@@ -546,14 +546,14 @@
 </div>
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"list-group"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"list-group-item list-group-item-action d-flex list-group-item-two-line"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;svg</span> <span class="na">xmlns=</span><span class="s">"http://www.w3.org/2000/svg"</span> <span class="na">height=</span><span class="s">"24"</span> <span class="na">viewbox=</span><span class="s">"0 0 24 24"</span> <span class="na">width=</span><span class="s">"24"</span> <span class="na">class=</span><span class="s">"list-group-item-graphic"</span><span class="nt">&gt;&lt;path</span> <span class="na">d=</span><span class="s">"M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"</span> <span class="na">fill=</span><span class="s">"rgba(0,0,0,0.3)"</span><span class="nt">/&gt;&lt;path</span> <span class="na">d=</span><span class="s">"M0 0h24v24H0z"</span> <span class="na">fill=</span><span class="s">"none"</span> <span class="nt">/&gt;&lt;/svg&gt;</span>
+    <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"list-group-item-graphic"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span> <span class="na">xmlns=</span><span class="s">"http://www.w3.org/2000/svg"</span> <span class="na">height=</span><span class="s">"24"</span> <span class="na">viewbox=</span><span class="s">"0 0 24 24"</span> <span class="na">width=</span><span class="s">"24"</span><span class="nt">&gt;&lt;path</span> <span class="na">d=</span><span class="s">"M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"</span> <span class="nt">/&gt;&lt;path</span> <span class="na">d=</span><span class="s">"M0 0h24v24H0z"</span> <span class="na">fill=</span><span class="s">"none"</span> <span class="nt">/&gt;&lt;/svg&gt;</span>
     <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"list-group-item-text"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;span&gt;</span>List item title with SVG<span class="nt">&lt;/span&gt;</span>
       <span class="nt">&lt;span&gt;</span>Secondary text<span class="nt">&lt;/span&gt;</span>
     <span class="nt">&lt;/span&gt;</span>
   <span class="nt">&lt;/li&gt;</span>
   <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"list-group-item list-group-item-action d-flex list-group-item-two-line"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"material-icons list-group-item-graphic"</span><span class="nt">&gt;</span>account_circle<span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"material-icons list-group-item-graphic"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span>account_circle<span class="nt">&lt;/span&gt;</span>
     <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"list-group-item-text"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;span&gt;</span>List item title with Text<span class="nt">&lt;/span&gt;</span>
       <span class="nt">&lt;span&gt;</span>Secondary text<span class="nt">&lt;/span&gt;</span>
@@ -561,7 +561,7 @@
     <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"material-icons list-group-item-meta"</span><span class="nt">&gt;</span>info<span class="nt">&lt;/span&gt;</span>
    <span class="nt">&lt;/li&gt;</span>
   <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"list-group-item list-group-item-action d-flex list-group-item-two-line"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"material-icons list-group-item-graphic"</span><span class="nt">&gt;</span>account_circle<span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"material-icons list-group-item-graphic"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span>account_circle<span class="nt">&lt;/span&gt;</span>
     <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"list-group-item-text"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;span&gt;</span>List item title with icon/button<span class="nt">&lt;/span&gt;</span>
       <span class="nt">&lt;span&gt;</span>Secondary text<span class="nt">&lt;/span&gt;</span>
@@ -571,7 +571,7 @@
     <span class="nt">&lt;/a&gt;</span>
   <span class="nt">&lt;/li&gt;</span>
   <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"list-group-item list-group-item-action d-flex list-group-item-two-line"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"material-icons list-group-item-graphic"</span><span class="nt">&gt;</span>account_circle<span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"material-icons list-group-item-graphic"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span>account_circle<span class="nt">&lt;/span&gt;</span>
     <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"list-group-item-text"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;span&gt;</span>List item title with Text<span class="nt">&lt;/span&gt;</span>
       <span class="nt">&lt;span&gt;</span>Secondary text<span class="nt">&lt;/span&gt;</span>
@@ -584,38 +584,38 @@
 <div class="bd-example">
 <ul class="list-group">
  <li class="list-group-item list-group-item-action d-flex">
-    <span class="material-icons list-group-item-icon">inbox</span>
+    <span class="material-icons list-group-item-icon" aria-hidden="true">inbox</span>
     Inbox
  </li>
  <li class="list-group-item active list-group-item-action d-flex">
-    <span class="material-icons list-group-item-icon">star</span>
+    <span class="material-icons list-group-item-icon" aria-hidden="true">star</span>
     Star
  </li>
  <li class="list-group-item list-group-item-action d-flex">
-    <span class="material-icons list-group-item-icon">send</span>
+    <span class="material-icons list-group-item-icon" aria-hidden="true">send</span>
     Send
  </li>
  <li class="list-group-item list-group-item-action d-flex">
-    <span class="material-icons list-group-item-icon">drafts</span>
+    <span class="material-icons list-group-item-icon" aria-hidden="true">drafts</span>
     Drafts
  </li>
 </ul>
 </div>
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"list-group"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"list-group-item list-group-item-action d-flex"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"material-icons list-group-item-icon"</span><span class="nt">&gt;</span>inbox<span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"material-icons list-group-item-icon"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span>inbox<span class="nt">&lt;/span&gt;</span>
     Inbox
   <span class="nt">&lt;/li&gt;</span>
   <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"list-group-item active list-group-item-action d-flex"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"material-icons list-group-item-icon"</span><span class="nt">&gt;</span>star<span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"material-icons list-group-item-icon"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span>star<span class="nt">&lt;/span&gt;</span>
     Star
   <span class="nt">&lt;/li&gt;</span>
   <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"list-group-item list-group-item-action d-flex"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"material-icons list-group-item-icon"</span><span class="nt">&gt;</span>send<span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"material-icons list-group-item-icon"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span>send<span class="nt">&lt;/span&gt;</span>
     Send
   <span class="nt">&lt;/li&gt;</span>
   <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"list-group-item list-group-item-action d-flex"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"material-icons list-group-item-icon"</span><span class="nt">&gt;</span>drafts<span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"material-icons list-group-item-icon"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span>drafts<span class="nt">&lt;/span&gt;</span>
     Drafts
   <span class="nt">&lt;/li&gt;</span>
 <span class="nt">&lt;/ul&gt;</span></code></pre></figure>
@@ -624,38 +624,38 @@
 <div class="bd-example">
 <ul class="list-group list-group-shaped">
  <li class="list-group-item list-group-item-action d-flex">
-    <span class="material-icons list-group-item-icon">inbox</span>
+    <span class="material-icons list-group-item-icon" aria-hidden="true">inbox</span>
     Inbox
  </li>
  <li class="list-group-item active list-group-item-action d-flex">
-    <span class="material-icons list-group-item-icon">star</span>
+    <span class="material-icons list-group-item-icon" aria-hidden="true">star</span>
     Star
  </li>
  <li class="list-group-item list-group-item-action d-flex">
-    <span class="material-icons list-group-item-icon">send</span>
+    <span class="material-icons list-group-item-icon" aria-hidden="true">send</span>
     Send
  </li>
  <li class="list-group-item list-group-item-action d-flex">
-    <span class="material-icons list-group-item-icon">drafts</span>
+    <span class="material-icons list-group-item-icon" aria-hidden="true">drafts</span>
     Drafts
  </li>
 </ul>
 </div>
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"list-group list-group-shaped"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"list-group-item list-group-item-action d-flex"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"material-icons list-group-item-icon"</span><span class="nt">&gt;</span>inbox<span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"material-icons list-group-item-icon"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span>inbox<span class="nt">&lt;/span&gt;</span>
     Inbox
   <span class="nt">&lt;/li&gt;</span>
   <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"list-group-item active list-group-item-action d-flex"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"material-icons list-group-item-icon"</span><span class="nt">&gt;</span>star<span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"material-icons list-group-item-icon"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span>star<span class="nt">&lt;/span&gt;</span>
     Star
   <span class="nt">&lt;/li&gt;</span>
   <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"list-group-item list-group-item-action d-flex"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"material-icons list-group-item-icon"</span><span class="nt">&gt;</span>send<span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"material-icons list-group-item-icon"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span>send<span class="nt">&lt;/span&gt;</span>
     Send
   <span class="nt">&lt;/li&gt;</span>
   <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"list-group-item list-group-item-action d-flex"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"material-icons list-group-item-icon"</span><span class="nt">&gt;</span>drafts<span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"material-icons list-group-item-icon"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span>drafts<span class="nt">&lt;/span&gt;</span>
     Drafts
   <span class="nt">&lt;/li&gt;</span>
 <span class="nt">&lt;/ul&gt;</span></code></pre></figure>
@@ -664,7 +664,7 @@
 <div class="bd-example">
 <ul class="list-group">
  <li class="list-group-item list-group-item-action d-flex list-group-item-two-line">
-    <span class="material-icons list-group-item-graphic">folder</span>
+    <span class="material-icons list-group-item-graphic" aria-hidden="true">folder</span>
     <span class="list-group-item-text">
       <span>Dog photos</span>
       <span>9 Jan 2018</span>
@@ -672,7 +672,7 @@
     <span class="list-group-item-meta material-icons">info</span>
  </li>
  <li class="list-group-item list-group-item-action d-flex list-group-item-two-line">
-    <span class="material-icons list-group-item-graphic">folder</span>
+    <span class="material-icons list-group-item-graphic" aria-hidden="true">folder</span>
     <span class="list-group-item-text">
       <span>Cat photos</span>
       <span>22 Dec 2017</span>
@@ -681,7 +681,7 @@
  </li>
  <li class="list-group-divider" role="separator">
  <li class="list-group-item list-group-item-action d-flex list-group-item-two-line">
-    <span class="material-icons list-group-item-graphic">folder</span>
+    <span class="material-icons list-group-item-graphic" aria-hidden="true">folder</span>
     <span class="list-group-item-text">
       <span>Potatoes</span>
       <span>30 Nov 2017</span>
@@ -689,7 +689,7 @@
     <span class="list-group-item-meta material-icons">info</span>
  </li>
  <li class="list-group-item list-group-item-action d-flex list-group-item-two-line">
-    <span class="material-icons list-group-item-graphic">folder</span>
+    <span class="material-icons list-group-item-graphic" aria-hidden="true">folder</span>
     <span class="list-group-item-text">
       <span>Carrots</span>
       <span>17 Oct 2017</span>
@@ -700,7 +700,7 @@
 </div>
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"list-group"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"list-group-item list-group-item-action d-flex list-group-item-two-line"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"material-icons list-group-item-graphic"</span><span class="nt">&gt;</span>folder<span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"material-icons list-group-item-graphic"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span>folder<span class="nt">&lt;/span&gt;</span>
     <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"list-group-item-text"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;span&gt;</span>Dog photos<span class="nt">&lt;/span&gt;</span>
       <span class="nt">&lt;span&gt;</span>9 Jan 2018<span class="nt">&lt;/span&gt;</span>
@@ -708,7 +708,7 @@
     <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"list-group-item-meta material-icons"</span><span class="nt">&gt;</span>info<span class="nt">&lt;/span&gt;</span>
   <span class="nt">&lt;/li&gt;</span>
   <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"list-group-item list-group-item-action d-flex list-group-item-two-line"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"material-icons list-group-item-graphic"</span><span class="nt">&gt;</span>folder<span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"material-icons list-group-item-graphic"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span>folder<span class="nt">&lt;/span&gt;</span>
     <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"list-group-item-text"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;span&gt;</span>Cat photos<span class="nt">&lt;/span&gt;</span>
       <span class="nt">&lt;span&gt;</span>22 Dec 2017<span class="nt">&lt;/span&gt;</span>
@@ -717,7 +717,7 @@
   <span class="nt">&lt;/li&gt;</span>
   <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"list-group-divider"</span> <span class="na">role=</span><span class="s">"separator"</span><span class="nt">&gt;&lt;/li&gt;</span>
   <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"list-group-item list-group-item-action d-flex list-group-item-two-line"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"material-icons list-group-item-graphic"</span><span class="nt">&gt;</span>folder<span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"material-icons list-group-item-graphic"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span>folder<span class="nt">&lt;/span&gt;</span>
     <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"list-group-item-text"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;span&gt;</span>Potatoes<span class="nt">&lt;/span&gt;</span>
       <span class="nt">&lt;span&gt;</span>30 Nov 2017<span class="nt">&lt;/span&gt;</span>
@@ -725,7 +725,7 @@
     <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"list-group-item-meta material-icons"</span><span class="nt">&gt;</span>info<span class="nt">&lt;/span&gt;</span>
   <span class="nt">&lt;/li&gt;</span>
   <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"list-group-item list-group-item-action d-flex list-group-item-two-line"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"material-icons list-group-item-graphic"</span><span class="nt">&gt;</span>folder<span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"material-icons list-group-item-graphic"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span>folder<span class="nt">&lt;/span&gt;</span>
     <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"list-group-item-text"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;span&gt;</span>Carrots<span class="nt">&lt;/span&gt;</span>
       <span class="nt">&lt;span&gt;</span>17 Oct 2017<span class="nt">&lt;/span&gt;</span>
