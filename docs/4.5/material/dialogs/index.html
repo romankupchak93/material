@@ -5,7 +5,7 @@
 <meta name="viewport" content="initial-scale=1, shrink-to-fit=no, width=device-width">
 <meta name="description" content="">
 <meta name="author" content="Daemonite, Sesemaya, djibe, Bootstrap authors and contributors">
-<meta name="generator" content="Jekyll v4.0.1">
+<meta name="generator" content="Jekyll v4.1.1">
 <meta name="keywords" content="material design, material, material UI, bootstrap, theme, daemonite, web, ui, components, responsive, accessibility, css, mobile web, open source">
 <link rel="preconnect" href="https://fonts.googleapis.com/">
 <link rel="preconnect" href="https://fonts.gstatic.com/">
@@ -15,11 +15,7 @@
 <title>Dialogs - Daemonite Material Design 2</title>
 <!-- CSS -->
 <!-- Add Material font (Roboto) and Material icon as needed -->
-<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;700&family=Roboto+Slab:wght@300;400;700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="preload" as="style">
-<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;700&family=Roboto+Slab:wght@300;400;700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-<noscript>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;700&family=Roboto+Slab:wght@300;400;700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap">
-</noscript>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;700&family=Roboto+Slab:wght@300;400;700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
 <!-- Add Material CSS, replace Bootstrap CSS -->
 <link href="/material/css/material.min.css" rel="stylesheet">
@@ -61,7 +57,7 @@
       <form class="navdrawer-body mt-2">
        <div class="floating-label textfield-box">
           <label for="doc-search">Search</label>
-          <input aria-label="Search" autocomplete="off" data-siteurl="http://localhost:9999" class="form-control doc-search" id="doc-search" type="search" disabled>
+          <input aria-label="Search" autocomplete="off" data-siteurl="https://djibe.github.io" class="form-control doc-search" id="doc-search" type="search" disabled>
           <small class="form-text text-muted">Desactivated since it is a fork.</small>
        </div>
         <button class="sr-only" type="submit">Search documentation</button>
@@ -176,12 +172,19 @@
           <a class="nav-item nav-link pl-4 my-0 text-black-secondary" href="/material/docs/4.5/material/tooltips/"><span class="font-weight-normal">Tooltips</span></a>
           <a class="nav-item nav-link pl-4 my-0 text-black-secondary" href="/material/docs/4.5/material/typography/"><span class="font-weight-normal">Typography</span></a>
        </div>
+        <a class="nav-item nav-link collapsed" data-toggle="collapse" href="#doc-navdrawer-plugins"><strong>Plugins</strong></a>
+       <div class="collapse pb-2 " id="doc-navdrawer-plugins">
+          <a class="nav-item nav-link pl-4 my-0 text-black-secondary" href="/material/docs/4.5/plugins/character-counter/"><span class="font-weight-normal">Character counter</span></a>
+          <a class="nav-item nav-link pl-4 my-0 text-black-secondary" href="/material/docs/4.5/plugins/sliders-ionrangeslider/"><span class="font-weight-normal">Sliders ionRangeSlider</span></a>
+          <a class="nav-item nav-link pl-4 my-0 text-black-secondary" href="/material/docs/4.5/plugins/select-select2/"><span class="font-weight-normal">Select Select2</span></a>
+          <a class="nav-item nav-link pl-4 my-0 text-black-secondary" href="/material/docs/4.5/plugins/textarea-autosize/"><span class="font-weight-normal">Textarea autosize</span></a>
+       </div>
      </nav>
      <div class="mt-auto">
        <div class="navdrawer-divider mt-0"></div>
        <div class="navdrawer-nav">
           <a class="nav-item nav-link text-black-secondary" href="https://github.com/djibe/material" target="_blank" rel="noopener noreferrer"><i class="material-icons mr-3">code</i>Fork me on GitHub</a>
-          <a class="nav-item nav-link text-black-secondary" href="http://www.daemon.com.au/" target="_blank" rel="noopener noreferrer"><i class="material-icons mr-3 text-danger">favorite</i>Made by Daemon</a>
+          <!--<a class="nav-item nav-link text-black-secondary" href="http://www.daemon.com.au/" target="_blank"><i class="material-icons mr-3 text-danger">favorite</i>Made by Daemon</a>-->
        </div>
      </div>
    </div>
@@ -229,7 +232,7 @@
  <li>Avoid apologies (“Sorry for the interruption”), alarm (“Warning!”), or ambiguity (“Are you sure?”)</li>
 </ul>
 <div class="bd-example bd-example-modal">
- <div class="modal" tabindex="-1" role="dialog">
+ <div class="modal" tabindex="-1">
    <div class="modal-dialog modal-sm">
      <div class="modal-content">
        <div class="modal-header">
@@ -246,7 +249,7 @@
    </div>
  </div>
 </div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal fade"</span> <span class="na">tabindex=</span><span class="s">"-1"</span> <span class="na">role=</span><span class="s">"dialog"</span><span class="nt">&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal fade"</span> <span class="na">tabindex=</span><span class="s">"-1"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-dialog modal-dialog-centered modal-sm"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-content"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-header"</span><span class="nt">&gt;</span>
@@ -265,7 +268,7 @@
 <h3 id="alerts-without-title">Alerts without title</h3>
 <p>Most alerts don’t need titles. They summarize a decision in a sentence or two by either asking a question or making a statement related to the action buttons.</p>
 <div class="bd-example bd-example-modal">
- <div class="modal" tabindex="-1" role="dialog">
+ <div class="modal" tabindex="-1">
    <div class="modal-dialog modal-sm">
      <div class="modal-content">
        <div class="modal-body">
@@ -279,7 +282,7 @@
    </div>
  </div>
 </div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal fade"</span> <span class="na">tabindex=</span><span class="s">"-1"</span> <span class="na">role=</span><span class="s">"dialog"</span><span class="nt">&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal fade"</span> <span class="na">tabindex=</span><span class="s">"-1"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-dialog modal-dialog-centered modal-sm"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-content"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-body"</span><span class="nt">&gt;</span>
@@ -295,7 +298,7 @@
 <h3 id="scrollable-alert">Scrollable alert</h3>
 <p>You’ll notice that the modal-body has a custom scrollbar on both Firefox and Chrome.</p>
 <div class="bd-example bd-example-modal">
- <div class="modal" tabindex="-1" role="dialog">
+ <div class="modal" tabindex="-1">
    <div class="modal-dialog modal-dialog-scrollable">
      <div class="modal-content">
        <div class="modal-header">
@@ -321,7 +324,7 @@
    </div>
  </div>
 </div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal fade"</span> <span class="na">tabindex=</span><span class="s">"-1"</span> <span class="na">role=</span><span class="s">"dialog"</span><span class="nt">&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal fade"</span> <span class="na">tabindex=</span><span class="s">"-1"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-dialog modal-dialog-scrollable"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-content"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-header"</span><span class="nt">&gt;</span>
@@ -350,7 +353,7 @@
 <h3 id="side-by-side-buttons">Side-by-side buttons</h3>
 <p>Flat buttons should be used in dialogs. In addition, the affirmative button should be placed on the right while the dismissive button should be placed on the left while both should use the same colour, ideally, info or primary colour.</p>
 <div class="bd-example bd-example-modal">
- <div class="modal" tabindex="-1" role="dialog">
+ <div class="modal" tabindex="-1">
    <div class="modal-dialog modal-sm">
      <div class="modal-content">
        <div class="modal-body">
@@ -364,7 +367,7 @@
    </div>
  </div>
 </div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal fade"</span> <span class="na">tabindex=</span><span class="s">"-1"</span> <span class="na">role=</span><span class="s">"dialog"</span><span class="nt">&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal fade"</span> <span class="na">tabindex=</span><span class="s">"-1"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-dialog modal-dialog-centered modal-sm"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-content"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-body"</span><span class="nt">&gt;</span>
@@ -380,7 +383,7 @@
 <h3 id="stacked-full-width-buttons">Stacked full-width buttons</h3>
 <p>Stacked buttons accommodate longer button text. Confirming actions appear above dismissive actions.</p>
 <div class="bd-example bd-example-modal">
- <div class="modal" tabindex="-1" role="dialog">
+ <div class="modal" tabindex="-1">
    <div class="modal-dialog modal-sm">
      <div class="modal-content">
        <div class="modal-header">
@@ -397,7 +400,7 @@
    </div>
  </div>
 </div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal fade"</span> <span class="na">tabindex=</span><span class="s">"-1"</span> <span class="na">role=</span><span class="s">"dialog"</span><span class="nt">&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal fade"</span> <span class="na">tabindex=</span><span class="s">"-1"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-dialog modal-dialog-centered modal-sm"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-content"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-header"</span><span class="nt">&gt;</span>
@@ -439,12 +442,12 @@
  </main>
 <!-- JavaScript -->
 <script crossorigin="anonymous" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
-<script crossorigin="anonymous" integrity="sha256-Xt8pc4G0CdcRvI0nZ2lRpZ4VHng0EoUDMlGcBSQ9HiQ=" src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.bundle.min.js"></script>
+<script crossorigin="anonymous" integrity="sha256-9nt4LsWmLI/O24lTW89IzAKuBqEZ47l/4rh1+tH/NY8=" src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
 <!-- Add Material JavaScript on top of Bootstrap JavaScript -->
 <script src="/material/js/material.min.js" async></script>
 <!-- Additional JavaScript for documentation site -->
 <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2.6.3/dist/cdn/docsearch.min.js" integrity="sha256-qybEsgf0PGiQS22AmoozPs09oRnSC7Gu7eBu4fbS2Ac=" crossorigin="anonymous" async></script>
 <script src="/material/docs/js/docs.min.js" async></script>
-<script src="//instant.page/3.0.0" type="module" integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+<script src="https://instant.page/5.1.0" type="module"></script>
 </body>
 </html>

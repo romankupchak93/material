@@ -5,7 +5,7 @@
 <meta name="viewport" content="initial-scale=1, shrink-to-fit=no, width=device-width">
 <meta name="description" content="Material design Buttons for Bootstrap 4 using some extra CSS classes for a perfect imitation. &middot; ">
 <meta name="author" content="Daemonite, Sesemaya, djibe, Bootstrap authors and contributors">
-<meta name="generator" content="Jekyll v4.0.1">
+<meta name="generator" content="Jekyll v4.1.1">
 <meta name="keywords" content="material design, material, material UI, bootstrap, theme, daemonite, web, ui, components, responsive, accessibility, css, mobile web, open source">
 <link rel="preconnect" href="https://fonts.googleapis.com/">
 <link rel="preconnect" href="https://fonts.gstatic.com/">
@@ -15,11 +15,7 @@
 <title>Buttons - Daemonite Material Design 2</title>
 <!-- CSS -->
 <!-- Add Material font (Roboto) and Material icon as needed -->
-<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;700&family=Roboto+Slab:wght@300;400;700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="preload" as="style">
-<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;700&family=Roboto+Slab:wght@300;400;700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-<noscript>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;700&family=Roboto+Slab:wght@300;400;700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap">
-</noscript>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;700&family=Roboto+Slab:wght@300;400;700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
 <!-- Add Material CSS, replace Bootstrap CSS -->
 <link href="/material/css/material.min.css" rel="stylesheet">
@@ -64,7 +60,7 @@
       <form class="navdrawer-body mt-2">
        <div class="floating-label textfield-box">
           <label for="doc-search">Search</label>
-          <input aria-label="Search" autocomplete="off" data-siteurl="http://localhost:9999" class="form-control doc-search" id="doc-search" type="search" disabled>
+          <input aria-label="Search" autocomplete="off" data-siteurl="https://djibe.github.io" class="form-control doc-search" id="doc-search" type="search" disabled>
           <small class="form-text text-muted">Desactivated since it is a fork.</small>
        </div>
         <button class="sr-only" type="submit">Search documentation</button>
@@ -179,12 +175,19 @@
           <a class="nav-item nav-link pl-4 my-0 text-black-secondary" href="/material/docs/4.5/material/tooltips/"><span class="font-weight-normal">Tooltips</span></a>
           <a class="nav-item nav-link pl-4 my-0 text-black-secondary" href="/material/docs/4.5/material/typography/"><span class="font-weight-normal">Typography</span></a>
        </div>
+        <a class="nav-item nav-link collapsed" data-toggle="collapse" href="#doc-navdrawer-plugins"><strong>Plugins</strong></a>
+       <div class="collapse pb-2 " id="doc-navdrawer-plugins">
+          <a class="nav-item nav-link pl-4 my-0 text-black-secondary" href="/material/docs/4.5/plugins/character-counter/"><span class="font-weight-normal">Character counter</span></a>
+          <a class="nav-item nav-link pl-4 my-0 text-black-secondary" href="/material/docs/4.5/plugins/sliders-ionrangeslider/"><span class="font-weight-normal">Sliders ionRangeSlider</span></a>
+          <a class="nav-item nav-link pl-4 my-0 text-black-secondary" href="/material/docs/4.5/plugins/select-select2/"><span class="font-weight-normal">Select Select2</span></a>
+          <a class="nav-item nav-link pl-4 my-0 text-black-secondary" href="/material/docs/4.5/plugins/textarea-autosize/"><span class="font-weight-normal">Textarea autosize</span></a>
+       </div>
      </nav>
      <div class="mt-auto">
        <div class="navdrawer-divider mt-0"></div>
        <div class="navdrawer-nav">
           <a class="nav-item nav-link text-black-secondary" href="https://github.com/djibe/material" target="_blank" rel="noopener noreferrer"><i class="material-icons mr-3">code</i>Fork me on GitHub</a>
-          <a class="nav-item nav-link text-black-secondary" href="http://www.daemon.com.au/" target="_blank" rel="noopener noreferrer"><i class="material-icons mr-3 text-danger">favorite</i>Made by Daemon</a>
+          <!--<a class="nav-item nav-link text-black-secondary" href="http://www.daemon.com.au/" target="_blank"><i class="material-icons mr-3 text-danger">favorite</i>Made by Daemon</a>-->
        </div>
      </div>
    </div>
@@ -227,8 +230,8 @@
 <h2 id="buttons">Buttons</h2>
 <h3 id="flat-buttons">Flat buttons</h3>
 <p>Flat buttons are text-only buttons (now called Text Buttons in Material Design guidelines). They may be used in dialogs, toolbars, or inline. They do not lift, but fill with color on press.<br>
-Material adds <code class="highlighter-rouge">.btn-flat-*</code> buttons in order to reflect these Text buttons.</p>
-<p>Bootstrap’s <code class="highlighter-rouge">.btn-link</code> and <code class="highlighter-rouge">.card-link</code> are styled as a primary text button.</p>
+Material adds <code class="language-plaintext highlighter-rouge">.btn-flat-*</code> buttons in order to reflect these Text buttons.</p>
+<p>Bootstrap’s <code class="language-plaintext highlighter-rouge">.btn-link</code> and <code class="language-plaintext highlighter-rouge">.card-link</code> are styled as a primary text button.</p>
 <div class="bd-example">
 <button class="btn btn-link" type="button">Btn-link</button>
 <button class="card-link" type="button">Card link</button>
@@ -255,7 +258,7 @@ Material adds <code class="highlighter-rouge">.btn-flat-*</code> buttons in orde
 <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-flat-light"</span> <span class="na">type=</span><span class="s">"button"</span><span class="nt">&gt;</span>Light<span class="nt">&lt;/button&gt;</span></code></pre></figure>
 <h3 id="raised-buttons">Raised buttons</h3>
 <p>Raised buttons are rectangular-shaped buttons. They may be used inline. They lift and display ink reactions on press.</p>
-<p><strong>Default buttons, i.e. <code class="highlighter-rouge">.btn</code>, are the equivalent of Material raised buttons. For more details, please refer to <a href="/material/docs/4.5/components/buttons/#examples">Components/Buttons documentation</a>.</strong></p>
+<p><strong>Default buttons, i.e. <code class="language-plaintext highlighter-rouge">.btn</code>, are the equivalent of Material raised buttons. For more details, please refer to <a href="/material/docs/4.5/components/buttons/#examples">Components/Buttons documentation</a>.</strong></p>
 <div class="bd-example">
 <button class="btn" type="button">Raised</button>
 <button class="btn btn-primary" type="button">Primary</button>
@@ -277,7 +280,7 @@ Material adds <code class="highlighter-rouge">.btn-flat-*</code> buttons in orde
 <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-dark"</span> <span class="na">type=</span><span class="s">"button"</span><span class="nt">&gt;</span>Dark<span class="nt">&lt;/button&gt;</span>
 <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-light"</span> <span class="na">type=</span><span class="s">"button"</span><span class="nt">&gt;</span>Light<span class="nt">&lt;/button&gt;</span></code></pre></figure>
 <h3 id="unelevated-buttons">Unelevated buttons</h3>
-<p>Unelevated buttons are easy to obtain : just add <code class="highlighter-rouge">shadow-none</code> class to your button.</p>
+<p>Unelevated buttons are easy to obtain : just add <code class="language-plaintext highlighter-rouge">shadow-none</code> class to your button.</p>
 <div class="bd-example">
 <button class="btn shadow-none" type="button">Unelevated</button>
 <button class="btn btn-primary shadow-none" type="button">Primary</button>
@@ -319,7 +322,7 @@ Material adds <code class="highlighter-rouge">.btn-flat-*</code> buttons in orde
 <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-outline-dark"</span> <span class="na">type=</span><span class="s">"button"</span><span class="nt">&gt;</span>Dark<span class="nt">&lt;/button&gt;</span>
 <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-outline-light"</span> <span class="na">type=</span><span class="s">"button"</span><span class="nt">&gt;</span>Light<span class="nt">&lt;/button&gt;</span></code></pre></figure>
 <h3 id="shaped-buttons">Shaped buttons</h3>
-<p>For rounded buttons, add <code class="highlighter-rouge">btn-shaped</code> class to your button. it also works for small and large buttons.</p>
+<p>For rounded buttons, add <code class="language-plaintext highlighter-rouge">btn-shaped</code> class to your button. it also works for small and large buttons.</p>
 <div class="bd-example">
 <button class="btn btn-primary btn-shaped" type="button">Normal</button>
 <button class="btn btn-primary btn-sm btn-shaped" type="button">Small</button>
@@ -334,15 +337,15 @@ Material adds <code class="highlighter-rouge">.btn-flat-*</code> buttons in orde
 <p>Recently, Google introduced <strong>Density guidelines</strong>, see the references at the top of page.</p>
 <p>To reflect these changes with lowest impact on Bootstrap, here are our choices :</p>
 <ul>
- <li>Standard <code class="highlighter-rouge">btn</code> is equivalent to <strong>Default</strong> button size</li>
+ <li>Standard <code class="language-plaintext highlighter-rouge">btn</code> is equivalent to <strong>Default</strong> button size</li>
  <li>
-<code class="highlighter-rouge">btn-sm</code> is equivalent to <strong>Comfortable</strong> button size</li>
+<code class="language-plaintext highlighter-rouge">btn-sm</code> is equivalent to <strong>Comfortable</strong> button size</li>
  <li>
-<code class="highlighter-rouge">btn-xs</code> is introduced to represent <strong>Compact</strong> button size</li>
- <li>Bootstrap’s <code class="highlighter-rouge">btn-lg</code> has no equivalent in Material design</li>
+<code class="language-plaintext highlighter-rouge">btn-xs</code> is introduced to represent <strong>Compact</strong> button size</li>
+ <li>Bootstrap’s <code class="language-plaintext highlighter-rouge">btn-lg</code> has no equivalent in Material design</li>
 </ul>
 <p><em>Examples are presented above (cf. Shaped buttons)</em></p>
-<p>At the same time, for easier icon integration within buttons (<strong>SVG, <em>Material Icons</em>, <em>FontAwesome</em> or any other icon set</strong>), <code class="highlighter-rouge">btn-icon-prepend</code> class has been created.<br>
+<p>At the same time, for easier icon integration within buttons (<strong>SVG, <em>Material Icons</em>, <em>FontAwesome</em> or any other icon set</strong>), <code class="language-plaintext highlighter-rouge">btn-icon-prepend</code> class has been created.<br>
 Just add this class to your icon/svg markup for a proper icon’s sizing and positioning.</p>
 <p class="typography-overline">Icon Compatibility</p>
 <div class="bd-example">
@@ -410,8 +413,8 @@ Just add this class to your icon/svg markup for a proper icon’s sizing and pos
 <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-flat-primary btn-xs btn-shaped"</span> <span class="na">type=</span><span class="s">"button"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"material-icons btn-icon-prepend"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span>add<span class="nt">&lt;/i&gt;</span>button<span class="nt">&lt;/button&gt;</span>
 <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-outline-primary btn-xs btn-shaped"</span> <span class="na">type=</span><span class="s">"button"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"material-icons btn-icon-prepend"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span>add<span class="nt">&lt;/i&gt;</span>button<span class="nt">&lt;/button&gt;</span></code></pre></figure>
 <h2 id="icon-buttons">Icon buttons</h2>
-<p>Daemonite Material brings brand new <code class="highlighter-rouge">btn-icon</code> class for buttons. Markup is simple : set a simple button with usual <code class="highlighter-rouge">btn</code> class, add <code class="highlighter-rouge">btn-icon</code> class and just place an icon in the button. See the examples below.</p>
-<p>They also exist in Comfortable (<code class="highlighter-rouge">.btn-sm</code>) and Compact (<code class="highlighter-rouge">.btn-xs</code>) versions with smaller sizing.</p>
+<p>Daemonite Material brings brand new <code class="language-plaintext highlighter-rouge">btn-icon</code> class for buttons. Markup is simple : set a simple button with usual <code class="language-plaintext highlighter-rouge">btn</code> class, add <code class="language-plaintext highlighter-rouge">btn-icon</code> class and just place an icon in the button. See the examples below.</p>
+<p>They also exist in Comfortable (<code class="language-plaintext highlighter-rouge">.btn-sm</code>) and Compact (<code class="language-plaintext highlighter-rouge">.btn-xs</code>) versions with smaller sizing.</p>
 <p class="typography-overline">Default</p>
 <div class="bd-example">
 <button class="btn btn-icon" type="button"><i class="material-icons">format_underline</i></button>
@@ -446,59 +449,59 @@ Just add this class to your icon/svg markup for a proper icon’s sizing and pos
 <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-icon btn-xs"</span> <span class="na">type=</span><span class="s">"button"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"material-icons"</span><span class="nt">&gt;</span>link<span class="nt">&lt;/i&gt;&lt;/button&gt;</span>
 <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn btn-icon btn-xs"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"material-icons"</span><span class="nt">&gt;</span>tag_faces<span class="nt">&lt;/i&gt;&lt;/a&gt;</span></code></pre></figure>
 <h2 id="toggle-buttons">Toggle buttons</h2>
-<p>Toggle buttons may be used to group related options, similar to <a href="/material/docs/4.5/components/button-group/">Components/Button group</a>. Use flat buttons (i.e. <code class="highlighter-rouge">.btn-outline</code>s or <code class="highlighter-rouge">.btn-outline-*</code>s) instead of raised buttons to achieve a look that is more in line with the specifications laid out in Material Design Guidelines.</p>
+<p>Toggle buttons may be used to group related options, similar to <a href="/material/docs/4.5/components/button-group/">Components/Button group</a>. Use flat buttons (i.e. <code class="language-plaintext highlighter-rouge">.btn-outline</code>s or <code class="language-plaintext highlighter-rouge">.btn-outline-*</code>s) instead of raised buttons to achieve a look that is more in line with the specifications laid out in Material Design Guidelines.</p>
 <div class="bd-example">
-<div class="btn-group" data-toggle="buttons" role="group">
+<div class="btn-group btn-group-toggle shadow-none" data-toggle="buttons">
   <label class="btn btn-outline btn-sm active">
-    <input autocomplete="off" checked name="options1" type="radio">
+    <input type="radio" name="options1" checked>
     <i class="material-icons">format_align_left</i>
   </label>
   <label class="btn btn-outline btn-sm">
-    <input autocomplete="off" name="options1" type="radio">
+    <input type="radio" name="options1">
     <i class="material-icons">format_align_center</i>
   </label>
   <label class="btn btn-outline btn-sm">
-    <input autocomplete="off" name="options1" type="radio">
+    <input type="radio" name="options1">
     <i class="material-icons">format_align_right</i>
   </label>
   <label class="btn btn-outline btn-sm">
-    <input autocomplete="off" name="options1" type="radio">
+    <input type="radio" name="options1">
     <i class="material-icons">format_align_justify</i>
   </label>
 </div>
 </div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"btn-group"</span> <span class="na">data-toggle=</span><span class="s">"buttons"</span> <span class="na">role=</span><span class="s">"group"</span><span class="nt">&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"btn-group btn-group-toggle shadow-none"</span> <span class="na">data-toggle=</span><span class="s">"buttons"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"btn btn-outline btn-sm active"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;input</span> <span class="na">autocomplete=</span><span class="s">"off"</span> <span class="na">checked</span> <span class="na">name=</span><span class="s">"options1"</span> <span class="na">type=</span><span class="s">"radio"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">name=</span><span class="s">"options1"</span> <span class="na">checked</span><span class="nt">&gt;</span>
     <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"material-icons"</span><span class="nt">&gt;</span>format_align_left<span class="nt">&lt;/i&gt;</span>
   <span class="nt">&lt;/label&gt;</span>
   <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"btn btn-outline btn-sm"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;input</span> <span class="na">autocomplete=</span><span class="s">"off"</span> <span class="na">name=</span><span class="s">"options1"</span> <span class="na">type=</span><span class="s">"radio"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">name=</span><span class="s">"options1"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"material-icons"</span><span class="nt">&gt;</span>format_align_center<span class="nt">&lt;/i&gt;</span>
   <span class="nt">&lt;/label&gt;</span>
   <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"btn btn-outline btn-sm"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;input</span> <span class="na">autocomplete=</span><span class="s">"off"</span> <span class="na">name=</span><span class="s">"options1"</span> <span class="na">type=</span><span class="s">"radio"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">name=</span><span class="s">"options1"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"material-icons"</span><span class="nt">&gt;</span>format_align_right<span class="nt">&lt;/i&gt;</span>
   <span class="nt">&lt;/label&gt;</span>
   <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"btn btn-outline btn-sm"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;input</span> <span class="na">autocomplete=</span><span class="s">"off"</span> <span class="na">name=</span><span class="s">"options1"</span> <span class="na">type=</span><span class="s">"radio"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">name=</span><span class="s">"options1"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"material-icons"</span><span class="nt">&gt;</span>format_align_justify<span class="nt">&lt;/i&gt;</span>
   <span class="nt">&lt;/label&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
 <p>Logically-grouped options, like Bold, Italic, and Underline, allow multiple options to be selected.</p>
 <div class="bd-example">
-<div class="btn-group" data-toggle="buttons" role="group">
+<div class="btn-group btn-group-toggle" data-toggle="buttons">
   <button class="btn btn-outline btn-sm" disabled><i class="material-icons">attach_file</i></button>
   <label class="btn btn-outline btn-sm active">
-    <input autocomplete="off" checked name="options2" type="checkbox">
+    <input checked name="options2" type="checkbox">
     <i class="material-icons">format_bold</i>
   </label>
   <label class="btn btn-outline btn-sm active">
-    <input autocomplete="off" checked name="options2" type="checkbox">
+    <input checked name="options2" type="checkbox">
     <i class="material-icons">format_italic</i>
   </label>
   <label class="btn btn-outline btn-sm active">
-    <input autocomplete="off" checked name="options2" type="checkbox">
+    <input checked name="options2" type="checkbox">
     <i class="material-icons">format_underlined</i>
   </label>
  <div class="btn-group" role="group">
@@ -519,18 +522,18 @@ Just add this class to your icon/svg markup for a proper icon’s sizing and pos
  </div>
 </div>
 </div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"btn-group"</span> <span class="na">data-toggle=</span><span class="s">"buttons"</span> <span class="na">role=</span><span class="s">"group"</span><span class="nt">&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"btn-group btn-group-toggle"</span> <span class="na">data-toggle=</span><span class="s">"buttons"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-outline btn-sm"</span> <span class="na">disabled</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"material-icons"</span><span class="nt">&gt;</span>attach_file<span class="nt">&lt;/i&gt;&lt;/button&gt;</span>
   <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"btn btn-outline btn-sm active"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;input</span> <span class="na">autocomplete=</span><span class="s">"off"</span> <span class="na">checked</span> <span class="na">name=</span><span class="s">"options2"</span> <span class="na">type=</span><span class="s">"checkbox"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">checked</span> <span class="na">name=</span><span class="s">"options2"</span> <span class="na">type=</span><span class="s">"checkbox"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"material-icons"</span><span class="nt">&gt;</span>format_bold<span class="nt">&lt;/i&gt;</span>
   <span class="nt">&lt;/label&gt;</span>
   <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"btn btn-outline btn-sm active"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;input</span> <span class="na">autocomplete=</span><span class="s">"off"</span> <span class="na">checked</span> <span class="na">name=</span><span class="s">"options2"</span> <span class="na">type=</span><span class="s">"checkbox"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">checked</span> <span class="na">name=</span><span class="s">"options2"</span> <span class="na">type=</span><span class="s">"checkbox"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"material-icons"</span><span class="nt">&gt;</span>format_italic<span class="nt">&lt;/i&gt;</span>
   <span class="nt">&lt;/label&gt;</span>
   <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"btn btn-outline btn-sm active"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;input</span> <span class="na">autocomplete=</span><span class="s">"off"</span> <span class="na">checked</span> <span class="na">name=</span><span class="s">"options2"</span> <span class="na">type=</span><span class="s">"checkbox"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">checked</span> <span class="na">name=</span><span class="s">"options2"</span> <span class="na">type=</span><span class="s">"checkbox"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"material-icons"</span><span class="nt">&gt;</span>format_underlined<span class="nt">&lt;/i&gt;</span>
   <span class="nt">&lt;/label&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"btn-group"</span> <span class="na">role=</span><span class="s">"group"</span><span class="nt">&gt;</span>
@@ -550,59 +553,20 @@ Just add this class to your icon/svg markup for a proper icon’s sizing and pos
     <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
-<p>Purely flat toggle buttons can be achieved by adding <code class="highlighter-rouge">.btn-group-fluid</code> class.</p>
-<div class="bd-example">
-<div class="btn-group btn-group-fluid" data-toggle="buttons" role="group">
-  <label class="btn btn-outline btn-sm active">
-    <input autocomplete="off" checked name="options3" type="radio">
-    <i class="material-icons">format_align_left</i>
-  </label>
-  <label class="btn btn-outline btn-sm">
-    <input autocomplete="off" name="options3" type="radio">
-    <i class="material-icons">format_align_center</i>
-  </label>
-  <label class="btn btn-outline btn-sm">
-    <input autocomplete="off" name="options3" type="radio">
-    <i class="material-icons">format_align_right</i>
-  </label>
-  <label class="btn btn-outline btn-sm">
-    <input autocomplete="off" name="options3" type="radio">
-    <i class="material-icons">format_align_justify</i>
-  </label>
-</div>
-</div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"btn-group btn-group-fluid"</span> <span class="na">data-toggle=</span><span class="s">"buttons"</span> <span class="na">role=</span><span class="s">"group"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"btn btn-outline btn-sm active"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;input</span> <span class="na">autocomplete=</span><span class="s">"off"</span> <span class="na">checked</span> <span class="na">name=</span><span class="s">"options3"</span> <span class="na">type=</span><span class="s">"radio"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"material-icons"</span><span class="nt">&gt;</span>format_align_left<span class="nt">&lt;/i&gt;</span>
-  <span class="nt">&lt;/label&gt;</span>
-  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"btn btn-outline btn-sm"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;input</span> <span class="na">autocomplete=</span><span class="s">"off"</span> <span class="na">name=</span><span class="s">"options3"</span> <span class="na">type=</span><span class="s">"radio"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"material-icons"</span><span class="nt">&gt;</span>format_align_center<span class="nt">&lt;/i&gt;</span>
-  <span class="nt">&lt;/label&gt;</span>
-  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"btn btn-outline btn-sm"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;input</span> <span class="na">autocomplete=</span><span class="s">"off"</span> <span class="na">name=</span><span class="s">"options3"</span> <span class="na">type=</span><span class="s">"radio"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"material-icons"</span><span class="nt">&gt;</span>format_align_right<span class="nt">&lt;/i&gt;</span>
-  <span class="nt">&lt;/label&gt;</span>
-  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"btn btn-outline btn-sm"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;input</span> <span class="na">autocomplete=</span><span class="s">"off"</span> <span class="na">name=</span><span class="s">"options3"</span> <span class="na">type=</span><span class="s">"radio"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"material-icons"</span><span class="nt">&gt;</span>format_align_justify<span class="nt">&lt;/i&gt;</span>
-  <span class="nt">&lt;/label&gt;</span>
-<span class="nt">&lt;/div&gt;</span></code></pre></figure>
 <p>Vertical variation is also supported</p>
 <div class="bd-example">
-<div class="btn-group-vertical" data-toggle="buttons" role="group">
+<div class="btn-group-vertical btn-group-toggle" data-toggle="buttons">
   <button class="btn btn-outline btn-sm" disabled><i class="material-icons">attach_file</i></button>
   <label class="btn btn-outline btn-sm active">
-    <input autocomplete="off" checked name="options4" type="checkbox">
+    <input checked name="options4" type="checkbox">
     <i class="material-icons">format_bold</i>
   </label>
   <label class="btn btn-outline btn-sm active">
-    <input autocomplete="off" checked name="options4" type="checkbox">
+    <input checked name="options4" type="checkbox">
     <i class="material-icons">format_italic</i>
   </label>
   <label class="btn btn-outline btn-sm active">
-    <input autocomplete="off" checked name="options4" type="checkbox">
+    <input checked name="options4" type="checkbox">
     <i class="material-icons">format_underlined</i>
   </label>
  <div class="btn-group" role="group">
@@ -623,18 +587,18 @@ Just add this class to your icon/svg markup for a proper icon’s sizing and pos
  </div>
 </div>
 </div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"btn-group-vertical"</span> <span class="na">data-toggle=</span><span class="s">"buttons"</span> <span class="na">role=</span><span class="s">"group"</span><span class="nt">&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"btn-group-vertical btn-group-toggle"</span> <span class="na">data-toggle=</span><span class="s">"buttons"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-outline btn-sm"</span> <span class="na">disabled</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"material-icons"</span><span class="nt">&gt;</span>attach_file<span class="nt">&lt;/i&gt;&lt;/button&gt;</span>
   <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"btn btn-outline btn-sm active"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;input</span> <span class="na">autocomplete=</span><span class="s">"off"</span> <span class="na">checked</span> <span class="na">name=</span><span class="s">"options4"</span> <span class="na">type=</span><span class="s">"checkbox"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">checked</span> <span class="na">name=</span><span class="s">"options4"</span> <span class="na">type=</span><span class="s">"checkbox"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"material-icons"</span><span class="nt">&gt;</span>format_bold<span class="nt">&lt;/i&gt;</span>
   <span class="nt">&lt;/label&gt;</span>
   <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"btn btn-outline btn-sm active"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;input</span> <span class="na">autocomplete=</span><span class="s">"off"</span> <span class="na">checked</span> <span class="na">name=</span><span class="s">"options4"</span> <span class="na">type=</span><span class="s">"checkbox"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">checked</span> <span class="na">name=</span><span class="s">"options4"</span> <span class="na">type=</span><span class="s">"checkbox"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"material-icons"</span><span class="nt">&gt;</span>format_italic<span class="nt">&lt;/i&gt;</span>
   <span class="nt">&lt;/label&gt;</span>
   <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"btn btn-outline btn-sm active"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;input</span> <span class="na">autocomplete=</span><span class="s">"off"</span> <span class="na">checked</span> <span class="na">name=</span><span class="s">"options4"</span> <span class="na">type=</span><span class="s">"checkbox"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">checked</span> <span class="na">name=</span><span class="s">"options4"</span> <span class="na">type=</span><span class="s">"checkbox"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"material-icons"</span><span class="nt">&gt;</span>format_underlined<span class="nt">&lt;/i&gt;</span>
   <span class="nt">&lt;/label&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"btn-group"</span> <span class="na">role=</span><span class="s">"group"</span><span class="nt">&gt;</span>
@@ -726,12 +690,12 @@ Just add this class to your icon/svg markup for a proper icon’s sizing and pos
  </main>
 <!-- JavaScript -->
 <script crossorigin="anonymous" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
-<script crossorigin="anonymous" integrity="sha256-Xt8pc4G0CdcRvI0nZ2lRpZ4VHng0EoUDMlGcBSQ9HiQ=" src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.bundle.min.js"></script>
+<script crossorigin="anonymous" integrity="sha256-9nt4LsWmLI/O24lTW89IzAKuBqEZ47l/4rh1+tH/NY8=" src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
 <!-- Add Material JavaScript on top of Bootstrap JavaScript -->
 <script src="/material/js/material.min.js" async></script>
 <!-- Additional JavaScript for documentation site -->
 <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2.6.3/dist/cdn/docsearch.min.js" integrity="sha256-qybEsgf0PGiQS22AmoozPs09oRnSC7Gu7eBu4fbS2Ac=" crossorigin="anonymous" async></script>
 <script src="/material/docs/js/docs.min.js" async></script>
-<script src="//instant.page/3.0.0" type="module" integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+<script src="https://instant.page/5.1.0" type="module"></script>
 </body>
 </html>
