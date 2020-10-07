@@ -5,7 +5,7 @@
 <meta name="viewport" content="initial-scale=1, shrink-to-fit=no, width=device-width">
 <meta name="description" content="">
 <meta name="author" content="Daemonite, Sesemaya, djibe, Bootstrap authors and contributors">
-<meta name="generator" content="Jekyll v4.0.1">
+<meta name="generator" content="Jekyll v4.1.1">
 <meta name="keywords" content="material design, material, material UI, bootstrap, theme, daemonite, web, ui, components, responsive, accessibility, css, mobile web, open source">
 <link rel="preconnect" href="https://fonts.googleapis.com/">
 <link rel="preconnect" href="https://fonts.gstatic.com/">
@@ -15,11 +15,7 @@
 <title>Dropdowns - Daemonite Material Design 2</title>
 <!-- CSS -->
 <!-- Add Material font (Roboto) and Material icon as needed -->
-<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;700&family=Roboto+Slab:wght@300;400;700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="preload" as="style">
-<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;700&family=Roboto+Slab:wght@300;400;700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-<noscript>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;700&family=Roboto+Slab:wght@300;400;700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap">
-</noscript>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;700&family=Roboto+Slab:wght@300;400;700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
 <!-- Add Material CSS, replace Bootstrap CSS -->
 <link href="/material/css/material.min.css" rel="stylesheet">
@@ -61,7 +57,7 @@
       <form class="navdrawer-body mt-2">
        <div class="floating-label textfield-box">
           <label for="doc-search">Search</label>
-          <input aria-label="Search" autocomplete="off" data-siteurl="http://localhost:9999" class="form-control doc-search" id="doc-search" type="search" disabled>
+          <input aria-label="Search" autocomplete="off" data-siteurl="https://djibe.github.io" class="form-control doc-search" id="doc-search" type="search" disabled>
           <small class="form-text text-muted">Desactivated since it is a fork.</small>
        </div>
         <button class="sr-only" type="submit">Search documentation</button>
@@ -176,12 +172,19 @@
           <a class="nav-item nav-link pl-4 my-0 text-black-secondary" href="/material/docs/4.5/material/tooltips/"><span class="font-weight-normal">Tooltips</span></a>
           <a class="nav-item nav-link pl-4 my-0 text-black-secondary" href="/material/docs/4.5/material/typography/"><span class="font-weight-normal">Typography</span></a>
        </div>
+        <a class="nav-item nav-link collapsed" data-toggle="collapse" href="#doc-navdrawer-plugins"><strong>Plugins</strong></a>
+       <div class="collapse pb-2 " id="doc-navdrawer-plugins">
+          <a class="nav-item nav-link pl-4 my-0 text-black-secondary" href="/material/docs/4.5/plugins/character-counter/"><span class="font-weight-normal">Character counter</span></a>
+          <a class="nav-item nav-link pl-4 my-0 text-black-secondary" href="/material/docs/4.5/plugins/sliders-ionrangeslider/"><span class="font-weight-normal">Sliders ionRangeSlider</span></a>
+          <a class="nav-item nav-link pl-4 my-0 text-black-secondary" href="/material/docs/4.5/plugins/select-select2/"><span class="font-weight-normal">Select Select2</span></a>
+          <a class="nav-item nav-link pl-4 my-0 text-black-secondary" href="/material/docs/4.5/plugins/textarea-autosize/"><span class="font-weight-normal">Textarea autosize</span></a>
+       </div>
      </nav>
      <div class="mt-auto">
        <div class="navdrawer-divider mt-0"></div>
        <div class="navdrawer-nav">
           <a class="nav-item nav-link text-black-secondary" href="https://github.com/djibe/material" target="_blank" rel="noopener noreferrer"><i class="material-icons mr-3">code</i>Fork me on GitHub</a>
-          <a class="nav-item nav-link text-black-secondary" href="http://www.daemon.com.au/" target="_blank" rel="noopener noreferrer"><i class="material-icons mr-3 text-danger">favorite</i>Made by Daemon</a>
+          <!--<a class="nav-item nav-link text-black-secondary" href="http://www.daemon.com.au/" target="_blank"><i class="material-icons mr-3 text-danger">favorite</i>Made by Daemon</a>-->
        </div>
      </div>
    </div>
@@ -204,16 +207,16 @@
          <div class="bd-content mb-5">
            <h2 id="overview">Overview</h2>
 <p>Dropdowns are toggleable, contextual overlays for displaying lists of links and more. They’re made interactive with the included Bootstrap dropdown JavaScript plugin. They’re toggled by clicking, not by hovering; this is <a href="http://markdotto.com/2012/02/27/bootstrap-explained-dropdowns/" target="_blank" rel="noopener noreferrer">an intentional design decision</a>.</p>
-<p>Dropdowns are built on a third party library, <a href="https://popper.js.org/" target="_blank" rel="noopener noreferrer">Popper.js</a>, which provides dynamic positioning and viewport detection. Be sure to include <a href="">popper.min.js</a> before Bootstrap’s JavaScript or use <code class="highlighter-rouge">bootstrap.bundle.min.js</code> / <code class="highlighter-rouge">bootstrap.bundle.js</code> which contains Popper.js. Popper.js isn’t used to position dropdowns in navbars though as dynamic positioning isn’t required.</p>
-<p>If you’re building our JavaScript from source, it <a href="/material/docs/4.5/getting-started/javascript/#util">requires <code class="highlighter-rouge">util.js</code></a>.</p>
+<p>Dropdowns are built on a third party library, <a href="https://popper.js.org/" target="_blank" rel="noopener noreferrer">Popper.js</a>, which provides dynamic positioning and viewport detection. Be sure to include <a href="">popper.min.js</a> before Bootstrap’s JavaScript or use <code class="language-plaintext highlighter-rouge">bootstrap.bundle.min.js</code> / <code class="language-plaintext highlighter-rouge">bootstrap.bundle.js</code> which contains Popper.js. Popper.js isn’t used to position dropdowns in navbars though as dynamic positioning isn’t required.</p>
+<p>If you’re building our JavaScript from source, it <a href="/material/docs/4.5/getting-started/javascript/#util">requires <code class="language-plaintext highlighter-rouge">util.js</code></a>.</p>
 <h2 id="accessibility">Accessibility</h2>
-<p>The <a href="https://www.w3.org/TR/wai-aria/" target="_blank" rel="noopener noreferrer"><abbr title="Web Accessibility Initiative">WAI</abbr> <abbr title="Accessible Rich Internet Applications">ARIA</abbr></a> standard defines an actual <a href="https://www.w3.org/WAI/PF/aria/roles#menu" target="_blank" rel="noopener noreferrer"><code class="highlighter-rouge">role="menu"</code> widget</a>, but this is specific to application-like menus which trigger actions or functions. <abbr title="Accessible Rich Internet Applications">ARIA</abbr> menus can only contain menu items, checkbox menu items, radio button menu items, radio button groups, and sub-menus.</p>
-<p>Bootstrap’s dropdowns, on the other hand, are designed to be generic and applicable to a variety of situations and markup structures. For instance, it is possible to create dropdowns that contain additional inputs and form controls, such as search fields or login forms. For this reason, Bootstrap does not expect (nor automatically add) any of the <code class="highlighter-rouge">role</code> and <code class="highlighter-rouge">aria-</code> attributes required for true <abbr title="Accessible Rich Internet Applications">ARIA</abbr> menus. Authors will have to include these more specific attributes themselves.</p>
-<p>However, Bootstrap does add built-in support for most standard keyboard menu interactions, such as the ability to move through individual <code class="highlighter-rouge">.dropdown-item</code> elements using the cursor keys and close the menu with the <kbd>ESC</kbd> key.</p>
+<p>The <a href="https://www.w3.org/TR/wai-aria/" target="_blank" rel="noopener noreferrer"><abbr title="Web Accessibility Initiative">WAI</abbr> <abbr title="Accessible Rich Internet Applications">ARIA</abbr></a> standard defines an actual <a href="https://www.w3.org/WAI/PF/aria/roles#menu" target="_blank" rel="noopener noreferrer"><code class="language-plaintext highlighter-rouge">role="menu"</code> widget</a>, but this is specific to application-like menus which trigger actions or functions. <abbr title="Accessible Rich Internet Applications">ARIA</abbr> menus can only contain menu items, checkbox menu items, radio button menu items, radio button groups, and sub-menus.</p>
+<p>Bootstrap’s dropdowns, on the other hand, are designed to be generic and applicable to a variety of situations and markup structures. For instance, it is possible to create dropdowns that contain additional inputs and form controls, such as search fields or login forms. For this reason, Bootstrap does not expect (nor automatically add) any of the <code class="language-plaintext highlighter-rouge">role</code> and <code class="language-plaintext highlighter-rouge">aria-</code> attributes required for true <abbr title="Accessible Rich Internet Applications">ARIA</abbr> menus. Authors will have to include these more specific attributes themselves.</p>
+<p>However, Bootstrap does add built-in support for most standard keyboard menu interactions, such as the ability to move through individual <code class="language-plaintext highlighter-rouge">.dropdown-item</code> elements using the cursor keys and close the menu with the <kbd>ESC</kbd> key.</p>
 <h2 id="examples">Examples</h2>
-<p>Wrap the dropdown’s toggle (your button or link) and the dropdown menu within <code class="highlighter-rouge">.dropdown</code>, or another element that declares <code class="highlighter-rouge">position: relative;</code>. Dropdowns can be triggered from <code class="highlighter-rouge">&lt;a&gt;</code> or <code class="highlighter-rouge">&lt;button&gt;</code> elements to better fit your potential needs.</p>
+<p>Wrap the dropdown’s toggle (your button or link) and the dropdown menu within <code class="language-plaintext highlighter-rouge">.dropdown</code>, or another element that declares <code class="language-plaintext highlighter-rouge">position: relative;</code>. Dropdowns can be triggered from <code class="language-plaintext highlighter-rouge">&lt;a&gt;</code> or <code class="language-plaintext highlighter-rouge">&lt;button&gt;</code> elements to better fit your potential needs.</p>
 <h3 id="single-button">Single button</h3>
-<p>Any single <code class="highlighter-rouge">.btn</code> can be turned into a dropdown toggle with some markup changes. Here’s how you can put them to work with either <code class="highlighter-rouge">&lt;button&gt;</code> elements:</p>
+<p>Any single <code class="language-plaintext highlighter-rouge">.btn</code> can be turned into a dropdown toggle with some markup changes. Here’s how you can put them to work with either <code class="language-plaintext highlighter-rouge">&lt;button&gt;</code> elements:</p>
 <div class="bd-example">
 <div class="dropdown">
   <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -236,7 +239,7 @@
     <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"dropdown-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Something else here<span class="nt">&lt;/a&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
-<p>And with <code class="highlighter-rouge">&lt;a&gt;</code> elements:</p>
+<p>And with <code class="language-plaintext highlighter-rouge">&lt;a&gt;</code> elements:</p>
 <div class="bd-example">
 <div class="dropdown">
   <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -343,8 +346,8 @@
   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
 <h3 id="split-button">Split button</h3>
-<p>Similarly, create split button dropdowns with virtually the same markup as single button dropdowns, but with the addition of <code class="highlighter-rouge">.dropdown-toggle-split</code> for proper spacing around the dropdown caret.</p>
-<p>We use this extra class to reduce the horizontal <code class="highlighter-rouge">padding</code> on either side of the caret by 25% and remove the <code class="highlighter-rouge">margin-left</code> that’s added for regular button dropdowns. Those extra changes keep the caret centered in the split button and provide a more appropriately sized hit area next to the main button.</p>
+<p>Similarly, create split button dropdowns with virtually the same markup as single button dropdowns, but with the addition of <code class="language-plaintext highlighter-rouge">.dropdown-toggle-split</code> for proper spacing around the dropdown caret.</p>
+<p>We use this extra class to reduce the horizontal <code class="language-plaintext highlighter-rouge">padding</code> on either side of the caret by 25% and remove the <code class="language-plaintext highlighter-rouge">margin-left</code> that’s added for regular button dropdowns. Those extra changes keep the caret centered in the split button and provide a more appropriately sized hit area next to the main button.</p>
 <div class="bd-example">
  <div class="btn-group">
     <button type="button" class="btn btn-primary">Primary</button>
@@ -553,7 +556,7 @@
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
 <h2 id="directions">Directions</h2>
 <h3 id="dropup">Dropup</h3>
-<p>Trigger dropdown menus above elements by adding <code class="highlighter-rouge">.dropup</code> to the parent element.</p>
+<p>Trigger dropdown menus above elements by adding <code class="language-plaintext highlighter-rouge">.dropup</code> to the parent element.</p>
 <div class="bd-example">
  <div class="btn-group dropup">
     <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -606,7 +609,7 @@
   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
 <h3 id="dropright">Dropright</h3>
-<p>Trigger dropdown menus at the right of the elements by adding <code class="highlighter-rouge">.dropright</code> to the parent element.</p>
+<p>Trigger dropdown menus at the right of the elements by adding <code class="language-plaintext highlighter-rouge">.dropright</code> to the parent element.</p>
 <div class="bd-example">
  <div class="btn-group dropright">
     <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -659,7 +662,7 @@
   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
 <h3 id="dropleft">Dropleft</h3>
-<p>Trigger dropdown menus at the left of the elements by adding <code class="highlighter-rouge">.dropleft</code> to the parent element.</p>
+<p>Trigger dropdown menus at the left of the elements by adding <code class="language-plaintext highlighter-rouge">.dropleft</code> to the parent element.</p>
 <div class="bd-example">
  <div class="btn-group dropleft">
     <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -716,7 +719,7 @@
   <span class="nt">&lt;/button&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
 <h2 id="menu-items">Menu items</h2>
-<p>Historically dropdown menu contents <em>had</em> to be links, but that’s no longer the case with v4. Now you can optionally use <code class="highlighter-rouge">&lt;button&gt;</code> elements in your dropdowns instead of just <code class="highlighter-rouge">&lt;a&gt;</code>s.</p>
+<p>Historically dropdown menu contents <em>had</em> to be links, but that’s no longer the case with v4. Now you can optionally use <code class="language-plaintext highlighter-rouge">&lt;button&gt;</code> elements in your dropdowns instead of just <code class="language-plaintext highlighter-rouge">&lt;a&gt;</code>s.</p>
 <div class="bd-example">
 <div class="dropdown">
   <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -739,7 +742,7 @@
     <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"dropdown-item"</span> <span class="na">type=</span><span class="s">"button"</span><span class="nt">&gt;</span>Something else here<span class="nt">&lt;/button&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
-<p>You can also create non-interactive dropdown items with <code class="highlighter-rouge">.dropdown-item-text</code>. Feel free to style further with custom CSS or text utilities.</p>
+<p>You can also create non-interactive dropdown items with <code class="language-plaintext highlighter-rouge">.dropdown-item-text</code>. Feel free to style further with custom CSS or text utilities.</p>
 <div class="bd-example">
 <div class="dropdown-menu">
   <span class="dropdown-item-text">Dropdown item text</span>
@@ -755,7 +758,7 @@
   <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"dropdown-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Something else here<span class="nt">&lt;/a&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
 <h3 id="active">Active</h3>
-<p>Add <code class="highlighter-rouge">.active</code> to items in the dropdown to <strong>style them as active</strong>.</p>
+<p>Add <code class="language-plaintext highlighter-rouge">.active</code> to items in the dropdown to <strong>style them as active</strong>.</p>
 <div class="bd-example">
 <div class="dropdown-menu">
   <a class="dropdown-item" href="#">Regular link</a>
@@ -769,7 +772,7 @@
   <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"dropdown-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Another link<span class="nt">&lt;/a&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
 <h3 id="disabled">Disabled</h3>
-<p>Add <code class="highlighter-rouge">.disabled</code> to items in the dropdown to <strong>style them as disabled</strong>.</p>
+<p>Add <code class="language-plaintext highlighter-rouge">.disabled</code> to items in the dropdown to <strong>style them as disabled</strong>.</p>
 <div class="bd-example">
 <div class="dropdown-menu">
   <a class="dropdown-item" href="#">Regular link</a>
@@ -783,7 +786,7 @@
   <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"dropdown-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Another link<span class="nt">&lt;/a&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
 <h2 id="menu-alignment">Menu alignment</h2>
-<p>By default, a dropdown menu is automatically positioned 100% from the top and along the left side of its parent. Add <code class="highlighter-rouge">.dropdown-menu-right</code> to a <code class="highlighter-rouge">.dropdown-menu</code> to right align the dropdown menu.</p>
+<p>By default, a dropdown menu is automatically positioned 100% from the top and along the left side of its parent. Add <code class="language-plaintext highlighter-rouge">.dropdown-menu-right</code> to a <code class="language-plaintext highlighter-rouge">.dropdown-menu</code> to right align the dropdown menu.</p>
 <div class="bd-callout bd-callout-info">
 <p><strong>Heads up!</strong> Dropdowns are positioned thanks to Popper.js (except when they are contained in a navbar).</p>
 </div>
@@ -810,8 +813,8 @@
   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
 <h3 id="responsive-alignment">Responsive alignment</h3>
-<p>If you want to use responsive alignment, disable dynamic positioning by adding the <code class="highlighter-rouge">data-display="static"</code> attribute and use the responsive variation classes.</p>
-<p>To align <strong>right</strong> the dropdown menu with the given breakpoint or larger, add <code class="highlighter-rouge">.dropdown-menu{-sm|-md|-lg|-xl}-right</code>.</p>
+<p>If you want to use responsive alignment, disable dynamic positioning by adding the <code class="language-plaintext highlighter-rouge">data-display="static"</code> attribute and use the responsive variation classes.</p>
+<p>To align <strong>right</strong> the dropdown menu with the given breakpoint or larger, add <code class="language-plaintext highlighter-rouge">.dropdown-menu{-sm|-md|-lg|-xl}-right</code>.</p>
 <div class="bd-example">
 <div class="btn-group">
   <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" data-display="static" aria-haspopup="true" aria-expanded="false">
@@ -834,7 +837,7 @@
     <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"dropdown-item"</span> <span class="na">type=</span><span class="s">"button"</span><span class="nt">&gt;</span>Something else here<span class="nt">&lt;/button&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
-<p>To align <strong>left</strong> the dropdown menu with the given breakpoint or larger, add <code class="highlighter-rouge">.dropdown-menu-right</code> and <code class="highlighter-rouge">.dropdown-menu{-sm|-md|-lg|-xl}-left</code>.</p>
+<p>To align <strong>left</strong> the dropdown menu with the given breakpoint or larger, add <code class="language-plaintext highlighter-rouge">.dropdown-menu-right</code> and <code class="language-plaintext highlighter-rouge">.dropdown-menu{-sm|-md|-lg|-xl}-left</code>.</p>
 <div class="bd-example">
 <div class="btn-group">
   <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" data-display="static" aria-haspopup="true" aria-expanded="false">
@@ -857,7 +860,7 @@
     <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"dropdown-item"</span> <span class="na">type=</span><span class="s">"button"</span><span class="nt">&gt;</span>Something else here<span class="nt">&lt;/button&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
-<p>Note that you don’t need to add a <code class="highlighter-rouge">data-display="static"</code> attribute to dropdown buttons in navbars, since Popper.js isn’t used in navbars.</p>
+<p>Note that you don’t need to add a <code class="language-plaintext highlighter-rouge">data-display="static"</code> attribute to dropdown buttons in navbars, since Popper.js isn’t used in navbars.</p>
 <h2 id="menu-content">Menu content</h2>
 <h3 id="headers">Headers</h3>
 <p>Add a header to label sections of actions in any dropdown menu.</p>
@@ -1004,7 +1007,7 @@
   <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"submit"</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span><span class="nt">&gt;</span>Sign in<span class="nt">&lt;/button&gt;</span>
 <span class="nt">&lt;/form&gt;</span></code></pre></figure>
 <h2 id="dropdown-options">Dropdown options</h2>
-<p>Use <code class="highlighter-rouge">data-offset</code> or <code class="highlighter-rouge">data-reference</code> to change the location of the dropdown.</p>
+<p>Use <code class="language-plaintext highlighter-rouge">data-offset</code> or <code class="language-plaintext highlighter-rouge">data-reference</code> to change the location of the dropdown.</p>
 <div class="bd-example">
 <div class="d-flex">
  <div class="dropdown mr-1">
@@ -1058,12 +1061,12 @@
   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
 <h2 id="usage">Usage</h2>
-<p>Via data attributes or JavaScript, the dropdown plugin toggles hidden content (dropdown menus) by toggling the <code class="highlighter-rouge">.show</code> class on the parent list item. The <code class="highlighter-rouge">data-toggle="dropdown"</code> attribute is relied on for closing dropdown menus at an application level, so it’s a good idea to always use it.</p>
+<p>Via data attributes or JavaScript, the dropdown plugin toggles hidden content (dropdown menus) by toggling the <code class="language-plaintext highlighter-rouge">.show</code> class on the parent list item. The <code class="language-plaintext highlighter-rouge">data-toggle="dropdown"</code> attribute is relied on for closing dropdown menus at an application level, so it’s a good idea to always use it.</p>
 <div class="bd-callout bd-callout-info">
-<p>On touch-enabled devices, opening a dropdown adds empty (<code class="highlighter-rouge">$.noop</code>) <code class="highlighter-rouge">mouseover</code> handlers to the immediate children of the <code class="highlighter-rouge">&lt;body&gt;</code> element. This admittedly ugly hack is necessary to work around a <a href="https://www.quirksmode.org/blog/archives/2014/02/mouse_event_bub.html" target="_blank" rel="noopener noreferrer">quirk in iOS’ event delegation</a>, which would otherwise prevent a tap anywhere outside of the dropdown from triggering the code that closes the dropdown. Once the dropdown is closed, these additional empty <code class="highlighter-rouge">mouseover</code> handlers are removed.</p>
+<p>On touch-enabled devices, opening a dropdown adds empty (<code class="language-plaintext highlighter-rouge">$.noop</code>) <code class="language-plaintext highlighter-rouge">mouseover</code> handlers to the immediate children of the <code class="language-plaintext highlighter-rouge">&lt;body&gt;</code> element. This admittedly ugly hack is necessary to work around a <a href="https://www.quirksmode.org/blog/archives/2014/02/mouse_event_bub.html" target="_blank" rel="noopener noreferrer">quirk in iOS’ event delegation</a>, which would otherwise prevent a tap anywhere outside of the dropdown from triggering the code that closes the dropdown. Once the dropdown is closed, these additional empty <code class="language-plaintext highlighter-rouge">mouseover</code> handlers are removed.</p>
 </div>
 <h3 id="via-data-attributes">Via data attributes</h3>
-<p>Add <code class="highlighter-rouge">data-toggle="dropdown"</code> to a link or button to toggle a dropdown.</p>
+<p>Add <code class="language-plaintext highlighter-rouge">data-toggle="dropdown"</code> to a link or button to toggle a dropdown.</p>
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dropdown"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;button</span> <span class="na">id=</span><span class="s">"dLabel"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">data-toggle=</span><span class="s">"dropdown"</span> <span class="na">aria-haspopup=</span><span class="s">"true"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span><span class="nt">&gt;</span>
     Dropdown trigger
@@ -1077,11 +1080,11 @@
 <figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">.dropdown-toggle</span><span class="dl">'</span><span class="p">).</span><span class="nx">dropdown</span><span class="p">()</span></code></pre></figure>
 <div class="bd-callout bd-callout-info">
 <h5 id="data-toggledropdown-still-required">
-<code class="highlighter-rouge">data-toggle="dropdown"</code> still required</h5>
-<p>Regardless of whether you call your dropdown via JavaScript or instead use the data-api, <code class="highlighter-rouge">data-toggle="dropdown"</code> is always required to be present on the dropdown’s trigger element.</p>
+<code class="language-plaintext highlighter-rouge">data-toggle="dropdown"</code> still required</h5>
+<p>Regardless of whether you call your dropdown via JavaScript or instead use the data-api, <code class="language-plaintext highlighter-rouge">data-toggle="dropdown"</code> is always required to be present on the dropdown’s trigger element.</p>
 </div>
 <h3 id="options">Options</h3>
-<p>Options can be passed via data attributes or JavaScript. For data attributes, append the option name to <code class="highlighter-rouge">data-</code>, as in <code class="highlighter-rouge">data-offset=""</code>.</p>
+<p>Options can be passed via data attributes or JavaScript. For data attributes, append the option name to <code class="language-plaintext highlighter-rouge">data-</code>, as in <code class="language-plaintext highlighter-rouge">data-offset=""</code>.</p>
 <table class="table table-bordered table-striped">
 <thead>
    <tr>
@@ -1135,7 +1138,7 @@
    </tr>
  </tbody>
 </table>
-<p>Note when <code class="highlighter-rouge">boundary</code> is set to any value other than <code class="highlighter-rouge">'scrollParent'</code>, the style <code class="highlighter-rouge">position: static</code> is applied to the <code class="highlighter-rouge">.dropdown</code> container.</p>
+<p>Note when <code class="language-plaintext highlighter-rouge">boundary</code> is set to any value other than <code class="language-plaintext highlighter-rouge">'scrollParent'</code>, the style <code class="language-plaintext highlighter-rouge">position: static</code> is applied to the <code class="language-plaintext highlighter-rouge">.dropdown</code> container.</p>
 <h3 id="methods">Methods</h3>
 <table>
 <thead>
@@ -1146,30 +1149,30 @@
  </thead>
  <tbody>
    <tr>
-     <td><code class="highlighter-rouge">$().dropdown('toggle')</code></td>
+     <td><code class="language-plaintext highlighter-rouge">$().dropdown('toggle')</code></td>
      <td>Toggles the dropdown menu of a given navbar or tabbed navigation.</td>
    </tr>
    <tr>
-     <td><code class="highlighter-rouge">$().dropdown('show')</code></td>
+     <td><code class="language-plaintext highlighter-rouge">$().dropdown('show')</code></td>
      <td>Shows the dropdown menu of a given navbar or tabbed navigation.</td>
    </tr>
    <tr>
-     <td><code class="highlighter-rouge">$().dropdown('hide')</code></td>
+     <td><code class="language-plaintext highlighter-rouge">$().dropdown('hide')</code></td>
      <td>Hides the dropdown menu of a given navbar or tabbed navigation.</td>
    </tr>
    <tr>
-     <td><code class="highlighter-rouge">$().dropdown('update')</code></td>
+     <td><code class="language-plaintext highlighter-rouge">$().dropdown('update')</code></td>
      <td>Updates the position of an element’s dropdown.</td>
    </tr>
    <tr>
-     <td><code class="highlighter-rouge">$().dropdown('dispose')</code></td>
+     <td><code class="language-plaintext highlighter-rouge">$().dropdown('dispose')</code></td>
      <td>Destroys an element’s dropdown.</td>
    </tr>
  </tbody>
 </table>
 <h3 id="events">Events</h3>
-<p>All dropdown events are fired at the <code class="highlighter-rouge">.dropdown-menu</code>’s parent element and have a <code class="highlighter-rouge">relatedTarget</code> property, whose value is the toggling anchor element.
-<code class="highlighter-rouge">hide.bs.dropdown</code> and <code class="highlighter-rouge">hidden.bs.dropdown</code> events have a <code class="highlighter-rouge">clickEvent</code> property (only when the original event type is <code class="highlighter-rouge">click</code>) that contains an Event Object for the click event.</p>
+<p>All dropdown events are fired at the <code class="language-plaintext highlighter-rouge">.dropdown-menu</code>’s parent element and have a <code class="language-plaintext highlighter-rouge">relatedTarget</code> property, whose value is the toggling anchor element.
+<code class="language-plaintext highlighter-rouge">hide.bs.dropdown</code> and <code class="language-plaintext highlighter-rouge">hidden.bs.dropdown</code> events have a <code class="language-plaintext highlighter-rouge">clickEvent</code> property (only when the original event type is <code class="language-plaintext highlighter-rouge">click</code>) that contains an Event Object for the click event.</p>
 <table>
 <thead>
    <tr>
@@ -1179,19 +1182,19 @@
  </thead>
  <tbody>
    <tr>
-     <td><code class="highlighter-rouge">show.bs.dropdown</code></td>
+     <td><code class="language-plaintext highlighter-rouge">show.bs.dropdown</code></td>
      <td>This event fires immediately when the show instance method is called.</td>
    </tr>
    <tr>
-     <td><code class="highlighter-rouge">shown.bs.dropdown</code></td>
+     <td><code class="language-plaintext highlighter-rouge">shown.bs.dropdown</code></td>
      <td>This event is fired when the dropdown has been made visible to the user (will wait for CSS transitions, to complete).</td>
    </tr>
    <tr>
-     <td><code class="highlighter-rouge">hide.bs.dropdown</code></td>
+     <td><code class="language-plaintext highlighter-rouge">hide.bs.dropdown</code></td>
      <td>This event is fired immediately when the hide instance method has been called.</td>
    </tr>
    <tr>
-     <td><code class="highlighter-rouge">hidden.bs.dropdown</code></td>
+     <td><code class="language-plaintext highlighter-rouge">hidden.bs.dropdown</code></td>
      <td>This event is fired when the dropdown has finished being hidden from the user (will wait for CSS transitions, to complete).</td>
    </tr>
  </tbody>
@@ -1261,12 +1264,12 @@
  </main>
 <!-- JavaScript -->
 <script crossorigin="anonymous" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
-<script crossorigin="anonymous" integrity="sha256-Xt8pc4G0CdcRvI0nZ2lRpZ4VHng0EoUDMlGcBSQ9HiQ=" src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.bundle.min.js"></script>
+<script crossorigin="anonymous" integrity="sha256-9nt4LsWmLI/O24lTW89IzAKuBqEZ47l/4rh1+tH/NY8=" src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
 <!-- Add Material JavaScript on top of Bootstrap JavaScript -->
 <script src="/material/js/material.min.js" async></script>
 <!-- Additional JavaScript for documentation site -->
 <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2.6.3/dist/cdn/docsearch.min.js" integrity="sha256-qybEsgf0PGiQS22AmoozPs09oRnSC7Gu7eBu4fbS2Ac=" crossorigin="anonymous" async></script>
 <script src="/material/docs/js/docs.min.js" async></script>
-<script src="//instant.page/3.0.0" type="module" integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+<script src="https://instant.page/5.1.0" type="module"></script>
 </body>
 </html>
