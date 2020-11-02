@@ -277,13 +277,8 @@ caption {
 }
 
 th {
-  text-align: left;
-  text-align: start;
-}
-
-[dir='rtl'] th {
-  text-align: right;
-  text-align: start;
+  text-align: inherit;
+  text-align: -webkit-match-parent;
 }
 
 label {
@@ -291,7 +286,7 @@ label {
   font-weight: 400;
   letter-spacing: 0.033333em;
   line-height: 1.25rem;
-  color: rgba(0, 0, 0, 0.38);
+  color: rgba(0, 0, 0, 0.6);
   display: inline-block;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -1811,6 +1806,7 @@ mark,
   position: absolute;
   top: 0;
   right: 0;
+  z-index: 2;
 }
 
 .alert-primary {
@@ -2665,7 +2661,7 @@ pre code {
 [class~='textfield-box'] .form-text, [class~='textfield-box'] [class*='valid-feedback'],
 [class~='textfield-box'] ~ .form-text,
 [class~='textfield-box'] ~ [class*='valid-feedback'] {
-  padding-left: 1rem;
+  padding: 0 1rem;
 }
 
 .form-control-plaintext {
@@ -4899,6 +4895,44 @@ input:disabled + .chip {
   opacity: 0.38;
 }
 
+html[data-theme='dark'] {
+  -webkit-filter: invert(1) hue-rotate(180deg);
+  filter: invert(1) hue-rotate(180deg);
+}
+
+html[data-theme='dark'] body,
+html[data-theme='dark'] label {
+  font-weight: 500;
+}
+
+html[data-theme='dark'] img,
+html[data-theme='dark'] video,
+html[data-theme='dark'] .prevent-dark-mode {
+  -webkit-filter: invert(1) hue-rotate(180deg);
+  filter: invert(1) hue-rotate(180deg);
+}
+
+body {
+  transition: color 300ms, background-color 300ms;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    -webkit-filter: invert(1) hue-rotate(180deg);
+    filter: invert(1) hue-rotate(180deg);
+  }
+  body,
+  label {
+    font-weight: 500;
+  }
+  img,
+  video,
+  .prevent-dark-mode {
+    -webkit-filter: invert(1) hue-rotate(180deg);
+    filter: invert(1) hue-rotate(180deg);
+  }
+}
+
 .data-table {
   border: 1px solid #e1e1e1;
   border-radius: 4px;
@@ -5385,9 +5419,9 @@ input:disabled + .chip {
 }
 
 .modal-content {
-  border-radius: 4px;
   background-clip: padding-box;
   background-color: #ffffff;
+  border-radius: 4px;
   box-shadow: 0 24px 38px 3px rgba(0, 0, 0, 0.14), 0 9px 46px 8px rgba(0, 0, 0, 0.12), 0 11px 15px -7px rgba(0, 0, 0, 0.2);
   display: -ms-flexbox;
   display: flex;
@@ -5478,6 +5512,8 @@ input:disabled + .chip {
   border-top: 1px solid transparent;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   -ms-flex-pack: end;
   justify-content: flex-end;
   padding: 0.5rem 0.5rem;
@@ -5533,6 +5569,40 @@ input:disabled + .chip {
 @media (min-width: 1200px) {
   .modal-xl {
     max-width: 52.5rem;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .modal-content {
+    border-radius: 16px;
+  }
+  .modal-footer {
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+    padding: 0;
+  }
+  .modal-footer .btn, .modal-footer .card-link {
+    border-top: 1px solid rgba(0, 0, 0, 0.12);
+    display: block;
+    height: 3rem;
+    letter-spacing: 0.04em;
+    text-transform: lowercase;
+  }
+  .modal-footer .btn::first-letter, .modal-footer .card-link::first-letter {
+    text-transform: uppercase;
+  }
+  .modal-footer > * {
+    margin-left: 0;
+  }
+  .modal-footer-stacked {
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  .modal-footer-stacked .btn, .modal-footer-stacked .card-link,
+  .modal-footer-stacked .card-link {
+    margin: 0 !important;
   }
 }
 
@@ -9777,6 +9847,7 @@ input:disabled + .chip {
   border-style: solid;
   border-width: 0 0 1px;
   box-shadow: none;
+  caret-color: #6200ee;
   color: rgba(0, 0, 0, 0.87);
   display: block;
   font-size: 1rem;
@@ -9956,7 +10027,7 @@ select.form-control option:active {
 }
 
 select.form-control:not([multiple]):not([size]):focus {
-  background-image: url('data:image/svg+xml;charset=utf8,%3csvg fill="%23000" fill-opacity="0.54" transform="rotate(180)" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"%3e%3cpath d="M7 10l5 5 5-5z"/%3e%3cpath d="M0 0h24v24H0z" fill="none"/%3e%3canimateTransform attributeName="transform" attributeType="XML" type="rotate" from="0 0 0" to="180 0 0" dur="250ms"/%3e%3c/svg%3e');
+  background-image: url('data:image/svg+xml;charset=utf8,%3csvg fill="%236200ee" transform="rotate(180)" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"%3e%3cpath d="M7 10l5 5 5-5z"/%3e%3canimateTransform attributeName="transform" attributeType="XML" type="rotate" from="0 0 0" to="180 0 0" dur="250ms"/%3e%3c/svg%3e');
 }
 
 select.form-control-lg[multiple], select.form-control-lg[size]:not([size='1']) {
@@ -10473,6 +10544,7 @@ select.is-invalid.form-control:hover[multiple], select.is-invalid.form-control:h
   transition: transform 0.18s cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 0.18s cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 0.18s cubic-bezier(0.4, 0, 0.2, 1);
   width: 100%;
+  will-change: transform;
   z-index: 3;
 }
 
