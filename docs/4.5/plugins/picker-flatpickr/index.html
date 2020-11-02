@@ -58,7 +58,7 @@
       <form class="navdrawer-body mt-2">
        <div class="floating-label textfield-box">
           <label for="doc-search">Search</label>
-          <input aria-label="Search" autocomplete="off" data-siteurl="http://localhost:9999" class="form-control doc-search" id="doc-search" type="search" disabled>
+          <input aria-label="Search" autocomplete="off" data-siteurl="https://djibe.github.io" class="form-control doc-search" id="doc-search" type="search" disabled>
           <small class="form-text text-muted">Desactivated since it is a fork.</small>
        </div>
         <button class="sr-only" type="submit">Search documentation</button>
@@ -239,11 +239,9 @@ Plugin is <strong>jQuery</strong> free but can be initialized as a jQuery plugin
   <input class="form-control flatpickr" type="text" placeholder="Select Date.." id="flatpickr-demo">
 </div>
 <script>
-$(function() {
-  $("#flatpickr-demo").flatpickr({
-    altFormat: "F j, Y",
-    dateFormat: "Y-m-d"
-  })
+$("#flatpickr-demo").flatpickr({
+  altFormat: "F j, Y",
+  dateFormat: "Y-m-d"
 })
 </script>
 </div>
@@ -252,16 +250,14 @@ $(function() {
   <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"form-control flatpickr"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">placeholder=</span><span class="s">"Select Date.."</span> <span class="na">id=</span><span class="s">"flatpickr-demo"</span><span class="nt">&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;script&gt;</span>
-<span class="nx">$</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-  <span class="nx">$</span><span class="p">(</span><span class="dl">"</span><span class="s2">#flatpickr-demo</span><span class="dl">"</span><span class="p">).</span><span class="nx">flatpickr</span><span class="p">({</span>
-    <span class="na">altFormat</span><span class="p">:</span> <span class="dl">"</span><span class="s2">F j, Y</span><span class="dl">"</span><span class="p">,</span>
-    <span class="na">dateFormat</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Y-m-d</span><span class="dl">"</span>
-  <span class="p">})</span>
+<span class="nx">$</span><span class="p">(</span><span class="dl">"</span><span class="s2">#flatpickr-demo</span><span class="dl">"</span><span class="p">).</span><span class="nx">flatpickr</span><span class="p">({</span>
+  <span class="na">altFormat</span><span class="p">:</span> <span class="dl">"</span><span class="s2">F j, Y</span><span class="dl">"</span><span class="p">,</span>
+  <span class="na">dateFormat</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Y-m-d</span><span class="dl">"</span>
 <span class="p">})</span>
 <span class="nt">&lt;/script&gt;</span></code></pre></figure>
 <div class="alert alert-info">
 <!-- bd-callout bd-callout-info -->
-<p><strong>flatpickr</strong> will probably become default Picker as it corresponds perfectly to latest Material design guidelines.</p>
+<p><strong>flatpickr</strong> will probably become default Picker as it corresponds perfectly to latest Material design guidelines: Dropdown calendar on desktop and system’s default picker on mobile.</p>
 </div>
 <h2 id="using-flatpickr">Using flatpickr</h2>
 <p>Import <strong>material-plugins.css</strong> after Material CSS. Don’t use extra <strong>flatpickr</strong> CSS.</p>
@@ -274,9 +270,7 @@ $(function() {
   <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"form-control flatpickr"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">placeholder=</span><span class="s">"Select Date.."</span> <span class="na">id=</span><span class="s">"flatpickr-demo"</span><span class="nt">&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
 <p>Initialize plugin with JavaScript or jQuery parameters.</p>
-<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-  <span class="nx">$</span><span class="p">(</span><span class="dl">"</span><span class="s2">#flatpickr-demo</span><span class="dl">"</span><span class="p">).</span><span class="nx">flatpickr</span><span class="p">()</span>
-<span class="p">})</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="dl">"</span><span class="s2">#flatpickr-demo</span><span class="dl">"</span><span class="p">).</span><span class="nx">flatpickr</span><span class="p">()</span></code></pre></figure>
 <p>All parameters are detailed in <a href="https://flatpickr.js.org/" target="_blank" rel="noopener noreferrer">official documentation</a>.</p>
 <p>That’s it.</p>
 <h2 id="picker-types">Picker types</h2>
@@ -286,19 +280,21 @@ $(function() {
 <h3 id="date-range">Date range</h3>
 <p>Select a start and final date.</p>
 <p>Example displays the picker <code class="language-plaintext highlighter-rouge">inline</code> and sets <code class="language-plaintext highlighter-rouge">minDate</code> to Today.</p>
+<div class="alert alert-warning">
+<!-- bd-callout bd-callout-warning -->
+<p>Inline picker is not rendered using mobile’s OS Picker and is barely usable on mobile.</p>
+</div>
 <div class="bd-example">
 <div class="form-group">
   <label for="flatpickr-range">Arrival and departure dates</label>
   <input class="form-control flatpickr" type="text" placeholder="Select Dates.." id="flatpickr-range">
 </div>
 <script>
-$(function() {
-  $("#flatpickr-range").flatpickr({
-    inline: true,
-    mode: "range",
-    minDate: "today",
-    dateFormat: "d-m-Y"
-  })
+$("#flatpickr-range").flatpickr({
+  inline: true,
+  mode: "range",
+  minDate: "today",
+  dateFormat: "d-m-Y"
 })
 </script>
 </div>
@@ -307,13 +303,11 @@ $(function() {
   <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"form-control flatpickr"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">placeholder=</span><span class="s">"Select Dates.."</span> <span class="na">id=</span><span class="s">"flatpickr-range"</span><span class="nt">&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;script&gt;</span>
-<span class="nx">$</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-  <span class="nx">$</span><span class="p">(</span><span class="dl">"</span><span class="s2">#flatpickr-range</span><span class="dl">"</span><span class="p">).</span><span class="nx">flatpickr</span><span class="p">({</span>
-    <span class="na">inline</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-    <span class="na">mode</span><span class="p">:</span> <span class="dl">"</span><span class="s2">range</span><span class="dl">"</span><span class="p">,</span>
-    <span class="na">minDate</span><span class="p">:</span> <span class="dl">"</span><span class="s2">today</span><span class="dl">"</span><span class="p">,</span>
-    <span class="na">dateFormat</span><span class="p">:</span> <span class="dl">"</span><span class="s2">d-m-Y</span><span class="dl">"</span>
-  <span class="p">})</span>
+<span class="nx">$</span><span class="p">(</span><span class="dl">"</span><span class="s2">#flatpickr-range</span><span class="dl">"</span><span class="p">).</span><span class="nx">flatpickr</span><span class="p">({</span>
+  <span class="na">inline</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="na">mode</span><span class="p">:</span> <span class="dl">"</span><span class="s2">range</span><span class="dl">"</span><span class="p">,</span>
+  <span class="na">minDate</span><span class="p">:</span> <span class="dl">"</span><span class="s2">today</span><span class="dl">"</span><span class="p">,</span>
+  <span class="na">dateFormat</span><span class="p">:</span> <span class="dl">"</span><span class="s2">d-m-Y</span><span class="dl">"</span>
 <span class="p">})</span>
 <span class="nt">&lt;/script&gt;</span></code></pre></figure>
 <h3 id="datetime">DateTime</h3>
@@ -325,13 +319,11 @@ $(function() {
   <input class="form-control flatpickr" type="text" placeholder="Select Datetime.." id="flatpickr-datetime">
 </div>
 <script>
-$(function() {
-  $("#flatpickr-datetime").flatpickr({
-    enableTime: true,
-    dateFormat: "m/d/Y H:i",
-    time_24hr: false,
-    weekNumbers: true
-  })
+$("#flatpickr-datetime").flatpickr({
+  enableTime: true,
+  dateFormat: "m/d/Y H:i",
+  time_24hr: false,
+  weekNumbers: true
 })
 </script>
 </div>
@@ -340,13 +332,11 @@ $(function() {
   <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"form-control flatpickr"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">placeholder=</span><span class="s">"Select Datetime.."</span> <span class="na">id=</span><span class="s">"flatpickr-datetime"</span><span class="nt">&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;script&gt;</span>
-<span class="nx">$</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-  <span class="nx">$</span><span class="p">(</span><span class="dl">"</span><span class="s2">#flatpickr-datetime</span><span class="dl">"</span><span class="p">).</span><span class="nx">flatpickr</span><span class="p">({</span>
-    <span class="na">enableTime</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-    <span class="na">dateFormat</span><span class="p">:</span> <span class="dl">"</span><span class="s2">m/d/Y H:i</span><span class="dl">"</span><span class="p">,</span>
-    <span class="na">time_24hr</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
-    <span class="na">weekNumbers</span><span class="p">:</span> <span class="kc">true</span>
-  <span class="p">})</span>
+<span class="nx">$</span><span class="p">(</span><span class="dl">"</span><span class="s2">#flatpickr-datetime</span><span class="dl">"</span><span class="p">).</span><span class="nx">flatpickr</span><span class="p">({</span>
+  <span class="na">enableTime</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="na">dateFormat</span><span class="p">:</span> <span class="dl">"</span><span class="s2">m/d/Y H:i</span><span class="dl">"</span><span class="p">,</span>
+  <span class="na">time_24hr</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+  <span class="na">weekNumbers</span><span class="p">:</span> <span class="kc">true</span>
 <span class="p">})</span>
 <span class="nt">&lt;/script&gt;</span></code></pre></figure>
 <h3 id="time">Time</h3>
@@ -358,15 +348,13 @@ $(function() {
   <input class="form-control flatpickr" type="text" placeholder="Select Datetime.." id="flatpickr-time">
 </div>
 <script>
-$(function() {
-  $("#flatpickr-time").flatpickr({
-    inline: true,
-    enableTime: true,
-    noCalendar: true,
-    dateFormat: "H:i",
-    time_24hr: true,
-    defaultDate: "13:45"
-  })
+$("#flatpickr-time").flatpickr({
+  // inline: true,
+  enableTime: true,
+  noCalendar: true,
+  dateFormat: "H:i",
+  time_24hr: true,
+  defaultDate: "13:45"
 })
 </script>
 </div>
@@ -375,15 +363,13 @@ $(function() {
   <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"form-control flatpickr"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">placeholder=</span><span class="s">"Select Datetime.."</span> <span class="na">id=</span><span class="s">"flatpickr-time"</span><span class="nt">&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;script&gt;</span>
-<span class="nx">$</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-  <span class="nx">$</span><span class="p">(</span><span class="dl">"</span><span class="s2">#flatpickr-time</span><span class="dl">"</span><span class="p">).</span><span class="nx">flatpickr</span><span class="p">({</span>
-    <span class="na">inline</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-    <span class="na">enableTime</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-    <span class="na">noCalendar</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-    <span class="na">dateFormat</span><span class="p">:</span> <span class="dl">"</span><span class="s2">H:i</span><span class="dl">"</span><span class="p">,</span>
-    <span class="na">time_24hr</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-    <span class="na">defaultDate</span><span class="p">:</span> <span class="dl">"</span><span class="s2">13:45</span><span class="dl">"</span>
-  <span class="p">})</span>
+<span class="nx">$</span><span class="p">(</span><span class="dl">"</span><span class="s2">#flatpickr-time</span><span class="dl">"</span><span class="p">).</span><span class="nx">flatpickr</span><span class="p">({</span>
+  <span class="c1">// inline: true,</span>
+  <span class="na">enableTime</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="na">noCalendar</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="na">dateFormat</span><span class="p">:</span> <span class="dl">"</span><span class="s2">H:i</span><span class="dl">"</span><span class="p">,</span>
+  <span class="na">time_24hr</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="na">defaultDate</span><span class="p">:</span> <span class="dl">"</span><span class="s2">13:45</span><span class="dl">"</span>
 <span class="p">})</span>
 <span class="nt">&lt;/script&gt;</span></code></pre></figure>
 <h3 id="more-details">More details</h3>
@@ -437,7 +423,7 @@ $(function() {
     weekNumbers: true
   })
   $("#flatpickr-time").flatpickr({
-    inline: true,
+    // inline: true,
     enableTime: true,
     noCalendar: true,
     dateFormat: "H:i",
