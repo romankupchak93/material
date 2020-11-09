@@ -58,7 +58,7 @@
       <form class="navdrawer-body mt-2">
        <div class="floating-label textfield-box">
           <label for="doc-search">Search</label>
-          <input aria-label="Search" autocomplete="off" data-siteurl="http://localhost:9999" class="form-control doc-search" id="doc-search" type="search" disabled>
+          <input aria-label="Search" autocomplete="off" data-siteurl="https://djibe.github.io" class="form-control doc-search" id="doc-search" type="search" disabled>
           <small class="form-text text-muted">Desactivated since it is a fork.</small>
        </div>
         <button class="sr-only" type="submit">Search documentation</button>
@@ -227,7 +227,7 @@
 </div>
 <h2 id="demo">Demo</h2>
 <div class="bd-example">
-<select class="js-example-basic-single" name="fruit">
+<select class="form-control js-example-basic-single" name="fruit">
   <option></option>
   <option value="apple">Apple</option>
   <option value="orange">Orange</option>
@@ -244,7 +244,7 @@ $(function() {
 })
 </script>
 </div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;select</span> <span class="na">class=</span><span class="s">"js-example-basic-single"</span> <span class="na">name=</span><span class="s">"fruit"</span><span class="nt">&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;select</span> <span class="na">class=</span><span class="s">"form-control js-example-basic-single"</span> <span class="na">name=</span><span class="s">"fruit"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;option&gt;&lt;/option&gt;</span>
   <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"apple"</span><span class="nt">&gt;</span>Apple<span class="nt">&lt;/option&gt;</span>
   <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"orange"</span><span class="nt">&gt;</span>Orange<span class="nt">&lt;/option&gt;</span>
@@ -262,12 +262,12 @@ $(function() {
 <span class="nt">&lt;/script&gt;</span></code></pre></figure>
 <h2 id="using-select2">Using Select2</h2>
 <p>Import <strong>material-plugins.css</strong> after Material CSS. Don’t use official Select2 CSS.</p>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"https://cdn.jsdelivr.net/gh/djibe/material@4.5.3-rc1/css/material-plugins.min.css"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span><span class="nt">&gt;</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"https://cdn.jsdelivr.net/gh/djibe/material@4.5.3-rc2/css/material-plugins.min.css"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span><span class="nt">&gt;</span></code></pre></figure>
 <p>Import <strong>Select2</strong> after Material JavaScripts.</p>
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span></code></pre></figure>
-<p>Set HTML code of your select menu.</p>
+<p>Set HTML code of your select menu. You should keep <code class="language-plaintext highlighter-rouge">form-control</code> class for better mobile accessibility (refer to dedicated chapter below).</p>
 <p><strong>NB.</strong> With Select2, in simple select lists, you need to set a first blank <code class="language-plaintext highlighter-rouge">&lt;option&gt;</code> in order to set a placeholder.</p>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;select</span> <span class="na">class=</span><span class="s">"js-example-basic-single"</span> <span class="na">name=</span><span class="s">"fruit"</span><span class="nt">&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;select</span> <span class="na">class=</span><span class="s">"form-control js-example-basic-single"</span> <span class="na">name=</span><span class="s">"fruit"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;option&gt;&lt;/option&gt;</span>
   <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"apple"</span><span class="nt">&gt;</span>Apple<span class="nt">&lt;/option&gt;</span>
   <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"orange"</span><span class="nt">&gt;</span>Orange<span class="nt">&lt;/option&gt;</span>
@@ -290,7 +290,7 @@ Extra themes include <code class="language-plaintext highlighter-rouge">filled</
 <h3 id="default-theme">Default theme</h3>
 <p>No need to set the theme in Select2 options in order to use default theme.</p>
 <div class="bd-example">
-<select class="js-example-default-single" name="fruit">
+<select class="form-control js-example-default-single" name="fruit">
   <option></option>
   <option value="apple">Apple</option>
   <option value="orange">Orange</option>
@@ -306,7 +306,7 @@ $(function() {
 })
 </script>
 </div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;select</span> <span class="na">class=</span><span class="s">"js-example-default-single"</span> <span class="na">name=</span><span class="s">"fruit"</span><span class="nt">&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;select</span> <span class="na">class=</span><span class="s">"form-control js-example-default-single"</span> <span class="na">name=</span><span class="s">"fruit"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;option&gt;&lt;/option&gt;</span>
   <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"apple"</span><span class="nt">&gt;</span>Apple<span class="nt">&lt;/option&gt;</span>
   <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"orange"</span><span class="nt">&gt;</span>Orange<span class="nt">&lt;/option&gt;</span>
@@ -324,7 +324,7 @@ $(function() {
 <h3 id="filled-theme">Filled theme</h3>
 <p>Set theme to <code class="language-plaintext highlighter-rouge">filled</code> for filled material inputs (like <code class="language-plaintext highlighter-rouge">textfieldbox</code> ones).</p>
 <div class="bd-example">
-<select class="js-example-basic-single" name="fruit">
+<select class="form-control js-example-basic-single" name="fruit">
   <option></option>
   <option value="apple">Apple</option>
   <option value="orange">Orange</option>
@@ -342,7 +342,7 @@ $(function() {
 })
 </script>
 </div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;select</span> <span class="na">class=</span><span class="s">"js-example-basic-single"</span> <span class="na">name=</span><span class="s">"fruit"</span><span class="nt">&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;select</span> <span class="na">class=</span><span class="s">"form-control js-example-basic-single"</span> <span class="na">name=</span><span class="s">"fruit"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;option&gt;&lt;/option&gt;</span>
   <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"apple"</span><span class="nt">&gt;</span>Apple<span class="nt">&lt;/option&gt;</span>
   <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"orange"</span><span class="nt">&gt;</span>Orange<span class="nt">&lt;/option&gt;</span>
@@ -362,7 +362,7 @@ $(function() {
 <h3 id="outlined-theme">Outlined theme</h3>
 <p>Set theme to <code class="language-plaintext highlighter-rouge">outlined</code> for outlined material inputs.</p>
 <div class="bd-example">
-<select class="js-example-outlined-single" name="fruit">
+<select class="form-control js-example-outlined-single" name="fruit">
   <option></option>
   <option value="apple">Apple</option>
   <option value="orange">Orange</option>
@@ -380,7 +380,7 @@ $(function() {
 })
 </script>
 </div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;select</span> <span class="na">class=</span><span class="s">"js-example-outlined-single"</span> <span class="na">name=</span><span class="s">"fruit"</span><span class="nt">&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;select</span> <span class="na">class=</span><span class="s">"form-control js-example-outlined-single"</span> <span class="na">name=</span><span class="s">"fruit"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;option&gt;&lt;/option&gt;</span>
   <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"apple"</span><span class="nt">&gt;</span>Apple<span class="nt">&lt;/option&gt;</span>
   <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"orange"</span><span class="nt">&gt;</span>Orange<span class="nt">&lt;/option&gt;</span>
@@ -400,7 +400,7 @@ $(function() {
 <h2 id="options">Options</h2>
 <p>Various features are supported: Multiple select, optgroup.</p>
 <div class="bd-example">
-<select class="js-example-basic-multiple" name="cars" multiple>
+<select class="form-control js-example-basic-multiple" name="cars" multiple>
   <optgroup label="French Cars">
     <option value="AL">Citroën</option>
     <option value="OR" disabled>Peugeot</option>
@@ -425,7 +425,7 @@ $(function() {
 })
 </script>
 </div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;select</span> <span class="na">class=</span><span class="s">"js-example-basic-multiple"</span> <span class="na">name=</span><span class="s">"cars"</span> <span class="na">multiple</span><span class="nt">&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;select</span> <span class="na">class=</span><span class="s">"form-control js-example-basic-multiple"</span> <span class="na">name=</span><span class="s">"cars"</span> <span class="na">multiple</span><span class="nt">&gt;</span>
   <span class="nt">&lt;optgroup</span> <span class="na">label=</span><span class="s">"French Cars"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"AL"</span><span class="nt">&gt;</span>Citroën<span class="nt">&lt;/option&gt;</span>
     <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"OR"</span> <span class="na">disabled</span><span class="nt">&gt;</span>Peugeot<span class="nt">&lt;/option&gt;</span>
@@ -451,7 +451,7 @@ $(function() {
 <span class="nt">&lt;/script&gt;</span></code></pre></figure>
 <p>Single select with search field.</p>
 <div class="bd-example">
-<select class="js-example-search-single" name="cars">
+<select class="form-control js-example-search-single" name="cars">
   <optgroup label="French Cars">
     <option value="AL">Citroën</option>
     <option value="OR" disabled>Peugeot</option>
@@ -476,7 +476,7 @@ $(function() {
 })
 </script>
 </div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;select</span> <span class="na">class=</span><span class="s">"js-example-search-single"</span> <span class="na">name=</span><span class="s">"cars"</span><span class="nt">&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;select</span> <span class="na">class=</span><span class="s">"form-control js-example-search-single"</span> <span class="na">name=</span><span class="s">"cars"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;optgroup</span> <span class="na">label=</span><span class="s">"French Cars"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"AL"</span><span class="nt">&gt;</span>Citroën<span class="nt">&lt;/option&gt;</span>
     <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"OR"</span> <span class="na">disabled</span><span class="nt">&gt;</span>Peugeot<span class="nt">&lt;/option&gt;</span>
@@ -500,6 +500,19 @@ $(function() {
   <span class="p">})</span>
 <span class="p">})</span>
 <span class="nt">&lt;/script&gt;</span></code></pre></figure>
+<h2 id="mobile-accessibility">Mobile accessibility</h2>
+<p>In order to achieve optimal accessibility on mobile devices, you should initialize <strong>Select2</strong> only on small devices.</p>
+<p>This example will use default Android/iOS select on small devices (with a textfield-box style) and Select2 on bigger screens.</p>
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="k">if</span> <span class="p">(</span><span class="nb">window</span><span class="p">.</span><span class="nx">matchMedia</span><span class="p">(</span><span class="dl">"</span><span class="s2">(min-width: 768px)</span><span class="dl">"</span><span class="p">).</span><span class="nx">matches</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">.js-example-basic-single</span><span class="dl">'</span><span class="p">).</span><span class="nx">select2</span><span class="p">({</span>
+    <span class="na">theme</span><span class="p">:</span> <span class="dl">"</span><span class="s2">filled</span><span class="dl">"</span><span class="p">,</span>
+    <span class="na">placeholder</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Fruit</span><span class="dl">'</span><span class="p">,</span>
+    <span class="na">width</span><span class="p">:</span> <span class="dl">'</span><span class="s1">240px</span><span class="dl">'</span><span class="p">,</span>
+    <span class="na">minimumResultsForSearch</span><span class="p">:</span> <span class="kc">Infinity</span> <span class="cm">/* Hide search on single */</span>
+  <span class="p">})</span>
+<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+  <span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">.js-example-basic-single</span><span class="dl">'</span><span class="p">).</span><span class="nx">wrap</span><span class="p">(</span><span class="dl">'</span><span class="s1">&lt;div class="textfield-box"&gt;&lt;/div&gt;</span><span class="dl">'</span><span class="p">)</span>
+<span class="p">}</span></code></pre></figure>
          </div>
        </div>
          <div class="col-xl-3 d-none d-xl-block">
@@ -515,6 +528,7 @@ $(function() {
 </ul>
 </li>
 <li class="toc-entry toc-h2"><a href="#options">Options</a></li>
+<li class="toc-entry toc-h2"><a href="#mobile-accessibility">Mobile accessibility</a></li>
 </ul>
          </div>
      </div>
@@ -528,9 +542,13 @@ $(function() {
 <!-- Additional JavaScript for documentation site -->
 <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2.6.3/dist/cdn/docsearch.min.js" integrity="sha256-qybEsgf0PGiQS22AmoozPs09oRnSC7Gu7eBu4fbS2Ac=" crossorigin="anonymous" async></script>
 <script src="/material/docs/js/docs.min.js" async></script>
-<script src="https://instant.page/5.1.0" type="module"></script>
+<script type="module">
+  /*! instant.page v5.1.0 - (C) 2019-2020 Alexandre Dieulot - https://instant.page/license */
+  let t,e;const n=new Set,o=document.createElement("link"),i=o.relList&&o.relList.supports&&o.relList.supports("prefetch")&&window.IntersectionObserver&&"isIntersecting"in IntersectionObserverEntry.prototype,s="instantAllowQueryString"in document.body.dataset,a="instantAllowExternalLinks"in document.body.dataset,r="instantWhitelist"in document.body.dataset,c="instantMousedownShortcut"in document.body.dataset,d=1111;let l=65,u=!1,f=!1,m=!1;if("instantIntensity"in document.body.dataset){const t=document.body.dataset.instantIntensity;if("mousedown"==t.substr(0,"mousedown".length))u=!0,"mousedown-only"==t&&(f=!0);else if("viewport"==t.substr(0,"viewport".length))navigator.connection&&(navigator.connection.saveData||navigator.connection.effectiveType&&navigator.connection.effectiveType.includes("2g"))||("viewport"==t?document.documentElement.clientWidth*document.documentElement.clientHeight<45e4&&(m=!0):"viewport-all"==t&&(m=!0));else{const e=parseInt(t);isNaN(e)||(l=e)}}if(i){const n={capture:!0,passive:!0};if(f||document.addEventListener("touchstart",function(t){e=performance.now();const n=t.target.closest("a");if(!h(n))return;v(n.href)},n),u?c||document.addEventListener("mousedown",function(t){const e=t.target.closest("a");if(!h(e))return;v(e.href)},n):document.addEventListener("mouseover",function(n){if(performance.now()-e<d)return;const o=n.target.closest("a");if(!h(o))return;o.addEventListener("mouseout",p,{passive:!0}),t=setTimeout(()=>{v(o.href),t=void 0},l)},n),c&&document.addEventListener("mousedown",function(t){if(performance.now()-e<d)return;const n=t.target.closest("a");if(t.which>1||t.metaKey||t.ctrlKey)return;if(!n)return;n.addEventListener("click",function(t){1337!=t.detail&&t.preventDefault()},{capture:!0,passive:!1,once:!0});const o=new MouseEvent("click",{view:window,bubbles:!0,cancelable:!1,detail:1337});n.dispatchEvent(o)},n),m){let t;(t=window.requestIdleCallback?t=>{requestIdleCallback(t,{timeout:1500})}:t=>{t()})(()=>{const t=new IntersectionObserver(e=>{e.forEach(e=>{if(e.isIntersecting){const n=e.target;t.unobserve(n),v(n.href)}})});document.querySelectorAll("a").forEach(e=>{h(e)&&t.observe(e)})})}}function p(e){e.relatedTarget&&e.target.closest("a")==e.relatedTarget.closest("a")||t&&(clearTimeout(t),t=void 0)}function h(t){if(t&&t.href&&(!r||"instant"in t.dataset)&&(a||t.origin==location.origin||"instant"in t.dataset)&&["http:","https:"].includes(t.protocol)&&("http:"!=t.protocol||"https:"!=location.protocol)&&(s||!t.search||"instant"in t.dataset)&&!(t.hash&&t.pathname+t.search==location.pathname+location.search||"noInstant"in t.dataset))return!0}function v(t){if(n.has(t))return;const e=document.createElement("link");e.rel="prefetch",e.href=t,document.head.appendChild(e),n.add(t)}
+</script>
   <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js" integrity="sha256-nAS1wDQBPBqa1fnZq8wd1Z6CN+PgmHXLFdMo0g2pYf0=" crossorigin="anonymous"></script>
   <script>
+  $(function() {
     $('.js-example-basic-single').select2({
       theme: 'filled',
       placeholder: 'Fruit',
@@ -561,6 +579,7 @@ $(function() {
       placeholder: 'Cars',
       width: '240px'
     })
+  })
   </script>
 </body>
 </html>
