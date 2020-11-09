@@ -1,3 +1,7 @@
+.bd-content .alert {
+  margin: 2rem 0;
+}
+
 .bd-content .alert p:last-of-type {
   margin-bottom: 0;
 }
