@@ -1,2 +1,1 @@
-User-agent: *
 Sitemap: https://djibe.github.io/material/sitemap.xml

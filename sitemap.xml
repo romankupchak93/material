@@ -64,10 +64,10 @@
 <loc>https://djibe.github.io/material/docs/4.5/components/collapse/</loc>
 </url>
 <url>
-<loc>https://djibe.github.io/material/docs/4.5/material/colors/</loc>
+<loc>https://djibe.github.io/material/docs/4.5/utilities/colors/</loc>
 </url>
 <url>
-<loc>https://djibe.github.io/material/docs/4.5/utilities/colors/</loc>
+<loc>https://djibe.github.io/material/docs/4.5/material/colors/</loc>
 </url>
 <url>
 <loc>https://djibe.github.io/material/docs/4.5/getting-started/contents/</loc>
@@ -212,6 +212,9 @@
 </url>
 <url>
 <loc>https://djibe.github.io/material/docs/4.5/plugins/sliders-ionrangeslider/</loc>
+</url>
+<url>
+<loc>https://djibe.github.io/material/docs/4.5/material/sliders/</loc>
 </url>
 <url>
 <loc>https://djibe.github.io/material/docs/4.5/material/snackbars/</loc>
