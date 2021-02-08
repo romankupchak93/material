@@ -1,6 +1,6 @@
 /*!
- * Daemonite Material v4.5.3 (https://djibe.github.io/material/)
- * Copyright 2011-2020 Daemon Pty Ltd + djibe
+ * Daemonite Material v4.6.0 (https://djibe.github.io/material/)
+ * Copyright 2011-2021 Daemon Pty Ltd + djibe
  * Licensed under MIT (https://github.com/djibe/material/blob/master/LICENSE)
  */
 
@@ -1860,7 +1860,7 @@
   }));
   });
 
-  var picker_date = createCommonjsModule(function (module, exports) {
+  createCommonjsModule(function (module, exports) {
   /*!
    * Date picker for pickadate.js v3.6.4
    * http://amsul.github.io/pickadate.js/date.htm
@@ -3636,52 +3636,16 @@
         ripplet(rippleTarget, {
           color: 'rgba(255,255,255,0.24)'
         });
+      } else if (cls.contains('nav-link')) {
+        ripplet(rippleTarget, {
+          color: getComputedStyle(currentTarget, ':active').color,
+          opacity: 0.12
+        });
       } else {
         ripplet(rippleTarget);
       }
     });
   }();
-
-  /*
-   * Selection control plugin fixes the focus state problem with
-   * Chrome persisting focus state on checkboxes/radio buttons after clicking
-   */
-
-  var SelectionControlFocus = function ($) {
-    // constants >>>
-    var DATA_KEY = 'md.selectioncontrolfocus';
-    var EVENT_KEY = "." + DATA_KEY;
-    var ClassName = {
-      FOCUS: 'focus'
-    };
-    var LastInteraction = {
-      IS_MOUSEDOWN: false
-    };
-    var Event = {
-      BLUR: "blur" + EVENT_KEY,
-      FOCUS: "focus" + EVENT_KEY,
-      MOUSEDOWN: "mousedown" + EVENT_KEY,
-      MOUSEUP: "mouseup" + EVENT_KEY
-    };
-    var Selector = {
-      CONTROL: '.custom-control',
-      INPUT: '.custom-control-input'
-    }; // <<< constants
-
-    $(document).on("" + Event.BLUR, Selector.INPUT, function () {
-      $(this).removeClass(ClassName.FOCUS);
-    }).on("" + Event.FOCUS, Selector.INPUT, function () {
-      if (LastInteraction.IS_MOUSEDOWN === false) {
-        $(this).addClass(ClassName.FOCUS);
-      }
-    }).on("" + Event.MOUSEDOWN, Selector.CONTROL, function () {
-      LastInteraction.IS_MOUSEDOWN = true;
-    }).on("" + Event.MOUSEUP, Selector.CONTROL, function () {
-      setTimeout(function () {
-        LastInteraction.IS_MOUSEDOWN = false;
-      }, 1);
-    });
-  }($__default['default']);
 
   /*
    * Tab indicator animation
@@ -3813,7 +3777,6 @@
   exports.NavDrawer = NavDrawer;
   exports.PickDate = PickDate;
   exports.Ripplet = Ripplet;
-  exports.SelectionControlFocus = SelectionControlFocus;
   exports.TabSwitch = TabSwitch;
   exports.Util = Util;
 
