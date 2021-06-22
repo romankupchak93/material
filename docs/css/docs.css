@@ -45,63 +45,64 @@
 
 .bd-content > table {
   border: 1px solid #e1e1e1;
-}
+  /* > tbody,
+  > tfoot,
+  > thead {
+    > tr {
+      > td,
+      > th {
+        border: 0;
+        border-top: $table-border-width solid $table-border-color;
+        line-height: $table-line-height;
+        padding-right: $table-cell-padding-x;
+        padding-left: $table-cell-padding-x;
 
-.bd-content > table > tbody > tr > td,
-.bd-content > table > tbody > tr > th,
-.bd-content > table > tfoot > tr > td,
-.bd-content > table > tfoot > tr > th,
-.bd-content > table > thead > tr > td,
-.bd-content > table > thead > tr > th {
-  border: 0;
-  border-top: 1px solid #e1e1e1;
-  line-height: 1.5;
-  padding-right: 1rem;
-  padding-left: 1rem;
-}
+        &:first-child {
+          padding-left: $table-cell-padding-x;
+        }
 
-.bd-content > table > tbody > tr > td:first-child,
-.bd-content > table > tbody > tr > th:first-child,
-.bd-content > table > tfoot > tr > td:first-child,
-.bd-content > table > tfoot > tr > th:first-child,
-.bd-content > table > thead > tr > td:first-child,
-.bd-content > table > thead > tr > th:first-child {
-  padding-left: 1rem;
-}
+        &:last-child {
+          padding-right: $table-cell-padding-x;
+        }
+      }
+    }
+  }
 
-.bd-content > table > tbody > tr > td:last-child,
-.bd-content > table > tbody > tr > th:last-child,
-.bd-content > table > tfoot > tr > td:last-child,
-.bd-content > table > tfoot > tr > th:last-child,
-.bd-content > table > thead > tr > td:last-child,
-.bd-content > table > thead > tr > th:last-child {
-  padding-right: 1rem;
-}
+  > tbody {
+    > tr {
+      &:nth-of-type(odd) {
+        background-color: $table-bg-accent;
+      }
 
-.bd-content > table > tbody > tr:nth-of-type(odd) {
-  background-color: #f5f5f5;
-}
+      > td,
+      > th {
+        height: $table-tbody-cell-height;
+      }
+    }
+  }
 
-.bd-content > table > tbody > tr > td,
-.bd-content > table > tbody > tr > th {
-  height: 3.25rem;
-}
+  > tfoot {
+    color: $table-tfoot-color;
 
-.bd-content > table > tfoot {
-  color: rgba(0, 0, 0, 0.54);
-}
+    > tr {
+      > td,
+      > th {
+        font-size: $table-tfoot-font-size;
+        font-weight: $table-tfoot-font-weight;
+        height: $table-tfoot-cell-height;
+      }
+    }
+  }
 
-.bd-content > table > tfoot > tr > td,
-.bd-content > table > tfoot > tr > th {
-  font-size: 0.75rem;
-  font-weight: 400;
-  height: 3.5rem;
-}
-
-.bd-content > table > thead > tr > td,
-.bd-content > table > thead > tr > th {
-  font-weight: 500;
-  height: 3.5rem;
+  > thead {
+    > tr {
+      > td,
+      > th {
+        font-weight: $table-thead-font-weight;
+        height: $table-thead-cell-height;
+      }
+    }
+  } */
 }
 
 .bd-example {
@@ -171,7 +172,7 @@
   right: 0.25rem;
 }
 
-.btn-clipboard:hover {
+.btn-clipboard:hover, .btn-clipboard:focus {
   background: var(--primary);
 }
 
@@ -214,6 +215,7 @@
 
 .toc-entry {
   display: block;
+  margin: 0.5rem 0 !important;
 }
 
 .toc-entry a {
@@ -259,49 +261,44 @@
 }
 
 /* stylelint-disable declaration-no-important */
-/* .algolia-autocomplete {
-  .algolia-docsearch-footer {
-    border-top: $border-width solid $border-color;
-    color: $menu-link-color-disabled !important;
-    font-size: $font-size-caption !important;
-    line-height: $line-height-caption !important;
-    padding: $menu-padding-y-cascading $menu-link-padding-x 0;
-  }
+.algolia-autocomplete .algolia-docsearch-footer {
+  border-top: 1px solid rgba(0, 0, 0, 0.12);
+  color: rgba(0, 0, 0, 0.38) !important;
+  font-size: 0.75rem !important;
+  line-height: 1.25rem !important;
+  padding: 1rem 1rem 0;
+}
 
-  .algolia-docsearch-suggestion {
-    color: $menu-link-color;
-  }
+.algolia-autocomplete .algolia-docsearch-suggestion {
+  color: rgba(0, 0, 0, 0.87);
+}
 
-  .algolia-docsearch-suggestion--category-header,
-  .algolia-docsearch-suggestion--title {
-    //color: $menu-header-color !important;
-    font-size: $menu-font-size-cascading !important;
-    line-height: $menu-line-height-cascading;
-    padding: $menu-link-padding-y $menu-link-padding-x !important;
-  }
+.algolia-autocomplete .algolia-docsearch-suggestion--category-header,
+.algolia-autocomplete .algolia-docsearch-suggestion--title {
+  padding: 0 1rem !important;
+}
 
-  .ds-dropdown-menu {
-    border: 0;
-    border-radius: $menu-border-radius;
-    box-shadow: map-get($menu-elevation-shadow, shadow);
-    margin-top: 0;
-    padding-top: $menu-padding-y-cascading !important;
-    padding-bottom: $menu-padding-y-cascading !important;
-    width: 100%;
+.algolia-autocomplete .ds-dropdown-menu {
+  border: 0;
+  border-radius: 4px;
+  box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.2);
+  margin-top: 0;
+  width: 100%;
+}
 
-    [class^='ds-dataset-'] {
-      border-radius: 0;
-    }
-  }
+.algolia-autocomplete .ds-dropdown-menu [class^='ds-dataset-'] {
+  border-radius: 0;
+}
 
-  .ds-suggestion.ds-cursor .algolia-docsearch-suggestion--content {
-    background-color: $menu-link-bg-hover !important;
-  }
-} */
+.algolia-autocomplete .ds-suggestion.ds-cursor .algolia-docsearch-suggestion--content {
+  background-color: rgba(0, 0, 0, 0.04) !important;
+}
+
 /* stylelint-enable declaration-no-important */
-/* .doc-search:focus {
+.doc-search:focus {
   z-index: 101;
-} */
+}
+
 .doc-jumbotron {
   background-color: #6200ee;
   background-image: url("../images/doc-jumbotron-bg.jpg");
