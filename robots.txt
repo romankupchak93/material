@@ -1,1 +1,2 @@
 Sitemap: https://djibe.github.io/material/sitemap.xml
+# Algolia-Crawler-Verif: EC735CC5CA1255EC
