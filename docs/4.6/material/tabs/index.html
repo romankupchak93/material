@@ -232,14 +232,14 @@
 <p>Fixed tabs display all tabs on one screen, with each tab at a fixed width. The width of each tab is determined by dividing the number of tabs by the screen width. They don’t scroll to reveal more tabs; the visible tab set represents the only tabs available.</p>
 <div class="bd-example bd-example-tabs">
  <ul class="nav nav-justified nav-tabs" id="myTab" role="tablist">
-   <li class="nav-item">
-      <a aria-controls="home" aria-selected="true" class="active nav-link show" data-toggle="tab" href="#home" id="home-tab" role="tab">Home</a>
+   <li class="nav-item" role="presentation">
+      <button aria-controls="home" aria-selected="true" class="active nav-link show" data-toggle="tab" data-target="#home" id="home-tab" type="button" role="tab">Home</button>
    </li>
-   <li class="nav-item">
-      <a aria-controls="profile" aria-selected="false" class="nav-link" data-toggle="tab" href="#profile" id="profile-tab" role="tab">Profile</a>
+   <li class="nav-item" role="presentation">
+      <button aria-controls="profile" aria-selected="false" class="nav-link" data-toggle="tab" data-target="#profile" id="profile-tab" type="button" role="tab">Profile</button>
    </li>
-   <li class="nav-item">
-      <a aria-controls="contact" aria-selected="false" class="nav-link" data-toggle="tab" href="#contact" id="contact-tab" role="tab">Contact</a>
+   <li class="nav-item" role="presentation">
+      <button aria-controls="contact" aria-selected="false" class="nav-link" data-toggle="tab" data-target="#contact" id="contact-tab" type="button" role="tab">Contact</button>
    </li>
  </ul>
  <div class="tab-content" id="myTabContent">
@@ -255,14 +255,14 @@
  </div>
 </div>
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"nav nav-justified nav-tabs"</span> <span class="na">id=</span><span class="s">"justifiedTab"</span> <span class="na">role=</span><span class="s">"tablist"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;a</span> <span class="na">aria-controls=</span><span class="s">"home"</span> <span class="na">aria-selected=</span><span class="s">"true"</span> <span class="na">class=</span><span class="s">"nav-link active"</span> <span class="na">data-toggle=</span><span class="s">"tab"</span> <span class="na">href=</span><span class="s">"#home"</span> <span class="na">id=</span><span class="s">"home-tab"</span> <span class="na">role=</span><span class="s">"tab"</span><span class="nt">&gt;</span>Home<span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">aria-controls=</span><span class="s">"home"</span> <span class="na">aria-selected=</span><span class="s">"true"</span> <span class="na">class=</span><span class="s">"nav-link active"</span> <span class="na">data-toggle=</span><span class="s">"tab"</span> <span class="na">data-target=</span><span class="s">"#home"</span> <span class="na">id=</span><span class="s">"home-tab"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">role=</span><span class="s">"tab"</span><span class="nt">&gt;</span>Home<span class="nt">&lt;/button&gt;</span>
   <span class="nt">&lt;/li&gt;</span>
-  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;a</span> <span class="na">aria-controls=</span><span class="s">"profile"</span> <span class="na">aria-selected=</span><span class="s">"false"</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">data-toggle=</span><span class="s">"tab"</span> <span class="na">href=</span><span class="s">"#profile"</span> <span class="na">id=</span><span class="s">"profile-tab"</span> <span class="na">role=</span><span class="s">"tab"</span><span class="nt">&gt;</span>Profile<span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">aria-controls=</span><span class="s">"profile"</span> <span class="na">aria-selected=</span><span class="s">"false"</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">data-toggle=</span><span class="s">"tab"</span> <span class="na">data-target=</span><span class="s">"#profile"</span> <span class="na">id=</span><span class="s">"profile-tab"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">role=</span><span class="s">"tab"</span><span class="nt">&gt;</span>Profile<span class="nt">&lt;/button&gt;</span>
   <span class="nt">&lt;/li&gt;</span>
-  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;a</span> <span class="na">aria-controls=</span><span class="s">"contact"</span> <span class="na">aria-selected=</span><span class="s">"false"</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">data-toggle=</span><span class="s">"tab"</span> <span class="na">href=</span><span class="s">"#contact"</span> <span class="na">id=</span><span class="s">"contact-tab"</span> <span class="na">role=</span><span class="s">"tab"</span><span class="nt">&gt;</span>Contact<span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">aria-controls=</span><span class="s">"contact"</span> <span class="na">aria-selected=</span><span class="s">"false"</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">data-toggle=</span><span class="s">"tab"</span> <span class="na">data-target=</span><span class="s">"#contact"</span> <span class="na">id=</span><span class="s">"contact-tab"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">role=</span><span class="s">"tab"</span><span class="nt">&gt;</span>Contact<span class="nt">&lt;/button&gt;</span>
   <span class="nt">&lt;/li&gt;</span>
 <span class="nt">&lt;/ul&gt;</span>
 <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tab-content"</span> <span class="na">id=</span><span class="s">"justifiedTabContent"</span><span class="nt">&gt;</span>
@@ -274,14 +274,14 @@
 <p>You can add <strong>Leading icons</strong> in front of your tab title. Just add an icon within an <code class="language-plaintext highlighter-rouge">&lt;i&gt;</code> tag or a <code class="language-plaintext highlighter-rouge">.material-icon</code>.</p>
 <div class="bd-example bd-example-tabs">
  <ul class="nav nav-justified nav-tabs" id="justifiedTabWithIcons" role="tablist">
-   <li class="nav-item">
-      <a aria-controls="home" aria-selected="true" class="nav-link active" data-toggle="tab" href="#example2tab" id="example2" role="tab"><i class="material-icons">phone</i> tab one</a>
+   <li class="nav-item" role="presentation">
+      <button aria-controls="home" aria-selected="true" class="nav-link active" data-toggle="tab" data-target="#example2tab" id="example2" type="button" role="tab"><i class="material-icons">phone</i> tab one</button>
    </li>
-   <li class="nav-item">
-      <a aria-controls="profile" aria-selected="false" class="nav-link" data-toggle="tab" href="#example22tab" id="example22" role="tab"><i class="material-icons">favorite</i> tab two</a>
+   <li class="nav-item" role="presentation">
+      <button aria-controls="profile" aria-selected="false" class="nav-link" data-toggle="tab" data-target="#example22tab" id="example22" type="button" role="tab"><i class="material-icons">favorite</i> tab two</button>
    </li>
-   <li class="nav-item">
-      <a aria-controls="contact" aria-selected="false" class="nav-link" data-toggle="tab" href="#example23tab" id="example23" role="tab"><i class="material-icons">location_on</i> tab three</a>
+   <li class="nav-item" role="presentation">
+      <button aria-controls="contact" aria-selected="false" class="nav-link" data-toggle="tab" data-target="#example23tab" id="example23" type="button" role="tab"><i class="material-icons">location_on</i> tab three</button>
    </li>
  </ul>
  <div class="tab-content" id="myTabContentWithIcons">
@@ -297,14 +297,14 @@
  </div>
 </div>
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"nav nav-justified nav-tabs"</span> <span class="na">id=</span><span class="s">"justifiedTabWithIcons"</span> <span class="na">role=</span><span class="s">"tablist"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;a</span> <span class="na">aria-controls=</span><span class="s">"home"</span> <span class="na">aria-selected=</span><span class="s">"true"</span> <span class="na">class=</span><span class="s">"nav-link active"</span> <span class="na">data-toggle=</span><span class="s">"tab"</span> <span class="na">href=</span><span class="s">"#example2tab"</span> <span class="na">id=</span><span class="s">"example2"</span> <span class="na">role=</span><span class="s">"tab"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"material-icons"</span><span class="nt">&gt;</span>phone<span class="nt">&lt;/i&gt;</span> tab one<span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">aria-controls=</span><span class="s">"home"</span> <span class="na">aria-selected=</span><span class="s">"true"</span> <span class="na">class=</span><span class="s">"nav-link active"</span> <span class="na">data-toggle=</span><span class="s">"tab"</span> <span class="na">data-target=</span><span class="s">"#example2tab"</span> <span class="na">id=</span><span class="s">"example2"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">role=</span><span class="s">"tab"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"material-icons"</span><span class="nt">&gt;</span>phone<span class="nt">&lt;/i&gt;</span> tab one<span class="nt">&lt;/button&gt;</span>
   <span class="nt">&lt;/li&gt;</span>
-  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;a</span> <span class="na">aria-controls=</span><span class="s">"profile"</span> <span class="na">aria-selected=</span><span class="s">"false"</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">data-toggle=</span><span class="s">"tab"</span> <span class="na">href=</span><span class="s">"#example22tab"</span> <span class="na">id=</span><span class="s">"example22"</span> <span class="na">role=</span><span class="s">"tab"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"material-icons"</span><span class="nt">&gt;</span>favorite<span class="nt">&lt;/i&gt;</span> tab two<span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">aria-controls=</span><span class="s">"profile"</span> <span class="na">aria-selected=</span><span class="s">"false"</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">data-toggle=</span><span class="s">"tab"</span> <span class="na">data-target=</span><span class="s">"#example22tab"</span> <span class="na">id=</span><span class="s">"example22"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">role=</span><span class="s">"tab"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"material-icons"</span><span class="nt">&gt;</span>favorite<span class="nt">&lt;/i&gt;</span> tab two<span class="nt">&lt;/button&gt;</span>
   <span class="nt">&lt;/li&gt;</span>
-  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;a</span> <span class="na">aria-controls=</span><span class="s">"contact"</span> <span class="na">aria-selected=</span><span class="s">"false"</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">data-toggle=</span><span class="s">"tab"</span> <span class="na">href=</span><span class="s">"#example23tab"</span> <span class="na">id=</span><span class="s">"example23"</span> <span class="na">role=</span><span class="s">"tab"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"material-icons"</span><span class="nt">&gt;</span>location_on<span class="nt">&lt;/i&gt;</span> tab three<span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">aria-controls=</span><span class="s">"contact"</span> <span class="na">aria-selected=</span><span class="s">"false"</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">data-toggle=</span><span class="s">"tab"</span> <span class="na">data-target=</span><span class="s">"#example23tab"</span> <span class="na">id=</span><span class="s">"example23"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">role=</span><span class="s">"tab"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"material-icons"</span><span class="nt">&gt;</span>location_on<span class="nt">&lt;/i&gt;</span> tab three<span class="nt">&lt;/button&gt;</span>
   <span class="nt">&lt;/li&gt;</span>
 <span class="nt">&lt;/ul&gt;</span>
 <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tab-content"</span> <span class="na">id=</span><span class="s">"myTabContentWithIcons"</span><span class="nt">&gt;</span>
@@ -322,14 +322,14 @@
 <p>You can use tabs without text and a simple icon. Just add a <code class="language-plaintext highlighter-rouge">.m-0</code> class to your icon to reset margins and center the icon.</p>
 <div class="bd-example bd-example-tabs">
  <ul class="nav nav-justified nav-tabs" id="justifiedTabWithIconsOnly" role="tablist">
-   <li class="nav-item">
-      <a aria-controls="example3tab" aria-selected="true" class="nav-link active" data-toggle="tab" href="#example3tab" id="example3" role="tab"><i class="material-icons">phone</i></a>
+   <li class="nav-item" role="presentation">
+      <button aria-controls="example3tab" aria-selected="true" class="nav-link active" data-toggle="tab" data-target="#example3tab" id="example3" type="button" role="tab"><i class="material-icons">phone</i></button>
    </li>
-   <li class="nav-item">
-      <a aria-controls="example32tab" aria-selected="false" class="nav-link" data-toggle="tab" href="#example32tab" id="example32" role="tab"><i class="material-icons">favorite</i></a>
+   <li class="nav-item" role="presentation">
+      <button aria-controls="example32tab" aria-selected="false" class="nav-link" data-toggle="tab" data-target="#example32tab" id="example32" type="button" role="tab"><i class="material-icons">favorite</i></button>
    </li>
-   <li class="nav-item">
-      <a aria-controls="example33tab" aria-selected="false" class="nav-link" data-toggle="tab" href="#example33tab" id="example33" role="tab"><i class="material-icons">location_on</i></a>
+   <li class="nav-item" role="presentation">
+      <button aria-controls="example33tab" aria-selected="false" class="nav-link" data-toggle="tab" data-target="#example33tab" id="example33" type="button" role="tab"><i class="material-icons">location_on</i></button>
    </li>
  </ul>
  <div class="tab-content" id="myTabContentWithIconsOnly">
@@ -345,14 +345,14 @@
  </div>
 </div>
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"nav nav-justified nav-tabs"</span> <span class="na">id=</span><span class="s">"justifiedTabWithIconsOnly"</span> <span class="na">role=</span><span class="s">"tablist"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;a</span> <span class="na">aria-controls=</span><span class="s">"example3tab"</span> <span class="na">aria-selected=</span><span class="s">"true"</span> <span class="na">class=</span><span class="s">"nav-link active"</span> <span class="na">data-toggle=</span><span class="s">"tab"</span> <span class="na">href=</span><span class="s">"#example3tab"</span> <span class="na">id=</span><span class="s">"example3"</span> <span class="na">role=</span><span class="s">"tab"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"material-icons"</span><span class="nt">&gt;</span>phone<span class="nt">&lt;/i&gt;&lt;/a&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">aria-controls=</span><span class="s">"example3tab"</span> <span class="na">aria-selected=</span><span class="s">"true"</span> <span class="na">class=</span><span class="s">"nav-link active"</span> <span class="na">data-toggle=</span><span class="s">"tab"</span> <span class="na">data-target=</span><span class="s">"#example3tab"</span> <span class="na">id=</span><span class="s">"example3"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">role=</span><span class="s">"tab"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"material-icons"</span><span class="nt">&gt;</span>phone<span class="nt">&lt;/i&gt;&lt;/button&gt;</span>
   <span class="nt">&lt;/li&gt;</span>
-  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;a</span> <span class="na">aria-controls=</span><span class="s">"example32tab"</span> <span class="na">aria-selected=</span><span class="s">"false"</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">data-toggle=</span><span class="s">"tab"</span> <span class="na">href=</span><span class="s">"#example32tab"</span> <span class="na">id=</span><span class="s">"example32"</span> <span class="na">role=</span><span class="s">"tab"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"material-icons"</span><span class="nt">&gt;</span>favorite<span class="nt">&lt;/i&gt;&lt;/a&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">aria-controls=</span><span class="s">"example32tab"</span> <span class="na">aria-selected=</span><span class="s">"false"</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">data-toggle=</span><span class="s">"tab"</span> <span class="na">data-target=</span><span class="s">"#example32tab"</span> <span class="na">id=</span><span class="s">"example32"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">role=</span><span class="s">"tab"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"material-icons"</span><span class="nt">&gt;</span>favorite<span class="nt">&lt;/i&gt;&lt;/button&gt;</span>
   <span class="nt">&lt;/li&gt;</span>
-  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;a</span> <span class="na">aria-controls=</span><span class="s">"example33tab"</span> <span class="na">aria-selected=</span><span class="s">"false"</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">data-toggle=</span><span class="s">"tab"</span> <span class="na">href=</span><span class="s">"#example33tab"</span> <span class="na">id=</span><span class="s">"example33"</span> <span class="na">role=</span><span class="s">"tab"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"material-icons"</span><span class="nt">&gt;</span>location_on<span class="nt">&lt;/i&gt;&lt;/a&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">aria-controls=</span><span class="s">"example33tab"</span> <span class="na">aria-selected=</span><span class="s">"false"</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">data-toggle=</span><span class="s">"tab"</span> <span class="na">data-target=</span><span class="s">"#example33tab"</span> <span class="na">id=</span><span class="s">"example33"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">role=</span><span class="s">"tab"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"material-icons"</span><span class="nt">&gt;</span>location_on<span class="nt">&lt;/i&gt;&lt;/button&gt;</span>
   <span class="nt">&lt;/li&gt;</span>
 <span class="nt">&lt;/ul&gt;</span>
 <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tab-content"</span> <span class="na">id=</span><span class="s">"myTabContentWithIconsOnly"</span><span class="nt">&gt;</span>
@@ -370,14 +370,14 @@
 <p>You can also use a <strong>Top icon</strong> for your tabs titles. Just add a <code class="language-plaintext highlighter-rouge">.flex-column</code> class to your <code class="language-plaintext highlighter-rouge">.nav-link</code> element so elements will align vertically.</p>
 <div class="bd-example bd-example-tabs">
  <ul class="nav nav-justified nav-tabs" id="justifiedTabVertical" role="tablist">
-   <li class="nav-item">
-      <a aria-controls="example4tab" aria-selected="true" class="nav-link flex-column active" data-toggle="tab" href="#example4tab" id="example4" role="tab"><i class="material-icons">phone</i> tab one</a>
+   <li class="nav-item" role="presentation">
+      <button aria-controls="example4tab" aria-selected="true" class="nav-link flex-column active" data-toggle="tab" data-target="#example4tab" id="example4" type="button" role="tab"><i class="material-icons">phone</i> tab one</button>
    </li>
-   <li class="nav-item">
-      <a aria-controls="example42tab" aria-selected="false" class="nav-link flex-column" data-toggle="tab" href="#example42tab" id="example42" role="tab"><i class="material-icons">favorite</i> tab two</a>
+   <li class="nav-item" role="presentation">
+      <button aria-controls="example42tab" aria-selected="false" class="nav-link flex-column" data-toggle="tab" data-target="#example42tab" id="example42" type="button" role="tab"><i class="material-icons">favorite</i> tab two</button>
    </li>
-   <li class="nav-item">
-      <a aria-controls="example43tab" aria-selected="false" class="nav-link flex-column" data-toggle="tab" href="#example43tab" id="example43" role="tab"><i class="material-icons">location_on</i> tab three</a>
+   <li class="nav-item" role="presentation">
+      <button aria-controls="example43tab" aria-selected="false" class="nav-link flex-column" data-toggle="tab" data-target="#example43tab" id="example43" type="button" role="tab"><i class="material-icons">location_on</i> tab three</button>
    </li>
  </ul>
  <div class="tab-content" id="myTabContentVertical">
@@ -393,14 +393,14 @@
  </div>
 </div>
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"nav nav-justified nav-tabs"</span> <span class="na">id=</span><span class="s">"justifiedTabVertical"</span> <span class="na">role=</span><span class="s">"tablist"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;a</span> <span class="na">aria-controls=</span><span class="s">"example4tab"</span> <span class="na">aria-selected=</span><span class="s">"true"</span> <span class="na">class=</span><span class="s">"nav-link flex-column active"</span> <span class="na">data-toggle=</span><span class="s">"tab"</span> <span class="na">href=</span><span class="s">"#example4tab"</span> <span class="na">id=</span><span class="s">"example4"</span> <span class="na">role=</span><span class="s">"tab"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"material-icons"</span><span class="nt">&gt;</span>phone<span class="nt">&lt;/i&gt;</span> tab one<span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">aria-controls=</span><span class="s">"example4tab"</span> <span class="na">aria-selected=</span><span class="s">"true"</span> <span class="na">class=</span><span class="s">"nav-link flex-column active"</span> <span class="na">data-toggle=</span><span class="s">"tab"</span> <span class="na">data-target=</span><span class="s">"#example4tab"</span> <span class="na">id=</span><span class="s">"example4"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">role=</span><span class="s">"tab"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"material-icons"</span><span class="nt">&gt;</span>phone<span class="nt">&lt;/i&gt;</span> tab one<span class="nt">&lt;/button&gt;</span>
   <span class="nt">&lt;/li&gt;</span>
-  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;a</span> <span class="na">aria-controls=</span><span class="s">"example42tab"</span> <span class="na">aria-selected=</span><span class="s">"false"</span> <span class="na">class=</span><span class="s">"nav-link flex-column"</span> <span class="na">data-toggle=</span><span class="s">"tab"</span> <span class="na">href=</span><span class="s">"#example42tab"</span> <span class="na">id=</span><span class="s">"example42"</span> <span class="na">role=</span><span class="s">"tab"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"material-icons"</span><span class="nt">&gt;</span>favorite<span class="nt">&lt;/i&gt;</span> tab two<span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">aria-controls=</span><span class="s">"example42tab"</span> <span class="na">aria-selected=</span><span class="s">"false"</span> <span class="na">class=</span><span class="s">"nav-link flex-column"</span> <span class="na">data-toggle=</span><span class="s">"tab"</span> <span class="na">data-target=</span><span class="s">"#example42tab"</span> <span class="na">id=</span><span class="s">"example42"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">role=</span><span class="s">"tab"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"material-icons"</span><span class="nt">&gt;</span>favorite<span class="nt">&lt;/i&gt;</span> tab two<span class="nt">&lt;/button&gt;</span>
   <span class="nt">&lt;/li&gt;</span>
-  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;a</span> <span class="na">aria-controls=</span><span class="s">"example43tab"</span> <span class="na">aria-selected=</span><span class="s">"false"</span> <span class="na">class=</span><span class="s">"nav-link flex-column"</span> <span class="na">data-toggle=</span><span class="s">"tab"</span> <span class="na">href=</span><span class="s">"#example43tab"</span> <span class="na">id=</span><span class="s">"example43"</span> <span class="na">role=</span><span class="s">"tab"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"material-icons"</span><span class="nt">&gt;</span>location_on<span class="nt">&lt;/i&gt;</span> tab three<span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">aria-controls=</span><span class="s">"example43tab"</span> <span class="na">aria-selected=</span><span class="s">"false"</span> <span class="na">class=</span><span class="s">"nav-link flex-column"</span> <span class="na">data-toggle=</span><span class="s">"tab"</span> <span class="na">data-target=</span><span class="s">"#example43tab"</span> <span class="na">id=</span><span class="s">"example43"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">role=</span><span class="s">"tab"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"material-icons"</span><span class="nt">&gt;</span>location_on<span class="nt">&lt;/i&gt;</span> tab three<span class="nt">&lt;/button&gt;</span>
   <span class="nt">&lt;/li&gt;</span>
 <span class="nt">&lt;/ul&gt;</span>
 <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tab-content"</span> <span class="na">id=</span><span class="s">"myTabContentVertical"</span><span class="nt">&gt;</span>
@@ -419,14 +419,14 @@
 <div class="bd-example bd-example-tabs">
  <div class="pt-2 bg-primary">
    <ul class="nav nav-justified nav-tabs nav-inverse" id="justifiedTabInverse" role="tablist">
-     <li class="nav-item">
-        <a aria-controls="example5tab" aria-selected="true" class="nav-link flex-column active" data-toggle="tab" href="#example5tab" id="example5" role="tab"><i class="material-icons">phone</i> tab one</a>
+     <li class="nav-item" role="presentation">
+        <button aria-controls="example5tab" aria-selected="true" class="nav-link flex-column active" data-toggle="tab" data-target="#example5tab" id="example5" type="button" role="tab"><i class="material-icons">phone</i> tab one</button>
      </li>
-     <li class="nav-item">
-        <a aria-controls="example52tab" aria-selected="false" class="nav-link flex-column" data-toggle="tab" href="#example52tab" id="example52" role="tab"><i class="material-icons">favorite</i> tab two</a>
+     <li class="nav-item" role="presentation">
+        <button aria-controls="example52tab" aria-selected="false" class="nav-link flex-column" data-toggle="tab" data-target="#example52tab" id="example52" type="button" role="tab"><i class="material-icons">favorite</i> tab two</button>
      </li>
-     <li class="nav-item">
-        <a aria-controls="example53tab" aria-selected="false" class="nav-link flex-column" data-toggle="tab" href="#example53tab" id="example53" role="tab"><i class="material-icons">location_on</i> tab three</a>
+     <li class="nav-item" role="presentation">
+        <button aria-controls="example53tab" aria-selected="false" class="nav-link flex-column" data-toggle="tab" data-target="#example53tab" id="example53" type="button" role="tab"><i class="material-icons">location_on</i> tab three</button>
      </li>
    </ul>
  </div>
@@ -444,14 +444,14 @@
 </div>
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"pt-2 bg-primary"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"nav nav-justified nav-tabs nav-inverse"</span> <span class="na">id=</span><span class="s">"justifiedTabInverse"</span> <span class="na">role=</span><span class="s">"tablist"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;a</span> <span class="na">aria-controls=</span><span class="s">"example5tab"</span> <span class="na">aria-selected=</span><span class="s">"true"</span> <span class="na">class=</span><span class="s">"nav-link flex-column active"</span> <span class="na">data-toggle=</span><span class="s">"tab"</span> <span class="na">href=</span><span class="s">"#example5tab"</span> <span class="na">id=</span><span class="s">"example5"</span> <span class="na">role=</span><span class="s">"tab"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"material-icons"</span><span class="nt">&gt;</span>phone<span class="nt">&lt;/i&gt;</span> tab one<span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;button</span> <span class="na">aria-controls=</span><span class="s">"example5tab"</span> <span class="na">aria-selected=</span><span class="s">"true"</span> <span class="na">class=</span><span class="s">"nav-link flex-column active"</span> <span class="na">data-toggle=</span><span class="s">"tab"</span> <span class="na">data-target=</span><span class="s">"#example5tab"</span> <span class="na">id=</span><span class="s">"example5"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">role=</span><span class="s">"tab"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"material-icons"</span><span class="nt">&gt;</span>phone<span class="nt">&lt;/i&gt;</span> tab one<span class="nt">&lt;/button&gt;</span>
     <span class="nt">&lt;/li&gt;</span>
-    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;a</span> <span class="na">aria-controls=</span><span class="s">"example52tab"</span> <span class="na">aria-selected=</span><span class="s">"false"</span> <span class="na">class=</span><span class="s">"nav-link flex-column"</span> <span class="na">data-toggle=</span><span class="s">"tab"</span> <span class="na">href=</span><span class="s">"#example52tab"</span> <span class="na">id=</span><span class="s">"example52"</span> <span class="na">role=</span><span class="s">"tab"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"material-icons"</span><span class="nt">&gt;</span>favorite<span class="nt">&lt;/i&gt;</span> tab two<span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;button</span> <span class="na">aria-controls=</span><span class="s">"example52tab"</span> <span class="na">aria-selected=</span><span class="s">"false"</span> <span class="na">class=</span><span class="s">"nav-link flex-column"</span> <span class="na">data-toggle=</span><span class="s">"tab"</span> <span class="na">data-target=</span><span class="s">"#example52tab"</span> <span class="na">id=</span><span class="s">"example52"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">role=</span><span class="s">"tab"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"material-icons"</span><span class="nt">&gt;</span>favorite<span class="nt">&lt;/i&gt;</span> tab two<span class="nt">&lt;/button&gt;</span>
     <span class="nt">&lt;/li&gt;</span>
-    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;a</span> <span class="na">aria-controls=</span><span class="s">"example53tab"</span> <span class="na">aria-selected=</span><span class="s">"false"</span> <span class="na">class=</span><span class="s">"nav-link flex-column"</span> <span class="na">data-toggle=</span><span class="s">"tab"</span> <span class="na">href=</span><span class="s">"#example53tab"</span> <span class="na">id=</span><span class="s">"example53"</span> <span class="na">role=</span><span class="s">"tab"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"material-icons"</span><span class="nt">&gt;</span>location_on<span class="nt">&lt;/i&gt;</span> tab three<span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;button</span> <span class="na">aria-controls=</span><span class="s">"example53tab"</span> <span class="na">aria-selected=</span><span class="s">"false"</span> <span class="na">class=</span><span class="s">"nav-link flex-column"</span> <span class="na">data-toggle=</span><span class="s">"tab"</span> <span class="na">data-target=</span><span class="s">"#example53tab"</span> <span class="na">id=</span><span class="s">"example53"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">role=</span><span class="s">"tab"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"material-icons"</span><span class="nt">&gt;</span>location_on<span class="nt">&lt;/i&gt;</span> tab three<span class="nt">&lt;/button&gt;</span>
     <span class="nt">&lt;/li&gt;</span>
   <span class="nt">&lt;/ul&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
@@ -472,65 +472,65 @@
 <div class="bd-example bd-example-tabs">
  <div class="nav-tabs-scrollable">
    <ul class="nav nav-tabs" id="scrollableTab" role="tablist">
-     <li class="nav-item">
-        <a aria-controls="scrollableTab1" aria-selected="true" class="nav-link active" data-toggle="tab" href="#scrollableTab1" id="scrollableTab1-tab" role="tab">Active</a>
+     <li class="nav-item" role="presentation">
+        <button aria-controls="scrollableTab1" aria-selected="true" class="nav-link active" data-toggle="tab" data-target="#scrollableTab1" id="scrollableTab1-tab" type="button" role="tab">Active</button>
      </li>
-       <li class="nav-item">
-          <a aria-controls="scrollableTab2" aria-selected="false" class="nav-link" data-toggle="tab" href="#scrollableTab2" id="scrollableTab2-tab" role="tab">Link</a>
+       <li class="nav-item" role="presentation">
+          <button aria-controls="scrollableTab2" aria-selected="false" class="nav-link" data-toggle="tab" data-target="#scrollableTab2" id="scrollableTab2-tab" type="button" role="tab">Link</button>
        </li>
-       <li class="nav-item">
-          <a aria-controls="scrollableTab3" aria-selected="false" class="nav-link" data-toggle="tab" href="#scrollableTab3" id="scrollableTab3-tab" role="tab">Link</a>
+       <li class="nav-item" role="presentation">
+          <button aria-controls="scrollableTab3" aria-selected="false" class="nav-link" data-toggle="tab" data-target="#scrollableTab3" id="scrollableTab3-tab" type="button" role="tab">Link</button>
        </li>
-       <li class="nav-item">
-          <a aria-controls="scrollableTab4" aria-selected="false" class="nav-link" data-toggle="tab" href="#scrollableTab4" id="scrollableTab4-tab" role="tab">Link</a>
+       <li class="nav-item" role="presentation">
+          <button aria-controls="scrollableTab4" aria-selected="false" class="nav-link" data-toggle="tab" data-target="#scrollableTab4" id="scrollableTab4-tab" type="button" role="tab">Link</button>
        </li>
-       <li class="nav-item">
-          <a aria-controls="scrollableTab5" aria-selected="false" class="nav-link" data-toggle="tab" href="#scrollableTab5" id="scrollableTab5-tab" role="tab">Link</a>
+       <li class="nav-item" role="presentation">
+          <button aria-controls="scrollableTab5" aria-selected="false" class="nav-link" data-toggle="tab" data-target="#scrollableTab5" id="scrollableTab5-tab" type="button" role="tab">Link</button>
        </li>
-       <li class="nav-item">
-          <a aria-controls="scrollableTab6" aria-selected="false" class="nav-link" data-toggle="tab" href="#scrollableTab6" id="scrollableTab6-tab" role="tab">Link</a>
+       <li class="nav-item" role="presentation">
+          <button aria-controls="scrollableTab6" aria-selected="false" class="nav-link" data-toggle="tab" data-target="#scrollableTab6" id="scrollableTab6-tab" type="button" role="tab">Link</button>
        </li>
-       <li class="nav-item">
-          <a aria-controls="scrollableTab7" aria-selected="false" class="nav-link" data-toggle="tab" href="#scrollableTab7" id="scrollableTab7-tab" role="tab">Link</a>
+       <li class="nav-item" role="presentation">
+          <button aria-controls="scrollableTab7" aria-selected="false" class="nav-link" data-toggle="tab" data-target="#scrollableTab7" id="scrollableTab7-tab" type="button" role="tab">Link</button>
        </li>
-       <li class="nav-item">
-          <a aria-controls="scrollableTab8" aria-selected="false" class="nav-link" data-toggle="tab" href="#scrollableTab8" id="scrollableTab8-tab" role="tab">Link</a>
+       <li class="nav-item" role="presentation">
+          <button aria-controls="scrollableTab8" aria-selected="false" class="nav-link" data-toggle="tab" data-target="#scrollableTab8" id="scrollableTab8-tab" type="button" role="tab">Link</button>
        </li>
-       <li class="nav-item">
-          <a aria-controls="scrollableTab9" aria-selected="false" class="nav-link" data-toggle="tab" href="#scrollableTab9" id="scrollableTab9-tab" role="tab">Link</a>
+       <li class="nav-item" role="presentation">
+          <button aria-controls="scrollableTab9" aria-selected="false" class="nav-link" data-toggle="tab" data-target="#scrollableTab9" id="scrollableTab9-tab" type="button" role="tab">Link</button>
        </li>
-       <li class="nav-item">
-          <a aria-controls="scrollableTab10" aria-selected="false" class="nav-link" data-toggle="tab" href="#scrollableTab10" id="scrollableTab10-tab" role="tab">Link</a>
+       <li class="nav-item" role="presentation">
+          <button aria-controls="scrollableTab10" aria-selected="false" class="nav-link" data-toggle="tab" data-target="#scrollableTab10" id="scrollableTab10-tab" type="button" role="tab">Link</button>
        </li>
-       <li class="nav-item">
-          <a aria-controls="scrollableTab11" aria-selected="false" class="nav-link" data-toggle="tab" href="#scrollableTab11" id="scrollableTab11-tab" role="tab">Link</a>
+       <li class="nav-item" role="presentation">
+          <button aria-controls="scrollableTab11" aria-selected="false" class="nav-link" data-toggle="tab" data-target="#scrollableTab11" id="scrollableTab11-tab" type="button" role="tab">Link</button>
        </li>
-       <li class="nav-item">
-          <a aria-controls="scrollableTab12" aria-selected="false" class="nav-link" data-toggle="tab" href="#scrollableTab12" id="scrollableTab12-tab" role="tab">Link</a>
+       <li class="nav-item" role="presentation">
+          <button aria-controls="scrollableTab12" aria-selected="false" class="nav-link" data-toggle="tab" data-target="#scrollableTab12" id="scrollableTab12-tab" type="button" role="tab">Link</button>
        </li>
-       <li class="nav-item">
-          <a aria-controls="scrollableTab13" aria-selected="false" class="nav-link" data-toggle="tab" href="#scrollableTab13" id="scrollableTab13-tab" role="tab">Link</a>
+       <li class="nav-item" role="presentation">
+          <button aria-controls="scrollableTab13" aria-selected="false" class="nav-link" data-toggle="tab" data-target="#scrollableTab13" id="scrollableTab13-tab" type="button" role="tab">Link</button>
        </li>
-       <li class="nav-item">
-          <a aria-controls="scrollableTab14" aria-selected="false" class="nav-link" data-toggle="tab" href="#scrollableTab14" id="scrollableTab14-tab" role="tab">Link</a>
+       <li class="nav-item" role="presentation">
+          <button aria-controls="scrollableTab14" aria-selected="false" class="nav-link" data-toggle="tab" data-target="#scrollableTab14" id="scrollableTab14-tab" type="button" role="tab">Link</button>
        </li>
-       <li class="nav-item">
-          <a aria-controls="scrollableTab15" aria-selected="false" class="nav-link" data-toggle="tab" href="#scrollableTab15" id="scrollableTab15-tab" role="tab">Link</a>
+       <li class="nav-item" role="presentation">
+          <button aria-controls="scrollableTab15" aria-selected="false" class="nav-link" data-toggle="tab" data-target="#scrollableTab15" id="scrollableTab15-tab" type="button" role="tab">Link</button>
        </li>
-       <li class="nav-item">
-          <a aria-controls="scrollableTab16" aria-selected="false" class="nav-link" data-toggle="tab" href="#scrollableTab16" id="scrollableTab16-tab" role="tab">Link</a>
+       <li class="nav-item" role="presentation">
+          <button aria-controls="scrollableTab16" aria-selected="false" class="nav-link" data-toggle="tab" data-target="#scrollableTab16" id="scrollableTab16-tab" type="button" role="tab">Link</button>
        </li>
-       <li class="nav-item">
-          <a aria-controls="scrollableTab17" aria-selected="false" class="nav-link" data-toggle="tab" href="#scrollableTab17" id="scrollableTab17-tab" role="tab">Link</a>
+       <li class="nav-item" role="presentation">
+          <button aria-controls="scrollableTab17" aria-selected="false" class="nav-link" data-toggle="tab" data-target="#scrollableTab17" id="scrollableTab17-tab" type="button" role="tab">Link</button>
        </li>
-       <li class="nav-item">
-          <a aria-controls="scrollableTab18" aria-selected="false" class="nav-link" data-toggle="tab" href="#scrollableTab18" id="scrollableTab18-tab" role="tab">Link</a>
+       <li class="nav-item" role="presentation">
+          <button aria-controls="scrollableTab18" aria-selected="false" class="nav-link" data-toggle="tab" data-target="#scrollableTab18" id="scrollableTab18-tab" type="button" role="tab">Link</button>
        </li>
-       <li class="nav-item">
-          <a aria-controls="scrollableTab19" aria-selected="false" class="nav-link" data-toggle="tab" href="#scrollableTab19" id="scrollableTab19-tab" role="tab">Link</a>
+       <li class="nav-item" role="presentation">
+          <button aria-controls="scrollableTab19" aria-selected="false" class="nav-link" data-toggle="tab" data-target="#scrollableTab19" id="scrollableTab19-tab" type="button" role="tab">Link</button>
        </li>
-       <li class="nav-item">
-          <a aria-controls="scrollableTab20" aria-selected="false" class="nav-link" data-toggle="tab" href="#scrollableTab20" id="scrollableTab20-tab" role="tab">Link</a>
+       <li class="nav-item" role="presentation">
+          <button aria-controls="scrollableTab20" aria-selected="false" class="nav-link" data-toggle="tab" data-target="#scrollableTab20" id="scrollableTab20-tab" type="button" role="tab">Link</button>
        </li>
    </ul>
  </div>
@@ -581,7 +581,7 @@
    </div>
  </main>
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha256-fgLAgv7fyCGopR/gBNq2iW3ZKIdqIcyshnUULC4vex8=" crossorigin defer></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha256-GRJrh0oydT1CwS36bBeJK/2TggpaUQC6GzTaTQdZm0k=" crossorigin defer></script>
 <script src="/material/js/material.min.js" defer></script>
 <script src="https://cdn.jsdelivr.net/npm/@docsearch/js@3" crossorigin async></script>
 <script src="/material/docs/js/docs.min.js" defer></script>

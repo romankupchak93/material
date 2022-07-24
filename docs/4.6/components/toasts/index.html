@@ -254,7 +254,7 @@
   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
 <h3 id="live">Live</h3>
-<p>Click the button the below to show as toast (positioning with our utilities in the lower right corner) that has been hidden by default with <code class="language-plaintext highlighter-rouge">.hide</code>.</p>
+<p>Click the button below to show a toast (positioned with our utilities in the lower right corner) that has been hidden by default with <code class="language-plaintext highlighter-rouge">.hide</code>.</p>
 <div class="position-fixed bottom-0 right-0 p-3" style="z-index: 5; right: 0; bottom: 0;">
  <div id="liveToast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true" data-delay="2000">
    <div class="toast-header">
@@ -291,7 +291,7 @@
 <span class="nt">&lt;/div&gt;</span>
 </code></pre></div></div>
 <h3 id="translucent">Translucent</h3>
-<p>Toasts are slightly translucent, too, so they blend over whatever they might appear over. For browsers that support the <code class="language-plaintext highlighter-rouge">backdrop-filter</code> CSS property, we’ll also attempt to blur the elements under a toast.</p>
+<p>Toasts are slightly translucent to blend in with what’s below them.</p>
 <div class="bd-example bg-dark">
 <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
  <div class="toast-header">
@@ -515,10 +515,10 @@
   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
 <h2 id="accessibility">Accessibility</h2>
-<p>Toasts are intended to be small interruptions to your visitors or users, so to help those with screen readers and similar assistive technologies, you should wrap your toasts in an <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions" target="_blank" rel="noopener noreferrer"><code class="language-plaintext highlighter-rouge">aria-live</code> region</a>. Changes to live regions (such as injecting/updating a toast component) are automatically announced by screen readers without needing to move the user’s focus or otherwise interrupt the user. Additionally, include <code class="language-plaintext highlighter-rouge">aria-atomic="true"</code> to ensure that the entire toast is always announced as a single (atomic) unit, rather than announcing what was changed (which could lead to problems if you only update part of the toast’s content, or if displaying the same toast content at a later point in time). If the information needed is important for the process, e.g. for a list of errors in a form, then use the <a href="/material/docs/4.6/components/alerts/">alert component</a> instead of toast.</p>
+<p>Toasts are intended to be small interruptions to your visitors or users, so to help those with screen readers and similar assistive technologies, you should wrap your toasts in an <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions" target="_blank" rel="noopener noreferrer"><code class="language-plaintext highlighter-rouge">aria-live</code> region</a>. Changes to live regions (such as injecting/updating a toast component) are automatically announced by screen readers without needing to move the user’s focus or otherwise interrupt the user. Additionally, include <code class="language-plaintext highlighter-rouge">aria-atomic="true"</code> to ensure that the entire toast is always announced as a single (atomic) unit, rather than just announcing what was changed (which could lead to problems if you only update part of the toast’s content, or if displaying the same toast content at a later point in time). If the information needed is important for the process, e.g. for a list of errors in a form, then use the <a href="/material/docs/4.6/components/alerts/">alert component</a> instead of toast.</p>
 <p>Note that the live region needs to be present in the markup <em>before</em> the toast is generated or updated. If you dynamically generate both at the same time and inject them into the page, they will generally not be announced by assistive technologies.</p>
 <p>You also need to adapt the <code class="language-plaintext highlighter-rouge">role</code> and <code class="language-plaintext highlighter-rouge">aria-live</code> level depending on the content. If it’s an important message like an error, use <code class="language-plaintext highlighter-rouge">role="alert" aria-live="assertive"</code>, otherwise use <code class="language-plaintext highlighter-rouge">role="status" aria-live="polite"</code> attributes.</p>
-<p>As the content you’re displaying changes, be sure to update the <a href="#options"><code class="language-plaintext highlighter-rouge">delay</code> timeout</a> to ensure people have enough time to read the toast.</p>
+<p>As the content you’re displaying changes, be sure to update the <a href="#options"><code class="language-plaintext highlighter-rouge">delay</code> timeout</a> so that users have enough time to read the toast.</p>
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"toast"</span> <span class="na">role=</span><span class="s">"alert"</span> <span class="na">aria-live=</span><span class="s">"polite"</span> <span class="na">aria-atomic=</span><span class="s">"true"</span> <span class="na">data-delay=</span><span class="s">"10000"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">role=</span><span class="s">"alert"</span> <span class="na">aria-live=</span><span class="s">"assertive"</span> <span class="na">aria-atomic=</span><span class="s">"true"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
@@ -551,6 +551,7 @@
     Hello, world! This is a toast message.
   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
+<p>While technically it’s possible to add focusable/actionable controls (such as additional buttons or links) in your toast, you should avoid doing this for autohiding toasts. Even if you give the toast a long <a href="#options"><code class="language-plaintext highlighter-rouge">delay</code> timeout</a>, keyboard and assistive technology users may find it difficult to reach the toast in time to take action (since toasts don’t receive focus when they are displayed). If you absolutely must have further controls, we recommend using a toast with <code class="language-plaintext highlighter-rouge">autohide: false</code>.</p>
 <h2 id="javascript-behavior">JavaScript behavior</h2>
 <h3 id="usage">Usage</h3>
 <p>Initialize toasts via JavaScript:</p>
@@ -675,7 +676,7 @@ You have to manually call this method, instead your toast won’t show.</p>
    </div>
  </main>
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha256-fgLAgv7fyCGopR/gBNq2iW3ZKIdqIcyshnUULC4vex8=" crossorigin defer></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha256-GRJrh0oydT1CwS36bBeJK/2TggpaUQC6GzTaTQdZm0k=" crossorigin defer></script>
 <script src="/material/js/material.min.js" defer></script>
 <script src="https://cdn.jsdelivr.net/npm/@docsearch/js@3" crossorigin async></script>
 <script src="/material/docs/js/docs.min.js" defer></script>
